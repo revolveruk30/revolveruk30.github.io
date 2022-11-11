@@ -1,0 +1,1559 @@
+<html>
+<title>NOTES</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow" />
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+<body>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+<BR>
+<BR>
+<p>
+<a class="w3-button w3-hover-black" href="anderson.html"><u>Security Engineering, Ross Anderson</u></a><br>
+<a class="w3-button w3-hover-black" href="bishop.html"><u>Introduction to Computer Security, Matt Bishop</u></a><br>
+<a class="w3-button w3-hover-black" href="bellovin.html"><u>Thinking About Security, Steven Bellovin</u></a><br>
+<a class="w3-button w3-hover-black" href="iracf.html"><u>Incident Response & Computer Forensics, Luttgens, Pepe, Mandia</u></a><br>
+<a class="w3-button w3-hover-black" href="conklin.html"><u>Computer Security Principles, Conklin, White</u></a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Digital Security in a Networked World, Bruce Schneier</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Security Warrior, Anton Chuvakin</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Counter Hack Reloaded, Ed Skoudis</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">The Practice of Network Security Monitoring, Richard Bejtlich</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Building Secure and Reliable Systems, Heather Adkins</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Information Assurance Handbook, Schou & Hernandez</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Zero Trust Networks, Gilman & Barth</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Intelligence-Driven Incident Response, Roberts & Brown</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Defensive Security Handbook, Brotherston & Berlin</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Threat Modeling: Designing for Security, Adam Shostack</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking Exposed: Network Security, McClure & Scambray</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking Exposed: Windows Security, McClure & Scambray</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Applied Incident Response, Steve Anson</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Ethical Hacking and Penetration Testing Guide, Rafay Baloch</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking: The Art of Exploitation, Jon Erickson</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Practical Malware Analysis, Michael Sikorski</a><br>
+
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+<input type="text" id="myInput" size="3" onkeyup="myFunction()" placeholder="Filter Standard by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="10" name="hilite" placeholder="Highlight Keywords"> 
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+</nav>
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">        
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+<center>
+<ul id="myUL">
+<P>
+Incident Response & Computer Forensics, Luttgens, Pepe, Mandia
+<P>
+
+<li><a href="#">According to NIST 800-61 an event is described simply as “any observable occurrence in a system or network,” and an incident is defined as “violation or threat of
+violation of computer security policies, acceptable use policies, or standard security practices.”
+
+<li><a href="#">We'd like to expand this definition to “any unlawful, unauthorized, or unacceptable action that involves a computer system, cell phone, tablet, and any other
+electronic device with an operating system or that operates on a computer network.”
+
+<li><a href="#">Incident response is a coordinated and structured approach to go from incident detection to resolution. Incident response may include activities that: 
+
+<br>&ensp; • Confirm whether or not an incident occurred 
+<br>&ensp; • Provide rapid detection and containment 
+<br>&ensp; • Determine and document the scope of the incident 
+<br>&ensp; • Prevent a disjointed, noncohesive response 
+<br>&ensp; • Determine and promote facts and actual information 
+<br>&ensp; • Minimize disruption to business and network operations 
+<br>&ensp; • Minimize the damage to the compromised organization 
+<br>&ensp; • Restore normal operations 
+<br>&ensp; • Manage the public perception of the incident 
+<br>&ensp; • Allow for criminal or civil actions against perpetrators 
+<br>&ensp; • Educate senior management 
+<br>&ensp; • Enhance the security posture of a compromised entity 
+
+<li><a href="#">In general, an incident response consists of an investigation team that determines what happened and performs a damage assessment, a remediation team that
+removes the attacker from the environment and enhances the victim's security posture, and some form of public relations (to senior level management, internal employees, business
+partners, or the public).
+
+<li><a href="#">Incident response teams now have to accomplish their activities faster than ever, and across a wider variety and number of systems, making scalability, automation,
+and variety of OS support increasingly important in investigative tools.
+
+<li><a href="#">Investigative tools need to allow an analyst to perform rapid but in-depth remote examinations. We commonly refer to this type of analysis as live response. Live
+response is conceptually the same as forensic analysis but performed on a live system rather than on a forensic image.
+
+<li><a href="#">Organizations are  logging more data than ever before, and  incident responders now need to  understand how to normalize, parse, and make  sense of large
+amounts of data.
+
+<li><a href="#">Finally, incident response no longer requires only the IT and security communities; effectively handling an incident requires many business disciplines, including legal,
+public relations, finance, marketing, and human resources.
+
+<li><a href="#">The attack lifecycle consists of seven stages common to most intrusions. Not all seven stages are always part of an attack; however, this lifecycle can be adapted to
+fit any incident. In addition, the phases of an attack do not always follow the order presented in the attack lifecycle.
+
+<li><a href="#">The seven stages of the attack lifecycle:
+
+<br>&ensp; •  Initial compromise.  The attacker successfully executes malicious code on one or more systems. Initial compromise often occurs through social engineering, such as
+spear phishing, or by exploiting a vulnerability on an Internet-facing system.
+
+<br>&ensp; •  Establish foothold.  The attacker ensures remote access to a recently compromised system. The attacker typically establishes a foothold by installing a persistent
+backdoor or downloading additional binaries or shellcode to the victim system.
+
+<br>&ensp; •  Escalate privileges. The attacker obtains greater access to systems and data than was initially available. Privilege escalation is often obtained through password hash
+or token dumping, which is followed by password cracking or a pass-the-hash attack.
+
+<br>&ensp; •  Internal reconnaissance.  The attacker explores the victim's environment to gain a better understanding of the environment, the roles and responsibilities of key
+individuals, and where key information is stored.
+
+<br>&ensp; •  Move laterally.  The attacker uses the established foothold to move from system to system within the compromised environment. Common lateral movement methods
+include accessing network shares, using the Windows Task Scheduler to execute programs, using remote access tools such as PsExec and radmin, or using remote desktop clients
+such as RDP.
+
+<br>&ensp; •  Maintain presence. The attacker ensures continued access to the victim environment. Common methods of maintaining persistence are to install multiple unrelated
+backdoors.
+
+<br>&ensp; • Complete mission. The attackers accomplish their goal, which often includes the theft of data or modification of existing data.
+
+<li><a href="#">We consider a computer security incident to be any event that has the following characteristics:   
+<br>&ensp; • Intent to cause harm   
+<br>&ensp; • Was performed by a person   
+<br>&ensp; • Involves a computing resource
+
+<li><a href="#">It may not be clear that an event is an incident until some initial response is performed. Suspicious events should be viewed as potential incidents until proven
+otherwise. Conversely, an incident investigation may uncover evidence that shows an incident was not truly a security incident at all.
+
+<li><a href="#">The primary goal of incident response is to effectively remove a threat from the organization's computing environment, while minimizing damages and restoring
+normal operations as quickly as possible. This goal is accomplished through two main activities:   
+
+<br>&ensp; • Investigate    
+<br>&ensp; • Determine the initial attack vector    
+<br>&ensp; • Determine malware and tools used    
+<br>&ensp; • Determine what systems were affected, and how    
+<br>&ensp; • Determine what the attacker accomplished (damage assessment)   
+<br>&ensp; • Determine if the incident is ongoing    
+<br>&ensp; • Establish the time frame of the incident   
+
+<br>&ensp; • Remediate    
+<br>&ensp; • Develop and implement a remediation plan
+
+<li><a href="#">The investigative team should have the ability to quickly access log repositories, system configurations, and, if an enterprise-wide IR platform is available, authority
+to conduct searches for relevant material.
+
+<li><a href="#">Understand what information systems fall within scope and what reporting requirements are in place. Understand who should be informed of a potential intrusion
+or breach and what are the thresholds for notification defined by governance. Most importantly, identify the internal party responsible for all external communication and ensure that
+your teams are empowered to speak frankly to these decision-makers.
+
+<li><a href="#">The fundamental skills that provide the greatest benefit to this field are the same as in most sciences: observation, communication, classification, measurement,
+inference, and prediction. The individuals possessing these skills typically make the best IR team members.
+
+<li><a href="#">The incident response process consists of all the activities necessary to accomplish the goals of incident response. The overall process and the activities should be
+well documented and understood by your response team, as well as by stakeholders throughout your organization.
+
+<li><a href="#">Initial response is an activity that typically begins the entire IR process. Once the team confirms that an incident is under way and performs the initial collection and
+response steps, the investigation and remediation efforts are usually executed concurrently.
+
+<li><a href="#">During the investigation, this team continually generates lists of what we call "leads are actionable items about stolen data, network indicators, identities of potential
+subjects, or issues that led to the compromise or security incident.
+
+<li><a href="#">The main objectives in this step include assembling the response team, reviewing network-based and other readily available data, determining the type of incident,
+and assessing the potential impact. The goal is to gather enough initial information to allow the team to determine the appropriate response.
+
+<li><a href="#">The data examined during this phase usually involves network, log, and other historical and contextual evidence. This information will provide you the context
+necessary to help decide the appropriate response.
+
+<li><a href="#">Some common tasks you may perform during this step are:
+
+<br>&ensp; • Interview the person(s) who reported the incident. Gather all the relevant details they can provide.
+<br>&ensp; • Interview IT staff who might have insight into the technical details of an incident.
+<br>&ensp; • Interview business unit personnel who might have insight into business events that may provide a context for the incident.
+<br>&ensp; • Review network and security logs to identify data that would support that an incident has occurred.
+<br>&ensp; • Document all information collected from your sources.
+
+<li><a href="#">The goal of an investigation is to determine facts that describe what happened, how it happened, and in some cases, who was responsible. Without knowing facts
+such as how the attacker gained access to your network in the first place, or what the attacker did, you are not in a good position to remediate.
+
+<li><a href="#">An investigation without leads is a fishing expedition. So, the collection of initial leads is a critical step in any investigation. We've noticed a common investigative
+misstep in many organizations: focus only on finding malware. It is unlikely that an attacker's only goal is to install malware. The attacker probably has another objective in mind,
+perhaps to steal e-mail or documents, capture passwords, disrupt the network, or alter data. Focusing only on malware will likely cause you to miss critical findings.
+
+<li><a href="#">In many cases, the failure of prior investigations was due to the fact that the teams did not focus on developing valid leads. Instead, they focused on irrelevant "shiny
+objects” that did not contribute to solving the case.
+
+<li><a href="#">In our experience, there are three common characteristics of good leads:
+
+<br>&ensp; •  Relevant.  The lead pertains to the current incident. This may seem obvious, but is often overlooked. A common trap organizations fall into is categorizing anything
+that seems suspicious as part of the current incident.
+
+<br>&ensp; • Detailed. The lead has specifics regarding a potential course of investigation. You need to pry for more details. Ask about the date and time of the event and IP addresses— think who, what, when, where, why, and how. Without these details,
+you may waste time.
+
+<br>&ensp; • Actionable. The lead contains information that you can use, and your organization possesses the means necessary to follow the lead.
+
+<li><a href="#">Indicator of Compromise (IOC) creation is the process of documenting characteristics and artifacts of an incident in a structured manner. This includes everything
+from both a host and network perspective— things beyond just malware. The goal of IOCs is to help you effectively describe, communicate, and find artifacts related to an incident.
+
+<li><a href="#">Network indicators of compromise are most commonly represented as Snort rules, and there are both free and commercial enterprise-grade products that can use
+them.
+
+<li><a href="#">Using IOCs to document indicators is great, but their real power is in enabling IR teams to find evil in an automated fashion, either through an enterprise IR platform
+or through visual basic (VB) and Windows Management Instrumentation (WMI) scripting.
+
+<li><a href="#">Hits are when an IOC tool finds a match for a given rule or IOC. Prior to taking action on a hit, you should review the matching information to determine if the hit is
+valid. This is normally required because some hits have a low confidence because they are very generic, or because of unexpected false positives.
+
+<li><a href="#">As systems are identified, you should perform an initial triage on the new information. These steps will help to ensure you spend time on relevant tasks, and keep
+the investigation focused:
+
+<br>&ensp; •  Validate.  Examine the initial details of the items that matched and determine if they are reliable. Are the new details consistent with the known time frame of the
+current investigation?
+
+<br>&ensp; •  Categorize.  Assign the identified system to one or more categories that keep the investigation organized. We have found it more helpful to use categories that more
+clearly indicate the type of finding and the attacker's activities, such as "Backdoor Installed,” "Access With Valid Credentials,” "SQL Injection,” "Credential Harvesting,” or "Data Theft.”
+
+<br>&ensp; • Prioritize. Assign a relative priority for further action on the identified system.
+
+<li><a href="#">Once systems are identified and have active indicators of compromise, the next step is to collect additional data for analysis. The primary goals when preserving
+evidence are to use a process that minimizes changes to a system, minimizes interaction time with a system, and creates the appropriate documentation.
+
+<li><a href="#">The typical evidence preservation categories are live response, memory collection, and forensic disk image, as detailed next:
+
+<br>&ensp; •  Live response. A live response is the process of using an automated tool to collect a standard set of data about a running system. The data includes both volatile and
+nonvolatile information that will rapidly provide answers to investigative questions. A live response analysis will usually be able to further confirm a compromise, provide additional detail about what the attacker did on the system, and reveal
+additional leads to investigate.
+
+<br>&ensp; •  Memory collection.  Memory collection is most useful in cases where you suspect the attacker is using a mechanism to hide their activities, such as a rootkit, and you
+cannot obtain a disk image.
+
+<br>&ensp; •  Forensic disk image. Forensic disk images are complete duplications of the hard drives in a system. Because disk images are large and can take a long time to analyze,
+we normally collect them only for situations where we believe a disk image is necessary to provide benefit to the investigation. Forensic disk images are useful in cases where an
+attacker performed many actions over a long time, when there are unanswered questions that other evidence is not helping with, or where we hope to recover additional information
+that we believe will only be available from a disk image.
+
+<li><a href="#">Analyzing data is the process of taking the evidence preserved in the previous step and performing an examination that is focused on answering the investigative
+questions. This step in the incident response lifecycle is where we usually spend most of our time. 
+
+<li><a href="#">There are three major data analysis areas:
+<br>&ensp; •  Malware analysis. During most investigations, we come across files that are suspected malware. We have a dedicated team of malware analysts that examines these
+files. They produce reports that include indicators of compromise and a detailed description of the functionality.
+
+<br>&ensp; •  Live response analysis. Examining the collected live response data is one of the more critical analysis steps during an investigation. During the analysis, you will try to
+find more leads and explain what happened. The results of live response analysis should help you understand the impact of the unauthorized access to the system and will directly
+impact your next steps.
+
+<br>&ensp; • Forensic examination A forensic examination performed on disk images during an incident response is a very focused and time-sensitive task.
+
+<li><a href="#">The timing of remediation is critical. Remediate too soon, and you may fail to account for new or yet-to-be-discovered information. Remediate too late, and
+considerable damage could occur, or the attacker could change tactics. We have found that the best time to begin remediation is when the detection methods that are in place enter
+a steady state. That is, the instrumentation you have configured with the IOCs stop alerting you to new unique events. We recommend starting remediation planning as early in the
+incident response process as possible so that you can avoid overtasking your team and making mistakes.
+
+<li><a href="#">Your investigations must have a mechanism to easily track critical information and share it with the ancillary teams and the organization's leadership. You should also
+have a way to refer to specific incidents, other than "the thing that started last Tuesday.”
+
+<li><a href="#">What is "significant investigative information”? We have found a handful of data points that are critical to any investigation.
+
+<br>&ensp; •  List of evidence collected  This should include the date and time of the collection and the source of the data, whether it be an actual person or a server.
+<br>&ensp; • List of affected systems Track how and when the system was identified.
+<br>&ensp; • List of accessed and stolen data Include file names, content, and the date of suspected exposure.
+<br>&ensp; • List of any files of interest This list usually contains only malicious software,
+<br>&ensp; • List of significant attacker activity, such as logins and malware execution.
+<br>&ensp; • List of network-based IOCs Track relevant IP addresses and domain names.
+<br>&ensp; • List of host-based IOCs Track any characteristic necessary to form a welldefined indicator.
+<br>&ensp; • List of compromised accounts Ensure you track the scope of the account's access, local or domain-wide.
+<br>&ensp; • List of ongoing and requested tasks for your teams
+
+<li><a href="#">The initial steps of pre-incident preparation involve getting the big picture of your corporate risk. What are your critical assets? What is their exposure? What is the
+threat? What regulatory requirements must your organization comply with?
+
+<li><a href="#">Risk identification is critical because it allows you to spend resources in the most efficient manner. Not every resource within your environment should be secured at
+the same level. Assets that introduce the most risk receive the most resources.
+
+<li><a href="#">If you plan to investigate an incident that involves a network spanning more than one country, you will need to do some homework before you begin. You should
+contact the organization's legal counsel within each country to discuss the situation and determine what actions you can, and cannot, take.
+
+<li><a href="#">The most important deliverables for  an IR team are investigative reports. The reports may range from simple  one-page status updates to detailed forensic
+examination reports that are 30 pages long each. Your IR team should explicitly define its primary deliverables, including the appropriate target completion time frames or recurrence
+intervals.
+
+<li><a href="#">Without the proper evidence, basic questions about what happened cannot be answered. Therefore, your organization should configure all systems in a manner that
+facilitates an effective investigation.
+
+<li><a href="#">In our experience, it is common for an attacker to use unrelated systems as their base of operations, creating hundreds of artifacts on numerous noncritical systems.
+An attacker is also likely to use valid credentials to access critical systems in ways that are consistent with normal activity. If those artifacts are not captured and preserved, many
+questions about the incident will remain unanswered.
+
+<li><a href="#">Understand what you have. It's rather difficult to protect systems you don't know exist. Your organization should consider implementing a comprehensive asset
+management system.
+
+<li><a href="#">Improve and augment. After you determine what systems and technology you have to work with, you should ensure they are configured in a way that helps an
+investigation.
+
+<li><a href="#">During the course of an investigation, we find that it is common to come across software, hardware, or operating systems that the organization did not previously
+know about.
+
+<li><a href="#">In general, we recommend that most organizations retain log data for at least a year. In some environments, the volume of events is so high that it is difficult to
+retain those events for much more than a couple of weeks. In those cases, you should examine the log data to determine what subset of information can be preserved for a longer
+period.
+
+<li><a href="#">In terms of applications, some of the most common logs useful to an investigation are web server, proxy, and firewall logs. But many others are important, such as
+database, e-mail, DNS (queries and responses), DHCP lease assignments (so you can track down a system based on IP address only), antivirus, IPS/ IDS, and custom application logs.
+
+<li><a href="#">The solution in your organization may be set to delete malware upon detection. Although that may seem like a good practice, it is also destroying evidence.
+Performing a quarantine to a central location gives you the opportunity to analyze the malware, generate indicators of compromise, and perhaps determine IP addresses it was
+configured to communicate with.
+
+<li><a href="#">The ability to reach out to systems within your environment and ask them questions related to leads you are following is critical to an investigation. When you find
+something unique in an investigation, such as malware, attacker tools, or anything else, your next question should be, "What other systems in my environment have this artifact?” An
+accurate answer to that question will help you properly scope the incident.
+
+<li><a href="#">Ingress filtering and its oft-ignored counterpart, egress filtering, is absolutely essential to impede an intruder's access across the enterprise. Consider what
+resources are actually required, lock the border down, and utilize change control and periodic reviews to ensure consistency over time.
+
+<li><a href="#">Traffic to external resources should pass through proxies that are capable of monitoring and filtering. This serves as an important line of defense for traffic
+permitted by policy.
+
+<li><a href="#">The IR team should have a series of diagrams at their disposal that represents the environment at various levels. Typically the high-level network design, where
+gateways, MPLS connections, VPN tunnels, and border control devices reside, should not change often. These diagrams are usually the most useful during the initial phases of an
+investigation.
+
+<li><a href="#">The IR team needs to have access to network configurations, such as routers, firewalls, and switches. That information can be useful if the IR team suspects
+tampering. With an archive of configuration files and associated change control documentation, any suspicious changes or suspected tampering can be easily validated.
+
+<li><a href="#">The most common sources of logging and monitoring are:
+<br>&ensp; • Firewalls Events should be logged to a location that promotes searching and retention.
+<br>&ensp; •  Intrusion detection systems  Far better suited for examining traffic for indicators of compromise, your IR team should have access to review alerts and submit
+additional indicators.
+<br>&ensp; • Full-content capture systems Periodically you may need to capture an entire session for analysis.
+<br>&ensp; •  Netflow emitters  At common gateways and internal switches, collect netflow statistical data on a per-host or per-port basis. Analysis of the volume and frequency of
+data flows can lead one to compromised systems and give the team a sense for how stolen data may be moving through the environment.
+<br>&ensp; •  Proxy servers  If all outbound traffic is forced through authenticated proxies, an IR team can use the proxy logs to examine the content of communications, detect the
+movement of data, identify communication with known-bad external systems, and trace the source of requests across address translation devices.
+
+<li><a href="#">Configure your DNS systems and DHCP servers to permit extensive logging.  In subnets where workstations receive leases for addresses, ensure that the DHCP
+servers retain (or transfer) assignment logs for a significant amount of time (one year at a minimum).
+
+<li><a href="#">The DNS systems in your environment may be one of most useful tools you can use to track and impede an attacker's attempts to use backdoor malware. A DNS
+blackhole occurs when you redirect an entire subdomain to a nonexistent or managed IP address.
+
+<li><a href="#">A better option would be to redirect those requests to a system dedicated to capturing the malicious traffic. Set up a Unix system with a logging web server and
+packet capture software. The malicious software may attempt to communicate to your false drop site, alerting you to the type of information being targeted.
+
+<li><a href="#">We've seen many investigations that start prior to confirmation of basic facts. They often suffer from a lack of focus and end up wasting time and resources.
+Sometimes people are excited about new information and are caught up in the heat of the moment. As with any real-life scenario, as you receive new information, you should always
+evaluate it with logic, common sense, and your own experience.
+
+<li><a href="#">For example, when your detection system reports an event, do you immediately take action, or do you try to verify the information? Detection systems can
+misrepresent or omit events or event details. No system is completely accurate. You must act as the gatekeeper, standing between events and investigations. To do that, you should
+build an overall picture of the incident and then collect and verify the initial facts. This will allow you to develop context.
+
+<li><a href="#">The first checklist you should complete is used to gather the basic vitals of an incident; it is called the Incident Summary Checklist. The purpose of this checklist is to
+record high-level information about the incident.
+
+<br>&ensp; • Date and time the incident was reported.
+
+<br>&ensp; • The date and time the incident was detected.
+
+<br>&ensp; • Contact information of the person documenting this information.
+
+<br>&ensp; • Contact information of the person who reported the incident.
+
+<br>&ensp; • Contact information of the person who detected the incident.
+
+<br>&ensp; • The nature of the incident. Provide a categorization of what was detected— mass malware, spear phishing attempt, failed logins, unauthorized access, and so on.
+
+<br>&ensp; • The type of affected resources. At times, the detection or notification gives details on the data or resources that may have been affected. Retain all data provided.
+
+<br>&ensp; •  How the incident was detected. Provide a brief summary of what the detection method was, such as an antivirus alert, an IDS alert, or that a user reported suspicious behavior.
+
+<br>&ensp; •  The unique identifier and location of the computers affected by the incident. Be sure to obtain a truly unique identifier— the IP address may not be unique, due to
+DHCP leases. It's typically more useful to get the host name or an asset tag number.
+
+<br>&ensp; •  Who accessed the systems since detection? It's important to record who accessed the system since detection, in case the investigators need details about what they
+did. Sometimes IT staff or others may take actions that they perceive as "helpful” but are difficult to differentiate from malicious activity.
+
+<br>&ensp; • Whether the incident is currently ongoing.
+
+<br>&ensp; • Whether there is a requirement to keep knowledge of the incident on a "need-toknow” basis.
+
+<li><a href="#">We've solved many "incidents” just by thoroughly collecting and examining details about the detection. Looking at the details allowed us to see that something was
+misinterpreted, and that there really was no incident. Taking extra time to validate the detection, in our experience, is time well spent.
+
+<br>&ensp; • Was the detection through an automated or manual process?
+<br>&ensp; •  What information was part of the initial detection? Record the details regarding the information present in the initial detection. Use healthy skepticism and be sure to
+get your eyes on raw data to confirm what you are being told or shown.
+
+<br>&ensp; • What sources provided the data that contributed to the detection? If the source was a person or persons, record their contact information.
+
+<br>&ensp; • Has someone acquired and validated that the source data is accurate? If so, who?
+
+<br>&ensp; • Is the source data involved being preserved? Depending on the system or method used, the data related to the detection may not be automatically preserved.
+
+<br>&ensp; •  How long have the detection sources been in operation and who runs them? Sometimes we find that a detection system was recently brought online, and is generating
+false positives, or perhaps the output is being misinterpreted due to lack of experience.
+
+<br>&ensp; •  What are the detection and error rates? Talk to the folks who run the system and review the alerts. Find out how often this type of detection occurs. Gain an
+understanding of the error rate.
+
+<br>&ensp; •  Has anything related to the data sources changed? In some cases, we find that an administrator recently performed tweaks or upgrades to a system. You should talk
+to the persons responsible for the data source systems and find out if any maintenance has been performed recently.
+
+<li><a href="#">If your detection details seem accurate and consistent, the next step is to move on to collect additional information about specific elements related to the detection.
+You should go one level down and collect details about the individual systems, the networks, and potentially malicious files.
+
+<li><a href="#">For each system involved, consider collecting the following information.
+
+<br>&ensp; • Physical location Include information so that someone outside of your organization would be able to clearly determine where a system is physically located.
+
+<br>&ensp; • The asset tag number This should be a number that your IT staff uses to track resources.
+
+<br>&ensp; • The system's make and model It's important to know the make and model number so that you can appropriately plan for any actions you might take.
+
+<br>&ensp; •  The operating system installed  Documenting the type and version of the operating system is also important for planning purposes. You may not have the required
+tools or expertise in house for a particular operating system.
+
+<br>&ensp; • Primary function of the system Understanding the primary function of a system helps to establish context. Is the system a web server? A database server?
+
+<br>&ensp; • The responsible system administrator or user If you need to preserve evidence, it is likely that you will need the assistance of the system administrator.
+
+<br>&ensp; •  The assigned IP addresses  Note that some servers have multiple interfaces, both physical and virtual. Record the current IP address and include a note that indicates
+if the address is assigned via DHCP or if it is statically configured. A follow-up lead would likely to be the collection of DHCP logs.
+
+<br>&ensp; •  The system's host name and domain  When dealing with Microsoft Windows– based systems, don't forget to include the workgroup or domain name. One of the
+follow-up leads will be to query the logs generated by the domain.
+
+<br>&ensp; • The critical information stored on the system This will be based on the primary function of the system.
+
+<br>&ensp; •  Whether backups exist for the system  Snapshots in time can provide an investigation with valuable information. It's important to know if backups for a system exist,
+what time frames they are available for, how long until they are overwritten, and how to request access to them.
+
+<br>&ensp; • Whether the system is still connected to the network If the system was disconnected, where is it now? How can responders get access to it?
+
+<br>&ensp; •  A list of malware detected, from the time of your investigation back to the beginning of log data  Record the details of the malware detection— date, time, file name,
+directory, and the type and family logged by the AV system.
+
+<br>&ensp; •  A list of any remediation steps that have been taken  Has the user deleted or copied files? Perhaps an administrator made configuration changes or performed
+password resets.
+
+<br>&ensp; • If any data is being preserved, what process is being used and where it is being stored.
+
+<li><a href="#">Network Details Documenting details about the network is just as important, even in cases where network details do not initially seem to be important.
+
+<br>&ensp; • A list of all external malicious IP addresses or domain names involved
+<br>&ensp; •  Whether network monitoring is being conducted. Clarify the filtering rules applied to the capture as well as whether the capture contains sessions' full content or only
+header (connection) information.
+<br>&ensp; • A list of any remediation steps that have been taken
+<br>&ensp; •  Updates to network diagrams and configurations  Obtain any updates to network diagrams and configurations since they were initially collected as part of a pre-
+incident exercise.
+
+<li><a href="#">Malware Details For each malicious file related to the incident you will want to document the following items:
+
+<br>&ensp; • The date and time of detection.
+<br>&ensp; • How the malware was detected.
+<br>&ensp; • The list of systems where the malware was found.
+<br>&ensp; • If the malware is active during the IR and if active network connections are present.
+<br>&ensp; • Whether a copy of the malware is preserved, either manually or through a quarantine process.
+<br>&ensp; • The status of any analysis. Has the malware been analyzed for network and host indicators of compromise?
+<br>&ensp; • Whether the malware was submitted to third parties, either through automated processes or via direct action by an employee.
+
+
+<li><a href="#">When a lot is happening and multiple incidents are going on at the same time, case notes are what will keep you sane. Case notes serve three main purposes: they
+keep you focused, they allow other team members to pick up where you've left off, and they allow for a third party to reproduce what you've done. Don't confuse taking case notes
+with documenting attacker activities— case notes are what you have done, not the attacker.
+
+<li><a href="#">The attack timeline focuses on significant attacker activities. Record details such as when an attacker accessed a system, when files were created, when data was
+transferred, and when tools were executed. It is also important to record the source of the data on the timeline.
+
+
+<li><a href="#">Keep in mind that a lead or an indicator is simply a way to characterize some tangible element relevant to an investigation. It can be a search for something that you
+know exists (an artifact of malware or the contents of a user's browser history) or something that you know is suspicious in aggregate (a sequence of user-related or kernel-related
+events).
+
+<li><a href="#">A good lead has three characteristics: • The lead must be relevant. • The lead must be actionable. • The lead must have sufficient detail.
+
+<li><a href="#">During most computer intrusion investigations, if you find that leads are becoming scarce, it is often due to the investigative methods rather than an actual lack of
+data.
+
+<li><a href="#">We perform the following three operations on leads before allocating time or resources: 
+<br>&ensp; • Clarify the data. 
+<br>&ensp; • Verify the veracity of the lead. 
+<br>&ensp; • Determine the context of the lead.
+
+<li><a href="#">When a potential lead is first derived from or generated by a source— be it a human or automated monitoring system— we attempt to gather additional data that
+will support the lead.
+
+<li><a href="#">This initial effort is limited in scope to information directly related to the potential lead. By examining the data supplied in the potential lead, we can move toward a
+more clear action.
+
+<li><a href="#">The second operation we perform is an attempt to verify the type of lead. Is it complete? To determine the veracity, you need to understand the observables used
+to generate the lead and understand the process used by the generator.
+
+<li><a href="#">Finally, we determine the context of the lead. Is the system or human reporting information that has been misinterpreted as an effect of an otherwise expected
+issue? This happens far more often from human sources, but automated ones can provide equally misleading data if not configured correctly. These steps serve as a framework for teams that must determine whether leads are worth the time to pursue.
+
+<li><a href="#">Most of the leads that IR teams generate consist of detectable characteristics of malicious actions. They can be represented in two types of indicators. The first type, property-based indicators, describes a set of known observable characteristics
+of malicious software or actions— a registry key, or an MD5 hash, for example.
+
+<li><a href="#">Some leads are less specific, where a combination of characteristics can define a malicious or suspicious act— unexpected executable files in the / Windows/ Help
+directory, for example. We call these methodology-based or anomaly-based indicators.
+
+<li><a href="#">Leads can result in host-based indicators, network-based indicators, or a combination of both. Imagine the ability to take all of the intelligence you learn from
+reverseengineering a remote access trojan and rapidly tasking your network and server teams with performing searches for existing data and monitoring for future events. 
+
+<li><a href="#">The lifecycle of indicator development starts with some amount of initial information, as one would expect. Any potential data source can feed this process. The
+most useful results come from high-fidelity sources such as a forensic examination or a quality malware analysis report. At times, the initial information consists solely of simple
+characteristics of a suspected attack.
+
+<li><a href="#">Indicator development is an iterative process where the target is to generate robust, sustainable signatures that can generate reliable information. Once an indicator
+has been generated, it needs to be verified before it is put into circulation or use.
+
+<li><a href="#">Information learned from the verification is fed back into the indicator for refinement. The cycle continues until the indicator is sufficiently formed, such that the
+investigators can use the indicator reliably. This process ensures that the indicator yields the expected results. At this point, it can be considered for deployment or dissemination,
+which is the Publish (Indicator) stage.
+
+<li><a href="#">We create indicators by assembling a set of observables that describes a condition we know to be suspicious... A good host-based indicator is composed of a
+number of observables that are specific to a particular activity, yet general enough to apply to a derivative of the activity.
+
+<li><a href="#">Many times we need to create IOCs that describe what an attacker does— because there is no associated malware. We can build an IOC that can be used to detect
+a typical sequence of actions that one may observe from an attacker. These IOCs are known as methodology-based indicators and may incorporate property-based indicators with
+information on artifacts left behind by an active attacker.
+
+<li><a href="#">The purpose of a network-based indicator is similar to a host-based indicator: you are attempting to make a rapid determination of whether a particular session is
+relevant to your investigation.
+
+<li><a href="#">Most indicators are simple: "if a given set of bytes is present in the first n bytes of a session, raise an alert,” for example. These indicators may have a limited
+lifespan due to changes an attacker can make in their tools or procedures.
+
+<li><a href="#">One must be cognizant of the specificity of the indicators and the volume of data the results generate. Whether you use an enterprise-grade IR system, deploy
+System Center Configuration Manager, or deploy shell scripts, you need to run your indicators against a representative sample of systems in your environment before turning them
+loose on a large population.
+
+<li><a href="#">The efficacy of an indicator can vary widely due to the properties it identifies. The  difference between indicators composed  of very specific properties  and indicators composed of  multiple indistinct or loosely  attributable properties.
+Additionally, you will want to ensure that the properties in a new indicator do not identify the malware or activity solely at a specific point in its lifecycle.
+
+<li><a href="#">In summary, ensuring that the process identifies data that is relevant to the indicator, you should verify that what you are looking for and how it changes over time
+are captured properly in the indicator itself.
+
+<li><a href="#">To verify that your indicator is appropriate for your environment, select a sample of clean workstations and servers that you will use as a test bench for new
+indicators. Run the indicator on the sample set and ensure that the parameters do not match against the unaffected systems. If they do, modify the indicator or review the initial data
+to determine a better approach. After you are satisfied that the indicator will not lead to many false-positive hits, slowly integrate it into your investigation. It usually takes time before
+we consider an indicator to be completely validated in a new environment.
+
+<li><a href="#">As an IR team, you may need to perform interviews and gather witness accounts of incidents. Keep the following pointers in mind:
+<br>&ensp; • Thoroughly document any statement.
+<br>&ensp; • Allow the interviewee to tell a story.
+<br>&ensp; • Avoid leading questions and those that lead to yes/ no answers.
+<br>&ensp; • Collect the facts before allowing the interviewee to opine.
+<br>&ensp; • Know when to get others involved.
+
+<li><a href="#">You have to determine what sources of preliminary evidence may be able to help and then decide which sources you will actually use. Finally, you will collect and
+review the evidence. Ideally, you should identify sources of evidence that come from several categories and require low effort to analyze.
+
+<li><a href="#">You will come to conclusions that are more reliable if you use multiple independent evidence sources. Evidence sources from a single category often lead to
+inconclusive results because there are too many alternate theories that you cannot rule out.
+
+<li><a href="#">The absence of evidence is not the evidence of absence. The initial system on which you detect malicious activity may be the only system affected … or it may be one
+of hundreds.
+
+<li><a href="#">We have found that investigations tend to fail when they focus too much on "who is doing this” before they answer "what is happening.” Therefore, without other
+specific evidence that suggests an insider threat, we recommend that you simply follow the evidence and keep an open mind.
+
+<li><a href="#">Making a conscious decision to focus all of your resources on a single category of evidence is poor investigative form, regardless of how confident you are in that
+source.
+
+<li><a href="#">Discovering the scope of an incident is a critical part of quickly solving the case. Understanding the scope allows you to make better decisions about where to use
+resources— including people and technology— on a case.
+
+<li><a href="#">The main purpose of live data collection is to preserve volatile evidence that will further the investigation. We do this so that we can begin answering investigative
+questions without performing a more lengthy drive duplication.
+
+<li><a href="#">Live data collection is not without risk, however. An important consideration is to minimize changes to the system made due to the collection process. In some cases,
+performing a live data collection may cause a system to crash.
+
+<li><a href="#">You have five important factors to consider when deciding if a live response is appropriate in your current situation:
+<br>&ensp; • Is there reason to believe volatile data contains information critical to the investigation that is not present elsewhere?
+<br>&ensp; • Can the live response be run in an ideal manner, minimizing changes to the target system?
+<br>&ensp; • Is the number of affected systems large, making it infeasible to perform forensic duplications on all of them?
+<br>&ensp; • Is there risk that forensic duplications will take an excessive amount of time, or potentially fail?
+<br>&ensp; • Are there legal or other considerations that make it wise to preserve as much data as possible?
+
+<li><a href="#">Be sure to evaluate the following questions to determine if the risk of performing the live response is too great:
+<br>&ensp; • Have you tested the live response process on a similar system?
+<br>&ensp; • Is the system particularly sensitive to performance issues?
+<br>&ensp; • If the system crashes, what would the impact be?
+<br>&ensp; • Have you communicated with all stakeholders and received their approval?
+
+<li><a href="#">We recommend that you consider the following factors when evaluating live response solutions:
+
+<br>&ensp; • Is the tool generally accepted in the forensic community?
+<br>&ensp; • Does the solution address the common operating systems in your environment?
+<br>&ensp; • Does the solution collect data that is important to have, based on your environment?
+<br>&ensp; • How long does a collection take?
+<br>&ensp; • Is the collection configurable?
+<br>&ensp; • Is the output easily reviewed and understood?
+
+<li><a href="#">We collect information from two general categories. The first category is data that describes the current running state of the system, such as network connections
+and running processes. This data, typically the contents of system memory, provides information that helps to answer questions about what is happening now.
+
+<li><a href="#">The second category is information that is less volatile and provides a snapshot of important information that can answer questions about what happened in the
+past— for example, a file listing, system logs, or other operating system or application specific data.
+
+<li><a href="#">At a minimum, the live response tool you choose should be capable of collecting the following common live response data from a system:
+
+<br>&ensp; • The system time and date, including the time zone
+<br>&ensp; • Operating system version
+<br>&ensp; • Memory capacity, hard drives, and mounted file systems
+<br>&ensp; • List of services and programs configured to automatically start on boot-up,
+<br>&ensp; • List of tasks scheduled to automatically run at given times or intervals
+<br>&ensp; • List of local user accounts and group membership
+<br>&ensp; • Network interface details, including IP and MAC addresses
+<br>&ensp; • Routing table, ARP table, and DNS cache
+<br>&ensp; • Currently loaded drivers or modules
+<br>&ensp; • Files and other open handles
+<br>&ensp; • Running processes, including parent process ID (PID)
+<br>&ensp; • System configuration data
+<br>&ensp; • User login history, including user name, source, and duration
+<br>&ensp; • Standard system log data
+<br>&ensp; • List of installed software
+<br>&ensp; • Application log data
+
+<li><a href="#">You also need to remember that the suspect system may be infected with malware. Any media you connect may be subsequently infected, and any credentials you
+use may be compromised. we've come up with a number of considerations that will help you establish a good process:
+
+<br>&ensp; • Document exactly what you do and when you do it.
+
+<br>&ensp; •  Use tools that minimize the impact on the target system. Avoid GUI-based collection tools; instead, use tools that have a minimal memory profile and that do not make
+unnecessary or excessive changes to the target system.
+
+<br>&ensp; • Fully automate the collection process, perhaps eliminating the requirement for a human to interact with the suspect computer.
+
+<br>&ensp; • Do your best to collect data in order of volatility.
+
+<br>&ensp; •  Do not use the suspect computer to perform analysis. This causes unnecessary changes to the system, potentially destroying evidence and making it harder to discern
+attacker activity from responder activity.
+
+<li><a href="#">Mandiant's Redline is a GUI tool that can both collect and analyze live response data. To collect data, Redline creates what is called a "collector”— a set of
+command-line batch scripts and binaries that you can place on removable media and run on each system of interest. The analysis is then performed in the GUI interface back on your
+system.
+
+<li><a href="#">Common Windows Commands:
+
+<br>&ensp; • date and time	(System Date and Time)
+<br>&ensp; • syteminfo		(OS Version, General System)
+<br>&ensp; • net user		(User Accounts)
+<br>&ensp; • net group		(Groups)
+<br>&ensp; • ipconfig /all		(Network Interfaces)
+<br>&ensp; • route print		(Routing Table)
+<br>&ensp; • arp -a		(ARP Table)
+<br>&ensp; • ipconfig /displaydns	(DNS Cache)
+<br>&ensp; • netstat -abn		(Network Connections)
+
+
+<li><a href="#">If a monitoring infrastructure is in place, a team can rapidly turn intelligence gathered from logs and malware into signatures that can help you to do the following:
+<br>&ensp; • Confirm or dispel suspicions surrounding an alleged computer security incident 
+<br>&ensp; • Accumulate additional evidence and indicators 
+<br>&ensp; • Verify the scope of a compromise 
+<br>&ensp; • Identify additional parties involved 
+<br>&ensp; • Generate a timeline of events occurring on the network
+
+<li><a href="#">When you begin to monitor your network during an IR, you can choose to collect four levels of detail. The first most closely resembles the level of detail you may be
+accustomed to through normal security monitoring: event-based alerts. Snort and Suricata are the primary applications used in this fashion.
+
+<li><a href="#">The next two levels of detail collect packet and session information that fits a given criteria, and an investigator is needed to post-process the data to extract
+information useful for the investigation. These options are known as header and full packet logging. Finally, highlevel statistics can be generated that show the nature and volume of
+the data moving through your networks.
+
+<li><a href="#">Header capture and full packet logging, when used sparingly, can help you identify the scope of data theft, capture the activities of attackers who use interactive
+shells, and more closely monitor communications between malware and remote sites.
+
+<li><a href="#">Finally, if you have very little information about an event, suspicious traffic patterns and transfer volumes can reveal interesting information on activities that are not
+otherwise detectable.
+
+<li><a href="#">Event-based alerting: This type of network monitoring is based on rules or thresholds employed on the platform. In their simplest form, events indicate the sensor
+observed something of interest.
+
+<li><a href="#">Event-based monitoring relies on indicators (or signatures) that are matched against the traffic observed by the network sensor. Indicators can be simple, such as a
+combination of a specific IP address and TCP port (for example, alert when any computer on the network attempts to connect to the secure shell daemon on the web server).
+
+<li><a href="#">Complex indicators involve session reconstruction or string matching that requires the analysis engine to maintain connection states. Stack too many of these
+indicators on a sensor and you may find that it cannot keep up with the incoming data rate.
+
+<li><a href="#">Statistical monitoring focuses on the high-level view of what connections, or flows, traverse the network. Modeling of traffic flows can be most useful during the
+stages of the investigation where there may not be complete visibility on the endpoints.
+
+<li><a href="#">Most organizations will generate data suitable for analysis from NetFlow probes. NetFlow data can originate from Cisco network devices, or anything else capable
+of running a capable agent. This type of data stream contains a count of the number of bytes and packets for each "flow,” or session, observed by a device.
+
+<li><a href="#">Generally, when we turn to NetFlow analysis, we are either answering a very specific question ("During the suspected time frame of the attack, has a significant
+amount of data left the environment?”) or looking for communications that are characteristic of beaconing or other malicious communications.
+
+<li><a href="#">When faced with the need to quickly deploy a monitoring technology, nothing beats a hardware network tap (or a robust SPAN port) coupled with a Snort sensor
+with tcpdump.
+
+<li><a href="#">The placement of the network sensor (or in some cases, a tap that supports several monitoring devices) is possibly the most important factor in setting up a
+monitoring system. Understanding the network environment is essential.
+
+<br>&ensp; • Where are the network egress points? 
+<br>&ensp; • Does the network use specific routes to control internal traffic? External traffic? 
+<br>&ensp; •  Are "choke points” available at suborganization or administrative boundaries? 
+<br>&ensp; • How is endpoint traffic encapsulated when it arrives at firewalls or "choke points”? Is
+VLAN trunking in use, for example? 
+<br>&ensp; • Where are network address translation devices in use? Web proxies?
+
+<li><a href="#">During an investigation, the network data analysis we perform is generally limited in scope— meaning, without good reason, we do not attempt to "find new evil in a
+network data haystack.” Whenever we analyze data, we focus on following leads and answering the investigative questions.
+
+<li><a href="#">During an incident, we most commonly obtain network capture data in the form of packet capture (or "pcap”) files exported from a dedicated monitoring solution. A
+packet capture or "pcap” file is the de facto standard file format for network capture data.
+
+<li><a href="#">Sometimes It's useful to know if an attacker performed tasks manually or used some automation. In the case of automation, there may be additional evidence on the
+system, such as scripts or programs that were used to automate the process. If the network session suggests the tasks were automated, it may be prudent to put extra effort into
+examining the system to find out how the automation was accomplished. That evidence may provide solid leads, such as file naming conventions for both the scripts and the data
+stolen.
+
+<li><a href="#">Typographical errors as well as incorrect command use and then subsequent successful retries are a strong indicator that a human was performing the tasks
+manually. Timing is another good indicator— automated processes have minimal delay between commands. Because automation can be made to look similar to manual interaction, this does not prove that the tasks were performed manually, but It's a good indicator.
+
+<li><a href="#">Do not overlook all the potential sources of evidence when responding to an incident! Most network traffic leaves an audit trail somewhere along the path it traveled.
+
+<br>&ensp; • Routers, firewalls, servers, IDS sensors, and other network devices may maintain logs that record network-based events.
+
+<br>&ensp; • DHCP servers log network access when a system requests an address.
+
+<br>&ensp; • Firewalls allow administrators an extensive amount of granularity when creating audit logs.
+
+<br>&ensp; • IDS sensors may catch a portion of an attack due to a signature recognition or anomaly detection filter.
+
+<br>&ensp; • Host-based sensors may detect the alteration of a system library or the addition of a file in a sensitive location.
+
+<br>&ensp; • System log files from the primary domain controller several zones away may show a failed authentication during a logon attempt.
+
+<li><a href="#">Network-based logging  offers some advantages over  standard system-based logging. Anyone who  has access to a  system, whether remotely or  locally at the
+console, may alter any file or a function that the system performs. Therefore, there is a compelling argument that properly handled network-based logs may be more reliable and
+valid than host-based system logs from a victim machine.
+
+<li><a href="#">The challenge for investigators is in locating all these logs and correlating them. It is time consuming and resource intensive to obtain geographically dispersed logs
+from many different systems, maintain a chain of custody for each of them, and reconstruct a network-based event.
+
+<li><a href="#">It is essential that your IR team become familiar with the tools and the typical traffic they may observe on your networks so that when the time comes, the
+identification of suspicious activity is easier.
+
+<li><a href="#">Most enterprises use DHCP to assign IP addresses to devices connected to the network. DHCP can also configure other network settings, such as DNS servers,
+default domain names, Network Time Protocol (NTP) servers, and IP routes. The DHCP protocol communicates over UDP ports 67 and 68.
+
+<li><a href="#">The system that is currently assigned a suspect IP address may not be the same system that was assigned that IP address when the suspicious activity occurred. If you are investigating a system that was issued a DHCP IP address, you
+should examine your DHCP logs to determine the mapping of the IP address to a system at the point in time you are interested in.
+
+<li><a href="#">There are two searches we normally run against DHCP logs: •  Search a date for an IP address This tells you what system was assigned the IP address on that date. • Search all dates for a MAC address This tells you all IP addresses and the associated dates that a system was assigned over time.
+
+<li><a href="#">A major issue with Microsoft's DHCP logging is that one week's worth of logging is the maximum duration that is retained by default. That means logs for a given
+day are overwritten the next week— which is terrible for an incident responder. However, because most incidents go undetected for longer than a week, you must coordinate with the
+IT staff to make sure the DHCP logs are recorded and preserved.
+
+<li><a href="#">DNS provides a wide variety of information, but the most common function is to look up, or resolve, host names. Your computer will automatically query the
+configured DNS server to resolve the host name. Then your computer can initiate a TCP/ IP connection with that address and begin communications. DNS client resolution commonly
+uses UDP port 53.
+
+<li><a href="#">A DNS server can collect logs that may show the following:
+<br>&ensp; • The host name that resolution was requested for (query),
+<br>&ensp; • The IP address of the client that requested resolution
+<br>&ensp; • The result of the resolution (answer).
+
+<li><a href="#">If you have a good historical archive of DNS resolution, you will be able to more confidently answer questions about the full timeline of an incident.
+
+<li><a href="#">Many enterprises have third-party software management or inventory tools that allow administrators to control and audit applications installed on systems in their
+environments. These tools, many of which are not designed specifically for security monitoring, can often provide you with information about software that ran on a system.
+
+<li><a href="#">It is rare to investigate a system that does not have some type of antivirus solution installed. These applications can be a vital source of evidence, as they often have
+verbose logging and record evidence of malicious activity on the system.
+
+<li><a href="#">Antivirus logs are a valuable source of evidence, but they are an incomplete picture at best. We're mentioning this because we still see too many organizations base
+conclusions on what they find— or don't find— in an antivirus log.
+
+<li><a href="#">Incident responders in a corporate environment should work with the antivirus software administrators to ensure that policies are set to quarantine first before
+deleting a file. Many antivirus applications delete any file detected as a risk by default. Although this may mitigate risk on an individual system, this setting works against the incident
+response team, because it essentially destroys evidence.
+
+<li><a href="#">Attackers frequently create archives or other files that antivirus cannot open due to password protection or other parsing issues. Many times, the antivirus product
+will log an error that includes the file name and path. This can be a valuable source of evidence, because It's likely the attacker has since deleted such files.
+
+<li><a href="#">Web servers are used to deliver most of the Internet's contact, and accordingly, we often encounter web servers during investigations. Effectively using the evidence
+from a web server requires an understanding of basic web protocols, relevant configuration files, and associated log files.
+
+<li><a href="#">Web servers receive and respond to requests from clients, such as web browsers, using the Hypertext Transfer Protocol (HTTP). The two protocol commands (called
+methods) that are the most used are GET and POST. GET requests are commonly used to retrieve content from a web server, whereas POST requests are commonly used to upload
+data. 
+
+<li><a href="#">Web servers can be configured to listen on any TCP port, but by convention, HTTP clients connect to servers on TCP port 80 when the traffic is unencrypted and to
+TCP port 443 if they are using the Secure Socket Layer (SSL).
+
+<li><a href="#">There are two major sources of evidence from web servers: log files and the web server content.The log files for Apache and IIS are in plain text, though each has its
+own format. By default, most web servers will log a summary of each request— including the IP address of the client, the URL requested, the HTTP method, and the server result
+(success, error, and so on).
+
+<li><a href="#">The most common searches we perform against web server log files are:
+• Requests during a specified time frame 
+• Requests to or from certain IP addresses 
+• Requests for specific URLs 
+• Requests containing a given User-Agent string
+
+<li><a href="#">Sometimes we perform statistical or other types of analysis in an attempt to identify anomalous activity. In an enterprise environment, we sometimes find that load-
+balancing mechanisms "mask” certain details from a web server. 
+
+<li><a href="#">Because load balancers act as a proxy for the client, the web servers only communicate directly with the load balancers. This causes the web servers to record the IP
+address of the load balancer instead of the actual client that made the request, which may prevent you from tracing back malicious activity. In some cases, you can address this
+problem by examining the load balancer logs.
+
+<li><a href="#">The second major source of evidence is the web content— the files on the web server that make up the website. During an incident that involves a web server, It's
+common for an attacker to exploit or modify existing web pages, or even upload some of their own, such as webshells or other tools.
+
+<li><a href="#">During our investigations, we've found several common sources of evidence from a database:
+<br>&ensp; • Client connection logs Most databases log when a client attempts a connection, including details such as the date, time, and the source IP address.
+
+<br>&ensp; • Error logs are also common, and typically include occurrences of malformed queries, database crashes, security violations, and other critical errors.
+
+<br>&ensp; •  Query logs  The basic service a database provides is the ability to perform queries against a set of data. Those queries can extract, modify, or add information. Most
+databases have the ability to log those queries; however, due to the performance overhead, query logging is not typically enabled. You can examine query logs to find the queries an
+attacker executed, which will help you to determine what the attacker was trying to accomplish.
+
+<br>&ensp; •  Database storage  Most database systems store data in a number of files. During an investigation, you may want to preserve the database by making a copy of the
+database files.
+
+<li><a href="#">Microsoft SQL, or MSSQL, is a popular commercial database solution. MSSQL does not maintain a historical log of client connections by default; only failed
+connections are logged to a file by default.
+
+<li><a href="#">MySQL is a very popular open source database that runs on Linux, Unix, and Windows. The MySQL configuration file, typically named my. cnf or my. conf, will
+indicate what logging is enabled, where the log files are, and the location of database storage.
+
+<li><a href="#">Oracle databases use the Transparent Network Substrate (TNS) listener to handle connections. By default, the tns listener maintains a log file that records details
+about each client connection. Oracle auditing is required to log the details of connections and queries. As with other database systems, we rarely find auditing enabled due to the
+performance impact.
+
+<li><a href="#">Effectively tracking an attacker requires visibility throughout your enterprise services generate logs that are a critical part of visibility. Therefore, we encourage you
+to discover all of the services in your enterprise— security or otherwise. Determine whether they can provide you with useful information. If they can, centralize collection and develop
+efficient search and analysis methods.
+
+<li><a href="#">When we consider performing analysis on new data, we follow a general process that is similar to the scientific method: 1. Define and understand objectives. 2.
+Obtain relevant data. 3. Inspect the data content. 4. Perform any necessary conversion or normalization. 5. Select a method. 6. Perform the analysis. 7. Evaluate the results.
+
+<li><a href="#">You might be asked if you can "prove” that a system was not compromised. It nearly all cases, it will be difficult, if not impossible. The reason is, It's very unlikely you
+would have access to all the information you would need. Most systems do not have full audit trails of every action that was taken.
+
+<li><a href="#">Instead, you can look for a set of indicators of compromise, and state if you find any. Provided the indicators are reasonable, you can state an opinion that the
+system was likely not compromised— but you don't know for sure. Your supporting factual evidence is that you performed an appropriate analysis and uncovered no evidence.
+
+<li><a href="#">If you intend to perform an analysis to the best of your ability, you must clearly understand what the scope of the analysis is. It is your job to understand what is
+really important, and stay focused. You should look at further defining the scope into something that is clearly actionable. Keep asking questions until you and the stakeholders come
+to a consensus about the scope and purpose of the analysis.
+
+<li><a href="#">Computing systems can store data in many formats and locations. Before you can perform analysis, or even select an analysis approach, you will need to explore
+possible data sources and understand how you can use them. Knowing what sources of data exist and what they can provide will help you to determine what data to collect.
+
+<li><a href="#">Where Is Data Stored?
+
+<br>&ensp; • User desktops and laptops are physical computers that are used for day-to-day business.
+
+<br>&ensp; • Server systems typically provide core business or infrastructure services. They are usually found in data centers, server rooms, or communication closets.
+
+<br>&ensp; • Mobile devices are typically small, handheld, networked computers.
+
+<br>&ensp; • USB flash drives, USB hard drives, CDs, and DVDs are common storage media in almost any environment.
+
+<br>&ensp; •  Network devices  Most network environments today contain devices such as firewalls, switches, and routers. Although these devices do not typically store user data,
+they may contain configuration and logging data that can be critical in an investigation.
+
+<br>&ensp; •  Cloud services  In this context, a cloud service is an off-site third-party service that provides hosted applications or data storage for an organization. Common
+business services are hosted e-mail, timesheets, payroll, and human resources.
+
+<br>&ensp; • Backups are copies of important data, typically part of a disaster recovery plan.
+
+<li><a href="#">From a general analysis standpoint, four high-level categories of evidence might exist in the locations we just outlined.
+
+<br>&ensp; •  Operating system  This category includes file systems such as NTFS and HFS+, state information such as running processes and open network ports (memory),
+operating system logs. OS-specific sources include the Windows registry, a Unix syslog, and Apple OS X property list (plist) files.
+
+<br>&ensp; •  Application The application category includes all artifacts that are specific to an application (for example, Internet browser cache, database files, web server logs, chat
+program user preferences and logs, e-mail client data files, and so on).
+
+<br>&ensp; • User data If the subject of your investigation involves a specific user, or group of users, it will be important to understand where user data is stored. Each user is likely
+to have user data on their day-to-day system; however, there may be user data on other systems throughout the environment.
+
+<br>&ensp; •  Network services and instrumentation. Sometimes they may be forgotten, but even common services such as DHCP, DNS, and proxy servers may be key sources of
+data for an investigation. In addition, common instrumentation such as network flow data, IDS/ IPS systems, and firewalls are frequently important to an investigation.
+
+<li><a href="#">Once you've obtained data to analyze, one of the first challenges you may encounter is figuring out how to access it. In this context, "access” means "in a state that
+you can perform analysis.” The data may be encrypted, compressed, encoded, in a custom format.
+
+<li><a href="#">We commonly encounter three disk image formats: Expert Witness/ EnCase (E01), Raw (DD), and virtual machine disk files (VMDK, OVF). If you have a commercial
+forensic tool, such as EnCase from Guidance Software, support is normally built in for all these formats. That means you don't have to perform a conversion to get access to the data.
+
+<li><a href="#">The analysis approaches discussed in this chapter are rendered useless if you forget about one simple fact: there are limitless ways to represent a single piece of
+data. When you consider character encodings, compression, encryption, data encoding, time zones, languages, and other locale-related formatting, your job of finding evil and
+solving crime can become exponentially difficult.
+
+<li><a href="#">In order to effectively find what you are looking for, you must understand where layers can exist, what they look like, and how to deal with them. When thinking
+about what your data might look like, don't forget about localization. Different areas of the world use different conventions for representing dates, times, numbers, characters, and
+other information.
+
+<li><a href="#">To search for network anomalies, you could start by looking at network flow data for egress points to see if there are any anomalies. Perhaps there was a day within
+the last month where the volume of data transferred (outbound) to the Internet was abnormally high. Or perhaps there was an unusual level of traffic over certain protocols or ports.
+You could investigate why, and see where that leads you could also examine proxy logs, DNS logs, firewall logs, or other network instrumentation for anomalies and investigate
+anything that seems suspicious.
+
+<li><a href="#">Knowledge of the attacker's methods will help greatly, but there are also some generic artifacts to look for. Here are some examples:    • Abnormal user activity
+• Login activity outside of expected hours    • Odd connection durations    • Unexpected connection sources (remote session from a workstation to a server, for example)    •
+Periods of abnormally high CPU or disk utilization (common when compressing data)   • File artifacts associated with the use of common compression tools    • Recently installed or
+modified services, or the presence of other persistence mechanisms
+
+<li><a href="#">You cannot prove there is no malware on a system; therefore,
+<li><a href="#">you will have to create a list of steps to take that provide a reasonable level of confidence that the system does not contain malware. A sample listing of steps for
+this situation might be:   • Follow the initial leads. For example, if a date is relevant, review system activity for that day. If you know that specific file names are involved, search for
+them.   • Review programs that automatically start.   • Verify the integrity of system binaries.   • Make a list of and look for other well-known artifacts of an infection.   • Perform
+a virus scan of the system.
+
+<li><a href="#">Remember that a file doesn't have to be malicious to be used with ill intent. Keep in mind that legitimate tools and system programs may be cause for suspicion in
+some situations. For example, finding a copy of cmd. exe in a directory other than Windows/ System32 should get your attention.
+
+<li><a href="#">Several analysis methods are commonly used across many different types of operating systems, disk images, log files, and other data. Some are useful when you
+know what you are looking for, and others are useful when you don't: • Use of external resources   • Manual inspection   • Use of specialized tools • Data minimization through sorting and filtering • Statistical analysis • Keyword searching • File and record carving
+
+<li><a href="#">Using external resources... In this case we're referring to resources such as known file databases, search engines, knowledge repositories, online forums, automated
+tools, co-workers, and colleagues.
+
+<li><a href="#">Another approach you may consider is manual inspection of data. Sometimes the size of the data you need to review is small. In those cases, it may make sense to
+manually review the entire contents of the data.
+
+<li><a href="#">Specialized tools perform tasks such as data visualization, browser artifact analysis, malware identification, and file system metadata reporting. It's important to have
+a comprehensive collection of tools on your tool belt so you can effectively handle different situations. However, remember that an important aspect of using tools is to perform
+some validation, or testing, to help ensure they actually do what they say they do.
+
+<li><a href="#">In most incidents, only a small subset of the metadata is actually relevant to the investigation, and if the metadata is voluminous, sifting through it to find what's
+important can be difficult. In cases like this, It's useful to be able to sort and filter so you can focus on specific dates, directories, file names, or other attributes.
+
+<li><a href="#">It's best to sort and filter when you have general leads, or know certain properties of the data that are effective in helping you find what you are after.
+
+<li><a href="#">Statistical analysis is typically used in cases where you don't know exactly what you are looking for or how to look for it. A statistical analysis will normally help to
+uncover patterns or anomalies that would be difficult or impossible for a human to discover.
+
+<li><a href="#">When reviewing the results of an analysis, be careful not to let it consume you. Many "anomalies” are either false positives, infrequent but legitimate events, or
+perhaps are really malicious but are not the bad guys you are after.
+
+<li><a href="#">The "string” or "keyword” search is a basic analysis method that forensic examiners have used since the beginning of computer forensics. The idea is that you create
+a list of keywords (strings) that are used to search evidence (files) with the goal of uncovering data that will help you answer investigative questions.
+
+<li><a href="#">Being able to keyword search unallocated and slack space opened up new sources of evidence. Unallocated space includes deleted files, which is frequently a very
+important source of evidence. File slack is the data present between the logical end of a file and the end of the allocation unit.
+
+<li><a href="#">File carving. This technique combines aspects of several other methods. The idea is to search for a unique sequence of bytes that corresponds with the header, or
+the first few bytes, of a file. Most common file formats have a standardized header that marks the beginning of a file, and sometimes a footer that marks the end of the file.
+
+<li><a href="#">Most commercial forensic tools can perform this type of analysis. There are also open source tools, such as Foremost. In the case where a file is partially
+overwritten, is fragmented, or you are analyzing a memory image or swap space, searching for records instead of entire files is more likely to return useful information.
+
+<li><a href="#">An important part of the analysis process is to evaluate your results and adjust your methods as needed. There are two parts to this: • You should evaluate results
+periodically throughout the analysis process. • Once the process is complete, you should evaluate how well the result answers the investigative questions.
+
+<li><a href="#">Watching for conditions like this, sometimes called "sanity checking,” is a key part of your job as an analyst. The root cause might be a simple mistake in setting up
+the parameters of the process— a typo, perhaps. Sometimes, the problem is with the approach. It's best to find out about either of these as soon as possible in the process, so you
+can fix the issue.
+
+<li><a href="#">Once you begin your review, be sure to have the relevant investigative questions fresh in your mind. Examine the results in that context and build evidence to
+support a position.
+
+<li><a href="#">As with any file system, NTFS defines how disk space is allocated and utilized, how files are created and deleted, and how the metadata associated with these files is
+stored and updated.
+
+<li><a href="#">The Master File Table (MFT) is the primary source of metadata in NTFS. It contains or indirectly references everything about a file: its timestamps, size in bytes,
+attributes (such as permissions), parent directory, and contents.
+
+<li><a href="#">Each NTFS volume will contain its own MFT, stored within the volume root as a file named $MFT. If you're analyzing a system with multiple partitions or drives,
+ensure you acquire the MFT from each volume.
+
+<li><a href="#">The MFT is structured as a series of 1,024-byte records, also known as "entries,” one for each file and directory on a volume. Each MFT entry contains a number of
+"attributes” that contain metadata about a file— everything from timestamps to the physical location of the file's contents on disk. The three most important attributes we'll detail in
+this section are $STANDARD_ INFORMATION, $FILENAME, and $DATA.
+
+<li><a href="#">When you delete a file or directory, NTFS sets the flag in the corresponding MFT entry to "Inactive”— meaning that the MFT entry is now available for reuse. But
+note that nothing else about the file, or the MFT entry, changes. Its actual contents still remain on disk, and are still "pointed to” by the inactive MFT entry. As long as those clusters
+are not overwritten with other data, they can still be recovered.
+
+<li><a href="#">File timestamps are among the most important metadata stored in the MFT. You'll often hear forensic analysts refer to a file's "MACE” times— that's short for the
+four types of NTFS timestamps: Modified, Accessed, Created, Entry Modified (MACE).
+
+<li><a href="#">NTFS is a recoverable and journaled file system, so it maintains several logs designed to track changes to directories and files. For a forensic investigator, they can
+also serve as a useful source of evidence for file system activity— particularly in cases where an attacker has attempted to delete files and disguise their activity.
+
+<li><a href="#">The NTFS log file, named $LogFile, tracks all transactions that change the structure of a volume. That includes file or directory creation/ copy/ deletes, changes to file
+metadata, and changes to INDX records. Like the MFT and other NTFS artifacts, You'll need to use a forensic utility that provides raw disk access to copy the $LogFile from a running
+system.
+
+<li><a href="#">The Update Sequence Number (USN) journal, named $UsnJrnl, provides a higherlevel summary of changes to a volume. A given entry includes the type of change
+event that occurred, its corresponding timestamp, the file name, its attributes, and the MFT entry identifiers for the file and its parent directory. You may not find the USN journal on
+every volume because It's not strictly required by NTFS.
+
+<li><a href="#">The Volume Shadow Copy (VSC) service provides a mechanism for maintaining pointin-time copies, also known as "snapshots” or "restore points,” of files on an
+entire volume. Examining shadow copies can be a useful way to recover files, registry keys, and other data that an attacker may have deleted or tampered with on a compromised
+system.
+
+<li><a href="#">Service pack installation, Windows updates, and driver installation can automatically trigger the creation of a snapshot, and users/ applications can also manually
+request a snapshot. Finally, the system restore service can automatically create snapshots on a daily basis via scheduled tasks.
+
+<li><a href="#">Prefetch is a  performance optimization mechanism that Microsoft introduced in Windows  XP to reduce boot and application loading  times. The Windows Cache
+Manager is a component of the memory management system that monitors the data and code that running processes load from files on disk. Specifically, it tracks the first two
+minutes of boot processes and the first 10 seconds of all other applications' startup.
+
+<li><a href="#">The Cache Manager then works with the Task Scheduler to write the results of these traces to prefetch files. The next time the system boots or a "prefetched”
+application executes, the Cache Manager can use these prefetch files like a "cheat sheet” to speed up the loading process.
+
+<li><a href="#">Prefetch files serve as a record of programs that have executed on a system, regardless of whether the original executable files are still on disk. Not only does the
+existence of a prefetch file prove that an application ran— but you can also determine when it ran, how many times, and from which path.
+
+<li><a href="#">The simplest way to analyze prefetch files is to look at their Standard Information timestamps. The File Created date indicates when the corresponding application
+first ran. The Last Modified date indicates when it most recently executed.
+
+<li><a href="#">What additional evidence is available within prefetch files? The most useful is the list of full paths, including volume, to files loaded by the application within the first
+10 seconds after it executed. This includes the executable itself, thus allowing you to determine exactly where it resided on disk. The list of accessed files will also include application
+dependencies (such as loaded DLLs) and files that may have been used for input or output.
+
+<li><a href="#">Event logs are generated by the system-wide auditing and monitoring mechanisms that are built in to the Windows operating system. By reviewing these logs, you
+may be able to perform the following tasks:   • Identify successful and failed logon attempts and determine their origin   • Track the creation, start, and stop of system services   •
+Track usage of specific applications   • Track alterations to the audit policy   • Track changes to user permissions   • Monitor events generated by installed applications
+
+<li><a href="#">All versions of Windows maintain three "core” event logs: Application, System, and Security. Activities related to user programs and commercial off-the-shelf
+applications populate the Application log. Application events that are audited by Windows include any errors or information that an application wants to report. Host-based security
+tools such as antivirus and intrusion prevention systems often record events to this log.
+
+<li><a href="#">Windows authentication and security processes record events in the Security log. This log can include user logon and logoff attempts, account creation, changes to
+user privileges or credentials, changes to the audit policy, process execution, and file and directory access. Local or Group Policy settings can configure exactly which security events
+are captured and logged.
+
+<li><a href="#">The System event logs events reported by a variety of core operating system components. Its contents can include Windows service events, changes to the system
+time, driver loads and unloads, and network configuration issues.
+
+<li><a href="#">Microsoft also added a second category of logs, Applications and Services, that are used by individual installed applications or system components. The Task
+Scheduler, Windows Firewall, AppLocker, Terminal Services, and User Access Control are a few examples of Windows features that can maintain their own logs (if enabled) under this
+category.
+
+<li><a href="#">Every type of event tracked in Windows event logs has an associated ID value. These IDs are often more useful than the event message itself when you are trying to
+research, filter, or cross-reference log entries.
+
+<li><a href="#">In a compromised Windows environment, attackers typically leverage stolen, valid credentials (either local or domain) to move from system to system— a process
+called "lateral movement.” Many environments use common local administrator passwords for all systems, or subsets of their environment. If an attacker compromises a single
+system and obtains such a credential, they can move freely from host to host.
+
+<li><a href="#">It is also often helpful to aggregate and search logon events to determine the source systems and accounts most frequently used during normal activity. This can
+help make anomalous logons using valid credentials more obvious amid all the noise on a busy system.
+
+<li><a href="#">Reviewing these events can help you determine whether an attacker has tampered with a system's security settings:
+<br>&ensp; • Account management events indicate whether a user account has been created, deleted, enabled, or disabled,
+<br>&ensp; • Policy change events capture changes to system security settings, including the audit policies that specify what is recorded in event logs.
+<br>&ensp; • An event noting "The audit log was cleared” is recorded whenever a user clears the event logs, irrespective of audit settings.
+
+<li><a href="#">Process tracking, also known as detailed tracking or process auditing, generates an event in the Security event log every time a process is executed or terminated.
+This evidence can provide a detailed account of everything that a user executed within a specified period of time.
+
+<li><a href="#">Note that audit process tracking will result in a significantly higher volume of logged events. If you are enabling this feature, make sure you increase the Maximum
+Security Event Log setting to ensure that the log does not reach capacity and roll over too frequently. In some cases, process tracking may have a severe performance impact, so be
+sure to test this setting prior to enabling it on any critical systems.
+
+<li><a href="#">Windows services are frequently utilized as persistence mechanisms for both commodity and targeted malware. In addition, nonpersistent malware will often install
+itself as a "temporary” service to run under a privileged context. Fortunately, every time a service is started or stopped, the Service Control Manager (SCM) creates an entry in the
+System event log.
+
+<li><a href="#">If you're tracking down suspicious but yet-to-be-categorized activity on a system, be sure to check the Application event log to see if any antivirus alerts were
+generated during your period of interest.
+
+<li><a href="#">The Windows Task Scheduler provides the ability to automatically execute programs at a specific date and time or on a recurring basis. It is functionally similar to
+the cron utility built in to most Unix-based operating systems.
+
+<li><a href="#">Attackers often use scheduled tasks to execute malware on a remote compromised system without the need for "helper” utilities such as PsExec, which may increase
+the likelihood of detection.
+
+<li><a href="#">The registry serves as the primary database of configuration data for the Windows operating system and the applications that run on it. The registry is organized
+into a number of system and user-specific "hives.” A hive is typically stored in a single file on disk. These hive files are not human readable, but can be parsed using a variety of tools.
+
+<li><a href="#">Note that You'll need to use a forensic imaging or acquisition tool with raw disk access to copy registry hive files while a system is booted. You cannot simply copy
+them with Windows Explorer.
+
+<li><a href="#">Information within the registry is stored in a tree structure that can be broken down into three components: keys, values, and data. If compared to a file system,
+consider a key analogous to a directory path, a value to a file name, and data to the contents of a file.
+
+<li><a href="#">Registry data can be stored in a variety of encodings— in fact, the registry stores a "value type” field along with each value that specifies the structure of its
+accompanying data.
+
+<li><a href="#">Unlike file system metadata, registry keys contain only a single timestamp. Each key has an associated LastWriteTime that is set when it is created and updated
+whenever any values directly under a key are added, removed, or otherwise changed.
+
+<li><a href="#">Note that there are no "created” or "accessed” timestamps. Also, registry timestamps are only associated with keys, not the values or data therein. An analyst may
+have to deduce the significance of a key's LastWriteTime by assessing and correlating other artifacts, such as evidence from the file system or event logs.
+
+<li><a href="#">By examining the correct keys, you can recover everything from a computer's operating system installation date to the current firewall policy or a local user's group
+membership.
+
+<li><a href="#">Auto-run keys, also known as auto-start extensibility points or persistence mechanism keys, ensure that Windows executable files, DLLs, and other components
+automatically load upon system boot, user login, and other conditions. Attackers frequently modify existing auto-run registry keys, or add new keys, to ensure that their malware is
+automatically loaded upon system startup.
+
+<li><a href="#">Windows Services are the most common and widely used persistence mechanism provided by Windows. A service is designed to run in the background, without the
+need for any user interaction. It can either start automatically during system boot, upon an event, or manually.
+
+<li><a href="#">How are services configured in the registry? Each service will have its own set of values and subkeys under HKLM\ CurrentControlSet\ services\{ servicename}\,
+where { servicename} represents the "short” name of a given service. Each service can have a variety of values and subkeys that control their behavior.
+
+<li><a href="#">As a result of the various ways that a service may execute, You'll need to ensure you review both the ImagePath and the ServiceDll (if present) when determining
+whether a service may be configured to load a malicious file.
+
+<li><a href="#">The task of identifying an evil auto-run key within a haystack of other keys can be difficult, but there are several analytical techniques that can help you do some
+rapid data reduction and triage.
+
+<li><a href="#">How to determine if Windows services are malicious?
+
+<br>&ensp; • Exclude persistent binaries signed by trusted publishers— though don't completely dismiss signed binaries.
+<br>&ensp; • Exclude persistent items created outside the time window of interest.
+<br>&ensp; •  Research the MD5 hashes for any remaining persistent binaries, using repositories of known-good software (such as Bit9 File Advisor) or known-bad (such as
+VirusTotal).
+<br>&ensp; • Compare any remaining "unknowns” against a known configuration, such as a "gold image” used to install systems in an environment.
+
+<li><a href="#">If you've identified evidence of a malicious service through registry analysis, don't forget to review the System event log. The Service Control Manager can log
+events such as service creation, stop, and start events.
+
+<li><a href="#">We find it useful to identify the earliest known and most recently logged event associated with a known-bad service to better establish a time frame of compromise.
+
+<li><a href="#">Windows also maintains a number of important artifacts that can only be recovered while a system is powered on. These volatile sources of evidence are stored in
+memory rather than on disk.
+
+<li><a href="#">What kinds of evidence can you obtain from memory? The list includes the following:
+
+<br>&ensp; • Running processes and the system objects/ resources with which they interact
+<br>&ensp; • Active network connections
+<br>&ensp; • Loaded drivers
+<br>&ensp; • User credentials
+<br>&ensp; • Remnants of previously executed console commands
+<br>&ensp; • Remnants of clear-text data that is otherwise encrypted on disk
+
+<li><a href="#">"Memory” on a Windows system is composed of two fundamental components: physical memory and the pagefile.
+
+<li><a href="#">The term "physical memory” simply refers to the contents of RAM. We acquire the contents of physical memory by taking an image of it— similar in principle
+(although much different in execution) to an image of a hard drive.
+
+<li><a href="#">Numerous attack techniques rely on manipulating user-land process memory, or structures within kernel memory, to hide malware and evade forensic analysis. Two
+of the most common techniques we see in the wild: process injection and hooking.
+
+<li><a href="#">In process injection, a malicious injecting process causes a legitimate process to load and execute the code of its choice. Once this occurs successfully, the injecting process can terminate and allow the injected process to continue running its
+malicious code as designed.
+
+<li><a href="#">An attacker can leverage and abuse a variety of APIs and mechanisms built into Windows to conduct injection attacks, so long as they have the necessary privileges.
+Fortunately, memory analysis can be an effective approach to identifying evidence of process injection. Many common types of injection techniques result in anomalies in a process
+memory space that can be programmatically detected. Redline can optionally detect and flag memory sections that show signs of basic process injection.
+
+<li><a href="#">There's one other way to identify evidence of process injection: find the injecting malware and how it runs on a system. If an attacker wishes to ensure that the
+injected malicious code survives user logout or system reboot, the injecting malware must maintain persistence.
+
+<li><a href="#">Broadly speaking, "hooking” allows code within running processes to intercept, view, and modify events such as function calls and the data they return. Plenty of
+legitimate applications (including antivirus, host-based intrusion prevention systems, and application inventory software) use hooks to support their functionality. Of course, malware
+authors can exploit these same mechanisms, or use more covert techniques, to insert malicious code.
+
+<li><a href="#">Rootkits often use hooking to hide files, processes, registry keys, or network connections from a user or forensic investigator. Fortunately, we can find evidence of
+malicious hooks through memory analysis.
+
+<li><a href="#">What sources of evidence can I use for timeline analysis?
+<br>&ensp; • NTFS Master File Table
+<br>&ensp; • Prefetch Files
+<br>&ensp; • Event Logs
+<br>&ensp; • Scheduled Tasks
+<br>&ensp; • Memory – Processes
+<br>&ensp; • Registry -- All Keys
+
+<li><a href="#">What sources of evidence can prove that a file previously executed?
+<br>&ensp; • Prefetch Files 
+<br>&ensp; • Event Logs – Security
+<br>&ensp; • Event Logs – System
+<br>&ensp; • Event Logs -- Task Scheduler
+<br>&ensp; • NTFS Master File Table
+<br>&ensp; • Registry— MRU Keys 
+
+<li><a href="#">What artifacts can provide evidence of deleted files?
+<br>&ensp; • NTFS Master File Table
+<br>&ensp; • LNK Files
+<br>&ensp; • Recycle Bin
+<br>&ensp; • Registry -- MRU Keys 
+
+<li><a href="#">What files are configured to maintain persistence (automatically run) upon bootup or user login?
+<br>&ensp; • Registry – Auto-Run Keys
+<br>&ensp; • Scheduled Tasks
+<br>&ensp; • File System -- DLLs
+
+<li><a href="#">The first question in our mind when we find malware is, "What does the malware do?” Without an answer to this question, you will have a hard time categorizing the
+malware or gaining insight into what the attacker is trying to accomplish.
+
+<li><a href="#">Intelligence generated should be actionable; otherwise, the process simply wastes time. The results can help generate indicators of compromise that can be used to sweep a larger population of systems.
+
+<li><a href="#">We normally take two main categories of steps to help decrease the likelihood that we will infect our systems with malware:
+<br>&ensp; •  Use a virtual environment for triage. Never open or triage suspected malware on your primary operating system. Rather, you should configure and use an isolated
+virtual or physical environment.
+
+<br>&ensp; •  Make configuration and process changes. There are a number of configuration and process changes we make to greatly decrease the likelihood we will infect a
+system with malware:
+<br>&ensp; • Ensure your system is fully patched and updated, including third-party software.
+<br>&ensp; • Disable autorun or automount features.
+<br>&ensp; • Handle suspected malware while logged on as a non-privileged user.
+<br>&ensp; •  Add an underscore to the end of suspected malware file extensions. For example change the extension “. exe” into "exe_” to help prevent accidental execution or
+opening.
+<br>&ensp; • Always store suspected malware in a password-protected and encrypted archive.
+
+<li><a href="#">Here are some useful questions to think about when documenting the context:
+
+<br>&ensp; •  How was the file identified? For example, did a security product, such as antivirus, alert on the file? Or did an investigator locate the file through some analysis? If so,
+what led them to it?
+<br>&ensp; • What was the operating system version, including patch level and address width 32 bit or 64 bit?
+<br>&ensp; • What was the original file name and the directory the malware was found in? Also include the MD5 or other appropriate checksum
+<br>&ensp; • Based on the checksum, is the file "known”— meaning, is it part of a database of cataloged files?
+<br>&ensp; • Are other files present that may be related due to proximity in location or time?
+<br>&ensp; •  Do forensic artifacts or other investigative findings suggest what the malware might be (for example, relevant network findings such as ports or protocols)?
+<br>&ensp; • Was there evidence of command-line execution or command-and-control mechanisms?
+<br>&ensp; • If the malware is believed to be persistent, is there evidence of what the persistence mechanism is?
+<br>&ensp; •  When looking at a timeline, did you see any items, such as files or registry keys, that were created/ modified/ accessed around the time of installation or the time(s) of
+suspected use?
+<br>&ensp; • Is there evidence that the attacker is actively using the malicious software? Is there evidence that the incident is ongoing?
+
+<li><a href="#">Static analysis. During this type of analysis, we examine a file using methods that do not execute the code. This type of analysis normally provides a quick
+assessment of the basic capabilities of an executable. However, because code can be quite complex, using this method in a triage situation usually falls short of revealing the full
+detail of what a program does.
+
+<li><a href="#">During an investigation, we frequently identify a number of files that We're interested in taking a closer look at. Sometimes we may have solid contextual evidence
+that suggests a file is malicious. Other times, a file is of interest for a reason that's less factual and more intuition.
+
+<li><a href="#">When you're researching a file, the most common way to be sure you are referring to the exact file you have is to use a cryptographic hash. Although a file name
+may be useful to search for, the hash uniquely identifies the contents of the file.
+
+<li><a href="#">Once you have hashes computed, It's time to look up information. The most wellknown resources are Bit9' s FileAdvisor, VirusTotal, ThreatExpert, and the National
+Software Reference Library (NSRL) from the U. S. National Institute of Standards and Technology (NIST). A good first step whenever examining an unknown file might be to search one
+of these databases. It's also worth searching for hashes through popular search engines, such as Google.
+
+<li><a href="#">A file "header” is a small number of bytes at the very beginning of the file that can help identify what the file is. A file header is sometimes referred to as a "magic
+number.” You can identify what a file is based on the first 16 bytes of data. For example, if you come across a file that starts with the two bytes 0x4D5A ("("MZ”), you know the file is
+probably an executable that may run on a Microsoft operating system.
+
+<li><a href="#">Normally the first step we take when triaging an unknown file is to open it up in a good hex editor and inspect the file header. FileInsight from McAfee is our free
+editor of choice.
+
+<li><a href="#">To use the file command in our Windows triage VM, we install a Unix-like environment called Cygwin. Once you have the command on your system, It's quite easy to
+use — just specify the name of the file to examine. For example, if you want to take a look at all the files in the C:\ Windows directory, you would run the following command: file
+/cygdrive/c/Windows/*
+
+<li><a href="#">Although the file command is normally quite useful, It's not always correct. You should validate its findings through manual inspection or another technique. When a
+file is unrecognized by common databases, you may have to do some research. If you see a unique string or sequence of hex bytes at the beginning of the file, there may be useful
+information on the Internet.
+
+<li><a href="#">Examining the strings within a file is a simplistic but sometimes very effective method to learn more about a file. We normally do this with a tool that strips away any
+nonprintable characters and only shows blocks of text.
+
+<li><a href="#">Be aware that malware writers sometimes take steps to obfuscate strings within malware. Just because you don't see a specific string present within the code does
+not mean it isn't there. The malware author may also insert strings that are intended to mislead you should not place too much confidence in string interpretation. Strings can be very
+suggestive, but the logic and code paths are more important.
+
+<li><a href="#">Sometimes we run across scripts or other malware that contains multiple levels of encoding. The encoding usually serves two main purposes: to avoid detection and
+to obfuscate functionality. This is very common in webshells (PHP code).
+
+<li><a href="#">Portable executable (PE). If you discover a PE, you should inspect it further using a tool that specializes in parsing the PE format and presenting additional
+information. It's good to know if a PE is packed, uses encryption algorithms, or perhaps what compiler created the binary.
+
+<li><a href="#">Both PeView and CFF Explorer provide an in-depth display of PE data structures. You can see and explore the major PE sections, view the PE compile time, see the
+standard PE characteristics, view import and export tables, and many other PE data structures.
+
+<li><a href="#">If an executable file contains only a few intelligible strings, or a very low number of imports, the file may be packed. A packed file is an executable that has been run
+through an additional process, usually to compress or obfuscate the code. The process significantly changes the content of the file, but retains the same functionality.
+
+<li><a href="#">During malware triage, you can use a debugger to attempt to unpack a file. A number of debuggers can dump a loaded file, sometimes providing wholly or
+partially unpacked data. This technique will not be able to deal with all packers, but can get at least partial results in many cases.
+
+<li><a href="#">The second general category of malware analysis is called dynamic analysis. During this type of analysis, system monitoring is put in place and the malware is
+executed. Ideally, this type of analysis should confirm any findings from static analysis, and will reveal new facts about the malware.
+
+<li><a href="#">You can perform dynamic analysis by either using an automated analysis tool or manually performing the analysis on your own. Automated tools can save time and
+do not require a specialized skill set, but are not always successful in producing useful output.
+
+<li><a href="#">Automated dynamic analysis tools, or sandboxes, are very simple to use. You input the malware sample, and after some analysis period the system provides an
+analysis report. A number of publicly available sandboxes can be used, with GFI Sandbox being one of the more popular options.
+
+<li><a href="#">One of the best ways to help determine how to execute a malware sample is to understand the context in which it was found.
+
+<li><a href="#">Most of the malware samples we deal with are Win32-based PE binaries. The common binary forms are executables with an “. exe” extension and dynamic linked
+libraries with a “. dll” extension. During malware triage, we run executables by entering the file name in a command prompt and pressing ENTER. 
+
+<li><a href="#">For a DLL, the method to load it depends on what it was designed for. You may be able to load the DLL using rundll32, which loads a DLL: rundll32 sample.dll
+
+
+<li><a href="#">Once you successfully execute or load the malware, you will want to monitor any actions it takes. Common events we are interested in are process creation, file
+creation or changes, registry key creation or changes, and network activity. The goal of monitoring these events is so you develop a general sense of what the malware is doing and
+generate leads. 
+
+<li><a href="#">For example, if malware creates a file, you should follow up by inspecting the content of a file that was created. Once you have followed up on the leads generated
+through the monitoring process, you should have a good picture of what the malware does.
+
+
+<li><a href="#">One of the best free tools available is Microsoft's Process Monitor. Process Monitor will monitor process, file, registry, and network activity and allows you to filter
+events based on many different criteria. Normally we start out by filtering events based on the process name, which is the file name of the malware.
+
+<li><a href="#">Now that a filter is set, It's time to activate monitoring and execute the suspicious file. Select File | Capture Events to begin monitoring. Continue to execute the file
+and keep an eye on the Process Monitor window for events, because they should appear immediately.
+
+<li><a href="#">There is a column in the Process Monitor display named Operation. This column shows the system calls made by the monitored program. We typically look for
+operations that are more likely to lead us to discover important
+<li><a href="#">information about the malware. Without better leads, the WriteFile, RegCreateKey, and RegSetKey operations are good starting points. These operations are related
+to writing data to a file, and creating and writing data to registry keys.
+
+<li><a href="#">You may notice that there are many CreateFile operations— don't misinterpret that as actual file creation. CreateFile is used to create or open a file handle. So in
+many cases, the CreateFile operation is being used to read a file.
+
+<li><a href="#">Process Explorer provides a hierarchical tree view of running processes, including many details of runtime parameters. One particularly useful feature is the ability to
+search process handles for a string. You can use Process Explorer to search handles (Find Handle or DLL) from all processes for the file name keylog. txt to determine what process
+has the file open.
+
+<li><a href="#">Handles is a command-line-based tool that displays all handles from all processes. Handles is sometimes useful when you are searching for any handle that looks
+suspicious, such as files open in user profile temporary directories.
+
+<li><a href="#">If you discover the malware you are analyzing attempts to make network connections, you may want to use Wireshark to capture and analyze the traffic.
+
+<li><a href="#">A remediation plan is commonly organized into two parts— the first part concentrates on remediating the current incident (posturing, containment, and eradication
+actions) and the second part concentrates on improving the organization's security posture (strategic actions).
+
+<li><a href="#">The draft remediation plan reflects all actions the remediation team believes the organization can realistically complete prior to an eradication event. we've found
+that the plan is revised many times during an investigation, because action items that are initially believed to be easy to implement turn out to be more difficult than anticipated. We
+usually shift these items into the strategic recommendation list, unless they are absolutely necessary for success.
+
+<li><a href="#">The remediation process consists of the following eight high-level steps:
+<br>&ensp; • Form the remediation team. Remediation teams are formed only when an incident is declared and incident ownership is assigned.
+
+<br>&ensp; •  Determine the timing of the remediation actions. Business leaders, in coordination with the legal, remediation, and investigation teams, must decide what actions begin
+immediately and what is delayed until the investigation is over.
+
+<br>&ensp; •  Develop and implement remediation posturing actions. Posturing actions are implemented while the incident is ongoing and often include enhancements to system
+and network monitoring, mitigating critical vulnerabilities.
+
+<br>&ensp; •  Develop and implement incident containment actions. Containment actions are designed to deny the attacker access to specific environments or sensitive data during
+an investigation.
+
+<br>&ensp; •  Develop the eradication action plan. The goal of the eradication plan is to remove the attacker's access to the environment and to mitigate the vulnerabilities the
+attacker used to gain and maintain access. This step of the remediation process is typically executed at or near the conclusion of the investigation, once the attacker's tools, tactics,
+and procedures are well understood.
+
+<br>&ensp; •  Determine eradication event timing and implement the eradication plan. There is a point in the investigation where a "steady state” is reached. At this point, while
+additional system compromises may be discovered, after analysis, no new tools or techniques are discovered.
+
+<br>&ensp; •  Develop strategic recommendations. Throughout the investigation and remediation process, you should document areas for improvement. These notes are the basis
+for strategic recommendations, which will help improve the security of your environment. Strategic actions typically occur months to years following an eradication event.
+
+<br>&ensp; • Document the lessons learned from the investigation. This information will be invaluable to help your organization improve over time.
+
+<li><a href="#">Understand what  your team (and the organization) is  capable of acting on quickly,  and push other tasks into the  strategic recommendations documentation
+Implementing a small number of effective changes is usually more effective than trying to implement a large number of actions that are less relevant to the incident.
+
+<li><a href="#">Based on our experience, the seven most common factors critical to the remediation effort are as follows:
+
+<br>&ensp; • The incident severity will dictate the type of remediation implemented. The severity of an incident is something each organization needs to decide for itself.
+
+<br>&ensp; • Remediation timing Stakeholders should agree on the tentative timing of the remediation actions at the beginning of the planning process.
+
+<br>&ensp; • The remediation team There are three primary concerns with incident remediation teams— the size of the team, the skill level, and management support.
+
+<br>&ensp; •  The type of technology in place will affect how you implement remediation actions. This includes security technology as well as enterprise management technology.
+
+<br>&ensp; • Budget. Spending more money protecting assets than the assets are worth usually does not make business sense.
+
+<br>&ensp; • Securing management support will help ensure that even the most painful remediation actions are implemented and supported throughout the organization.
+
+<br>&ensp; • Public scrutiny Your legal or PR team may be required to disclose information about an incident due to regulatory requirements.
+
+<li><a href="#">Based on our experience, the remediation team should be established as soon as an investigation is initiated. This allows the remediation team to start working on
+planning the remediation effort immediately.
+
+<li><a href="#">The time from incident discovery to eradication is known as the "time to remediate.” One goal of information security organizations is to strive for a low mean time
+to remediate (MTTR).
+
+<li><a href="#">Developing a comprehensive remediation plan is meaningless unless it is implemented appropriately and in a timely manner. The ability to make quick decisions
+based on limited information, though not always necessary, can be important. Most remediation efforts run into unexpected complications, budget overruns, and exceeded timelines.
+
+<li><a href="#">Members of the Remediation Team should include:
+
+<br>&ensp; •  An investigative team member will be able to offer valuable insight about the attacker's activities and what mitigation steps can be taken. They will also know what
+immediate remediation actions would alert the attacker (if the delayed remediation approach is taken).
+
+<br>&ensp; •  System, network, and application owners will best understand the feasibility of recommended actions and their effects on the organization. Their understanding of
+systems and applications will allow them to offer alternative suggestions if the initial recommendation is not feasible.
+
+<br>&ensp; •  Various subject matter experts (SMEs) will be crucial when a nonstandard system, such as a classified system or Industrial Control System (ICS), is involved in the
+remediation.
+
+<li><a href="#">There are three approaches to remediation action: immediate, delayed, and combined. Based on our experience, the "delayed action” remediation approach should
+be used as the default approach taken until evidence from the investigation proves that another approach is warranted.
+
+<br>&ensp; •  Immediate action  This approach is used to stop the incident from continuing (incident containment). This remediation approach should be implemented when it is
+considered more important to immediately stop the attacker's activities than to continue the investigation. Some examples of when this remediation approach is likely appropriate are
+when an organization is losing money in real time, such as through Automated Clearing House (ACH) or credit/ debit card fraud; when a malicious insider is copying data to an
+external USB drive and is about to sell the information to a competitor; and when the incident is small, such as a single compromised system.
+
+<br>&ensp; •  Delayed action This approach allows the investigation to conclude before any direct actions are taken against the attacker. Throughout the investigation, care is taken
+not to alert the attacker. This remedial approach should be implemented when the investigation is at least as important as the remediation.
+<li><a  href="#">Some examples  of when  this remediation  approach is  more appropriate  are corporate  espionage and  when an  attacker compromises  hundreds of  systems,
+requiring an investigation to fully scope the compromise.
+
+<br>&ensp; •  Combined action  This approach implements containment on only a specific aspect of the incident, while letting the rest of the incident continue. This remediation
+approach is most common in large environments that are able to remediate only part of their environment quickly.
+
+<li><a href="#">Posturing actions are taken during an ongoing incident and are designed to be implemented while having little impact on the attacker. The actions are designed to
+enhance the investigation team's visibility by implementing additional logging and monitoring.
+
+<li><a href="#">Here are some high-level examples of typical posturing actions: •  Patch  third-party applications • Implement multifactor authentication for access  to critical environments • Reduce locations where  critical data is stored
+• Enhance logging, including the following logs: System, Application, Networking and Central Authentication logs
+
+<li><a href="#">Enabling command history and process auditing, as well as ensuring all authentications are being properly logged, are some common and easy posturing actions
+to implement on Linux systems. For Windows systems, ensure that Microsoft Windows auditing is configured to log Success and Failure events. Here are some of the more common
+events to enable: • account management • object access • privileged use • process tracking • system events • logon events
+
+<li><a href="#">You should closely monitor the effects of your changes to logging policies. The maximum size of the log files may need to be increased or the events may need to
+be sent to a centralized logging system.
+
+<li><a href="#">In order to gain full visibility into an incident, you need to log and monitor allowed (Success) activity in addition to Failure activity. For example, if an attacker is able
+to gain access to legitimate credentials, all malicious activity will show as "allowed” by the "legitimate” user. Monitoring only for denied or failed activity would miss this set of activity.
+
+<li><a href="#">Taking actions that alerts an attacker they've been discovered is usually considered detrimental to an investigation. An attacker who becomes aware that they are
+detected will likely react. Here are some of the more common reactions we've seen:
+
+<br>&ensp; •  Change in tools, tactics, and procedures This will cause the incident responders to focus on reacting to the changing attacker activity rather than on investigating the
+past activity.
+
+<br>&ensp; •  Become dormant  If the attacker becomes dormant, it may cause the incident responders to miss evidence of malicious activity and allow the attacker to remain hidden
+in the environment during the eradication event, only to become active afterward.
+
+<br>&ensp; •  Become destructive  Although rare, some attackers will go on the offensive in order to change the incident response focus from responding to past activities to
+spending time recovering from damages. Some examples of destructive behavior are deleting files from systems, defacing web pages, and crashing systems.
+
+<li><a href="#">Implementing a containment plan often does not remove the attacker's access from the environment; rather, it just prevents the attacker from performing the activity
+that cannot be allowed to continue. For example, if an attacker is actively stealing a large amount of PII data from a file server, it is more advisable to immediately stop the activity,
+and thus prevent further theft of PII data, than to attempt to fully scope the compromise before taking any action.
+
+<li><a href="#">Four possible containment actions:
+<br>&ensp; •  Remove the attacker's network access to the server hosting the financial application. One approach is to implement Access Control Lists (ACLs) to prevent all systems,
+except one, from interacting with the server. That one system is established as a "jump” system that requires two-factor authentication and only allows logins from local accounts.
+Local accounts are created for a small number of users who absolutely must interact with the financial application.
+
+<br>&ensp; •  Remove the attacker's ability to authenticate to the financial application. This means changing all passwords for all user accounts that have access to the financial
+application.
+
+<br>&ensp; • Require two-person integrity to create and authorize ACH transactions.
+
+<br>&ensp; • Implement notifications for all ACH transactions.
+
+<li><a href="#">Containment plans are often developed and implemented prior to understanding the full scope of a compromise. This often means you take an overly cautious
+approach by implementing temporary stringent measures that are relaxed after a full remediation is performed.
+
+<li><a href="#">Unlike an immediate containment plan, which is designed to remove the attacker's access to a specific network segment, application, or data, the eradication plan is
+designed to remove all of the attacker's access to the environment.
+
+<li><a href="#">The goals of an eradication event are as follows:
+<br>&ensp; • Remove the attacker's ability to access to the environment.
+<br>&ensp; • Remove the attack vector the attacker used to gain access to the environment.
+<br>&ensp; • Restore the organization's trust in its computer systems and user accounts.
+
+<li><a href="#">Common eradication actions include:
+<br>&ensp; • Disconnecting the victim organization from the Internet
+<br>&ensp; • Blocking malicious IP addresses
+<br>&ensp; • Blackholing (or sinkholing) domain names
+<br>&ensp; • Changing all user account passwords
+<br>&ensp; • Implementing network segmentation
+<br>&ensp; • Mitigating the original vulnerability
+<br>&ensp; • Rebuilding compromised systems
+
+<li><a href="#">In order to remediate a compromised system, the eradication plan would include  either 1) rebuilding the systems from known good media or 2) implementing
+detailed cleaning instructions to clean the malware from the system.
+
+<li><a href="#">The timing of the eradication event is critical to a successful remediation. If the eradication event is executed too early, the investigation team may not have time to
+adequately scope the compromise. This may cause the remediation to fail because the attacker's access to the environment may not have been completely removed (for example, if a
+backdoor was missed). If the eradication event is executed too late, the attacker may change their tools, tactics, and procedures (TTPs) or accomplish their mission.
+
+<li><a href="#">An ideal time to execute the eradication event is when the investigative team has properly scoped the compromise and the remediation team has implemented all or
+most of the posturing/ containment actions and is prepared for the event. Properly scoping the compromise means that the investigation team understands the majority of the
+attacker's TTPs and can reliably detect malicious activity.
+
+<li><a href="#">Cleaning, or removing known malware, is not recommended because it is difficult to be certain that all malware has been discovered and thus removed from the
+compromised  system. Rebuilding  compromised systems  from knowngood  media is  the most  trusted way  to ensure  a clean  environment postremediation.  However, there  are
+circumstances where cleaning the malware from the system rather than rebuilding the system will be required. An example is when production servers are involved and downtime
+means lost revenue for the business, or when the attacker has compromised hundreds or thousands of systems.
+
+<li><a href="#">Verifying that malware has been removed from all compromised systems is a simple as looking for the indicators of compromise via whatever method was used
+throughout the investigation.
+
+<li><a href="#">The eradication team normally includes more people than just the remediation team. Usually, all network, system, and application administrators are required to
+participate in the eradication event, under the guidance of the remediation team.
+
+<li><a href="#">In the days following an eradication event, ensure that your helpdesk personnel have the ability to contact the remediation team, in the event suspicious activity or
+failed applications are reported.
+
+<li><a href="#">Strategic recommendations are actions that are critical to your organization's overall security posture, but that cannot be implemented prior to, or during, the
+eradication event. Some high-level examples of strategic recommendations are upgrading to  a more secure OS throughout the environment, reducing user privileges across the
+organization, implementing strict network segmentation, and implementing egress traffic filtering. Strategic recommendations are, by design, difficult to implement because they are
+disruptive in nature but offer significant security enhancements.
+
+<li><a href="#">When developing strategic recommendations, the remediation team should focus on describing the action items from a high level only. Strategic recommendations
+should always be documented in order of priority, with recommendations that reduce the organization's risk the most listed first.
+
+<li><a href="#">The lessons learned should be easily searchable and browsable, with tags, categories, or other appropriate methods to organize the documentation. This will also
+help to prevent duplicate lessons learned. Wikis and document management systems make great locations for centrally storing and indexing lessons learned. You should create
+lessons learned as soon as possible after the remediation effort has concluded, in order to ensure that all lessons are accurately captured.
+
+<li><a href="#">The Remediation Planning Matrix was created to help design a plan to protect against threats (prevention), detect attacker activities (detection), and eradicate the
+threat from the environment (responding). By focusing on each of the three rows (Prevent, Detect, and Respond) for each phase of the Attack Lifecycle (represented as columns in the
+figure), and understanding the goals of the incident response, your remediation team can develop a comprehensive plan that addresses the most critical security vulnerabilities of
+your organization.
+
+<li><a href="#">In our experience, there are some common mistakes that organizations make during the remediation process that cause them to fail or be less successful. Here are
+the most common pitfalls you should look out for:   • Lack of ownership   • Lack of executive support   • Poor planning   • Remediation plan is too ambitious   • Poor timing
+
+
+
+
+</body>
+</ul>
+</div>
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\w -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+<script>
+ window.addEventListener("DOMContentLoaded", function(e) {
+  var myHilitor2 = new Hilitor("playground");
+  myHilitor2.setMatchType("left");
+  document.getElementById("keywords").addEventListener("keyup", function(e) {
+   myHilitor2.apply(this.value);
+  }, false);
+ }, false);
+</script>
+
+</html>

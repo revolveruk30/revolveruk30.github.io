@@ -1,0 +1,731 @@
+<html>
+<title>SANS Notes</title>
+<meta name="robots" content="noindex,nofollow" />
+
+<link rel="stylesheet" href="w2.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="roboto.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<head>
+<style>
+
+
+
+html, body {
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+oncontextmenu="return false";
+onselectstart="return false";
+ondragstart="return false";
+background-color: #f0f0f0;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+	z-index: 3;
+	width: 345px;
+	top: 30px;
+	bottom: 0;
+	height: inherit;
+	text-align: justify
+	height: 100%;
+	background-color: #f0f0f0;
+	position: fixed;
+	overflow: auto;
+	line-height: 0.2
+}
+.w3-searchbox {
+	height: 25%;
+	width: 110%;
+	left:405px;
+	top: 23px;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	z-index: 1;
+	line-height: 2;
+ margin-top: -7px; 
+
+}
+
+.w3-topbar {
+	width: 100%;
+	height:5%;
+	background-color: black;
+	position: fixed;
+	top: -3px;
+	overflow: hidden;
+
+	
+}
+
+
+#myInput {
+  background-repeat: no-repeat;
+  width: 40%;
+  border: 1px solid #ddd;
+ margin-top: 20px; 
+ margin-bottom: 12px;
+  margin-left: 95px;
+  text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+
+#keywords {
+  background-repeat: no-repeat;
+  width: 20%;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 120px;
+
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+  margin-top: 150px;
+  width: 70%;
+}
+
+#myUL li a {
+  margin-top: -1px; 
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+}
+</style>
+</head>
+
+<body>
+<!-- Topbar -->
+<div class="w3-topbar"></div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+
+<BR>
+<p>
+<BR>
+<center><H3>SANS COURSE NOTES</H3></center>
+<BR>
+<p>
+<BR>
+<a class=" w3-button w3-hover-blue" href="sec401.html">SEC 401 - Security Essentials</a>
+<a class="w3-button w3-hover-blue" href="sec450.html">SEC 450 - Blue Team Fundamentals</a>
+<a class="w3-button w3-hover-green" href="for500.html">FOR 500 - Windows Forensic Analysis</a>
+<a class="w3-button w3-hover-blue" href="sec502.html">SEC 502 - Perimeter Protection</a>
+<a class="w3-button w3-hover-red" href="sec504.html">SEC 504 - Hacker Tools</a>
+<a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
+<a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
+<a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<P>
+<center>
+<a class="w3-button" href="standards.html">Security Standards</a><br>
+<a class="w3-button" href="books.html">Security Books</a><br>
+<a class="w3-button" href="tools.html">Security Tools</a>
+</center>
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter Paragraph by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="20" name="hilite" placeholder="Highlight Multiple Keywords">
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+
+</nav>
+
+
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+
+
+<center>
+
+
+
+
+<ul id="myUL">
+
+    <p>Advanced Digital Forensics and Incident Response, Robert Lee<p>
+
+<li><a href="#">The first step of incident response is critical. It is the proper identification of the systems compromised. This means ALL systems compromised, not just one or two. Advanced intruders install malware on 54% of the systems compromised. This means there are other systems compromised in your enterprise without active malware on them. You need to be able to detect those systems as well.
+
+
+<li><a href="#">While analyzing the intrusion, you will learn exactly how the intruders breached the network, how they are laterally moving from system to system, and how they are identifying malware used. All of these traits can be used in order to help identify additional systems compromised and help you engineer countermeasures that can be used during remediation.
+
+
+<li><a href="#">"Whack a mole" response occurs when you move too fast toward eradication without proper cyber threat intelligence helping direct containment by encircling your adversary so his own gasps for survival will be snuffed out. Without properly containing your adversary, the adversary is free to redeploy his assets around your network for greatest survivability.
+
+
+<li><a href="#">Organizations move from a reactive organization to a hunting organization when they realize they are not detecting their incidents early enough. The idea of hunting-based response doesn't mean it is an "either or" approach. Most hunting organizations are also reactive organizations, but they begin to task their incident response team to actively engage and hunt for adversaries inside their environment. To accomplish this task, the hunting team typically will be armed with known malware, patterns of activity, or accurate threat group intelligence aiding them in their search.
+
+
+<li><a href="#">A trained hunter must know the difference between normal and abnormal as a prerequisite. Even better, if a threat intelligence capability is informing the team, it would look for specific threat groups targeting specific programs using specific techniques.
+
+
+<li><a href="#">Containment essentially degrades the capabilities of your adversary or denies her from achieving her goals. During an intrusion, the more you can learn about your adversary's true intent, the easier it is to achieve true containment.
+
+
+<li><a href="#">Eventually with enough intelligence data, predicting the adversary's intent is possible. With this information, you are likely to predict the type of data she would be most interested in and deploy additional security capabilities around systems that house that data.
+
+
+<li><a href="#">Initial compromise: Initial attack that gave the intruder threat access to your network. Most initial compromised systems exploits are not persistent and the level of access given to an adversary at this stage is generally very fragile. If a response team can eliminate an adversary before he establishes a beachhead or foothold on your network, then survivability of the adversary drops to nearly zero.
+
+
+<li><a href="#">Establish foothold/maintain presence: This is how the adversary has maintained his presence on systems despite rebooting the system. He does not need to recompromise the system again. Any C2 channel that can survive reboot is likely to be a good candidate here.
+
+
+<li><a href="#">Lateral movement: This is how an adversary is moving around your network from system to system. It also details specifically how he compromises new hosts in your environment once he has a foothold.
+
+
+<li><a href="#">Data collection: An adversary will generally leave a very loud and obvious footprint on systems he is trying to identify and collects data and intellectual property of interest on a host.
+
+
+<li><a href="#">Data exfiltration: Once an adversary obtains the data he seeks, he needs to steal it. Setting a network segment "kill switch" that will suddenly terminate all connections from an adversary-controlled subnet that is used for data staging is likely wise.
+
+
+<li><a href="#">During deep-dive forensics, it should be noted that this is not performed on every system during a data breach. However, it should be used and required on the most likely systems to contain the most intelligence data on them.
+
+
+<li><a href="#">During the initial phase, we concentrated on analysis techniques that were quick and resulted in the ability to provide quick tum-around answers during incident response. During the first 24 hours, the majority of your work will likely be immediate and quick response analysis techniques.
+
+
+<li><a href="#">However, not every incident can be solved with our quick analysis techniques. In cases in which adversaries utilize more efficient anti-forensic techniques or are more careful about their movements around your enterprise, to discover their tools, techniques, and procedures to pull out effective cyber threat intelligence triggers, we will need to dive deeper.
+
+
+<li><a href="#">Nothing is more important to your organization than finally removing the adversary threat from your network. This is much easier said than done and most organizations almost always skip to this step immediately after incident detection. Without a proper scoping and containment, remediation is not possible. Typically, you end up only annoying the adversary and they end up returning very soon.
+
+
+<li><a href="#">Remediation events have generally occurred over a weekend where an organization can commit to purging an adversary from its network without impacting business operations greatly. A remediation event should: 1. Deny access to the environment to the adversary. 2. Eliminate the ability for the adversary to react to the remediation. 3. Remove the presence of the adversary from the environment. 4. Degrade the ability of the adversary to return.
+
+
+<li><a href="#">Critical remediation controls include but are not limited to: 1. Disconnect the environment from the Internet. 2. Implement strict network segmentation not allowing specific subnets to communicate with each other. 3. Block IP addresses and domain names for known C2 channels. 4. Remove all infected systems that maintained active or previous active malware on the host. 5. If needed, remove all systems identified as compromised but do not show signs of infection via malware. 6. Restrict access to known compromised accounts. 7. Restrict access to domain administrator accounts. 8. Validate everything above is done properly.
+
+
+<li><a href="#">Atomic indicators are pieces of data that are indicators of adversary activity on their own. Examples include IP addresses, e-mail addresses, a static string in a Covert Command-and-control (C2) channel, or fully qualified domain names (FQDNs). Atomic indicators can be problematic, because they might or might not exclusively represent activity by an adversary.
+
+
+<li><a href="#">Computed indicators are those which are, well, computed. The most common among these indicators are hashes of malicious files, but can also include specific data in decoded custom C2 protocols, etc. Your more complicated IDS signatures might fall into this category. Behavioral indicators are those that combine other indicators (including other behaviors) to form a profile.
+
+
+<li><a href="#">The reconnaissance phase is straightforward. However, in security intelligence, oftentimes this is manifested not in portscans, system enumeration, or the like. It is the data equivalent: browsing websites, pulling down PDFs, learning the internal structure of the target organization.
+
+
+<li><a href="#">Delivery is rather straightforward. Whether it is an HTTP request containing SQL injection code or an e-mail with a hyperlink to a compromised website, this is the critical phase where the payload is delivered to its target. I heard a term just the other day that I really like: "warheads on foreheads" (courtesy of the U.S. Army).
+
+
+<li><a href="#">Exploitation: The compromise phase will possibly have elements of a software vulnerability, a human vulnerability known as "social engineering," or a hardware vulnerability.
+
+
+<li><a href="#">C2 - Maintain Presence: The command-and-control phase of the attack represents the period after which adversaries leverage the exploit of a system. We will also lump lateral movement with compromised credentials, file system enumeration, and additional tool dropping by adversaries broadly into this phase of the attack.
+
+
+<li><a href="#">The exfiltration phase is conceptually very simple: This is when the data, which has been the ultimate target all along, is taken.
+
+
+<li><a href="#">What is an indicator of compromise? It is a very powerful technique to identify malware components on a compromised host. Generally, it is a combination of boolean expressions that can be used to identify general characteristics of malware. If these characteristics are found, then you have a hit.
+
+
+<li><a href="#">Your indicators of compromise usually are created by reversing malware and through application footprinting. Some professional groups that are responding to incidents have massive IOC lists that range in the thousands of indicators collected from previous intrusions that they have collected.
+
+
+<li><a href="#">In the study of malware over the past several years, it should be noted that the most popular malware name used to hide as a new service a system would be svchost.exe. Svchost.exe is a process that is found running at least 5-6 times on every system and frequently is hard to pick out a good svchost from a bad one.
+
+
+<li><a href="#">Benefits to Signing Malware: Malware that is signed is trusted by the operating system and can stay hidden for a longer period of time without arousing suspicion. Typically, we see espionage malware is signed frequently, such as Flame malware that is intended to stay hidden for as long as possible.
+
+
+<li><a href="#">Drawbacks to Signing Malware: Rapid development and release of malware will be inhibited. In many cases, malware authors need to rapidly develop alternatives to their code to avoid anti-virus and host-based intrusion detection systems. A malware author would need a plethora code signing certs to avoid burning an entire family of malware active across an enterprise if discovered.
+
+
+<li><a href="#">It is recommended that once you determine malware traces or some fragments you find on one machine, you scan the enterprise looking for those same fragments. Hackers change their profile, but not often enough so that their profile would be completely unique on each system.
+
+
+<li><a href="#">There are a daunting number of "autorun" locations available in Windows. In Microsoft-speak, these are also known as Autostart Extension Points (ASEPs) and they are one of the key reasons why Windows is so hard to secure. Luckily, many of the most common ASEP locations are in the registry, at least giving us a single place to look.
+
+
+<li><a href="#">By far the most popular ASEPs on the planet are the "run" registry keys:
+<li><a href="#">NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce
+<li><a href="#">Software\Microsoft\Windows\CurrentVersion\Runonce Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run
+<li><a href="#">Software\Microsoft\Windows\CurrentVersion\Run
+<li><a href="#">Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit\
+<li><a href="#">A final location to highlight is in the file system, not the registry. This can actually be advantageous to an attacker because creating persistence here does not require Administrator rights. Even advanced attackers often use this location as an early stage persistence mechanism via phishing attacks:
+<li><a href="#">%AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+
+
+<li><a href="#">Windows services are designed to run applications in the background without user interaction. Many services are required at system boot, including the DHCP Client, Windows Event Log, Server, and Workstation services. These services provide critical functionality for the OS and must be started immediately without requiring user input. Services can be implemented as standalone executables or loaded as DLLs.
+
+
+<li><a href="#">Windows services provide great flexibility to developers, and similarly malware authors, for automatically running code on a Windows host. Because services can be configured to reliably start at boot (often before the loading of anti-virus), they are a very popular persistence vector.
+
+
+<li><a href="#">Scheduled tasks provide an extremely granular means to create persistence in Windows. The at.exe command has long been a core part of the hacker lexicon, most notably because in WinXP, it provided a very reliable privilege escalation attack.
+
+
+<li><a href="#">The schtasks.exe tool is an upgraded version of at.exe and has an immense number of features allowing tasks to be set and finely controlled. Tasks can even be set for specific Windows events such as when a specific user logs on, allowing much more creativity for persistence over just using specific times.
+
+
+<li><a href="#">Remote scheduled tasks are routinely used to spread malware (including backdoors), execute batch scripts, and perform routine actions like credential dumping across many systems. Most forensic artifacts for these remote tasks will be present on the systems they were executed on, not the originating system.
+
+
+<li><a href="#">WMI is often overlooked by security professionals, but it contains very powerful capabilities that have not gone unnoticed in the hacker community. One of the more recent persistence methods identified in the wild has been the use of WMI Event Consumers. WMI provides the ability to monitor for specific events and when triggered, alert event consumers that can then do things like run scripts and execute code.[11 Administrative privileges are necessary, but once achieved, attackers can use WMI to create a backdoor that is difficult to detect without the proper tools.
+
+
+<li><a href="#">Malware authors generally pick one of two strategies for obscuring their malicious processes: hide in plain sight and attempt to appear legitimate, or use code injection and/or rootkit methods to hide from the view of normal analysis tools.
+
+
+<li><a href="#">When searching for malware attempting to hide in plain sight, look for process names that appear legitimate but originate from the wrong directory path or with the wrong parent process or SID. Look for misspellings like scvhost.exe or lssass.exe and check for unusual command-line arguments.
+
+
+<li><a href="#">Besides processes, also look for suspicious DLLs executed through rundll32.exe, implemented as services with svchost.exe, or injected into legitimate processes.
+
+
+<li><a href="#">Code injection and rootkits provide stealth to malware by hiding it from normal analysis techniques. Fortunately, memory analysis provides an effective mechanism for detecting both of these behaviors. Typical code injection techniques provide an effective way to hide code without relying upon low-level programming knowledge, thus making it very popular among malware authors.
+
+
+<li><a href="#">A rootkit is a broad term for describing ways of subverting the operating system with the intent to hide activities and data. There are a number of techniques for doing this, but the end result is stealthy malware that is often undetectable by security tools running on the system. Fortunately, rootkits are relatively rare due to the skill required to create a reliable exploit across the various Windows versions.
+
+
+<li><a href="#">When searching for malicious processes, look for any of these anomalous characteristics: • Started with the wrong parent process • Image executable is located in the wrong path • Misspelled processes • Processes that are running under the wrong account (incorrect SID) • Processes with unusual start times (for example, starts minutes or hours after boot when it should be within seconds of boot) • Unusual command-line arguments • Packed executables
+
+
+<li><a href="#">Once you understand the unique capabilities of remote forensics, you quickly realize that what you can accomplish against one machine could be utilized across hundreds of systems. A single investigator now has too many systems to potentially analyze in a network.
+
+
+<li><a href="#">Although a single system could be forensicated manually, enterprise forensics leans specifically toward automation. It also leans toward scalability for the investigator. It is not hard to imagine an investigator being able to investigate thousands of machines over a couple of days looking for a unique registry key or keyword on one system. Enterprise forensic tools aim to aid that investigator in just this task.
+
+
+<li><a href="#">The days of imaging every hard drive from each system will soon be over. This is truly the future of digital forensics against end-points in your infrastructure.
+
+
+<li><a href="#">Malware does not need to be present on a system for it to be compromised. We need to also look for unusual OS-based artifacts that would not exist on a typical workstation in the organization. When looking for program execution, focus on prefetch, shimcache, userassist registry keys, and even jump lists. Many of these artifacts can result from an adversary using your system but not implanting malware.
+
+
+<li><a href="#">RAM is the bridge among the CPU, operating system, and getting things done. Nearly everything of interest that has ever happened on a modern computer has traversed RAM. From files to network connections to registry hives to running malware, a wealth of data is available for analysis. Until recently, memory analysis was largely limited to performing string and byte searches through seemingly random data. Now, memory structures are better understood and new tools exist that allow for a more granular approach to examining the contents of memory.
+
+
+<li><a href="#">Currently, there is no better place to discover malware than in RAM. There is literally no place left for it to hide. The classic malware dilemma manifests perfectly in memory: Malware wants to hide, but it also has to execute to be effective. Malware might be successful at either hiding or executing, but it is nearly impossible to do both!
+
+
+<li><a href="#">There are a number of key artifacts that might exist only in memory. Advanced malware exists that attempts to never write to disk. The majority of chat applications do not log communications to disk by default. And as users become savvier about privacy, memory might be our best bet for finding artifacts from things like "In Private" or "Incognito" browsing sessions.
+
+
+<li><a href="#">Volatility is by far the most well-supported and powerful memory analysis tool. It is command-line based and hence does have an associated learning curve. Because it is open-source and plugin-based, a cadre of developers from across the globe continue to contribute new features. It also allows a very deep-dive into memory structures, facilitating memory research in addition to memory forensics.
+
+
+<li><a href="#">During quick assessment incident response, it helps to have a tool to give you a high-level view of what is going on in memory. An easy tool that accomplishes this is Redline. Redline has many advanced features, but from a usability standpoint, it clearly enables responders to quickly assess a system rapidly without having to input a series of commands.
+
+
+<li><a href="#">For hunters and those continually doing threat identification across multiple systems, Volatility might be the way to go. Because it is command-line driven, many of the functions and outputs of Volatility can be scripted to run across multiple systems. Volatility also has more ofa discrete capability to find well-hidden data. This is the type of data that sometimes eludes Redline.
+
+
+<li><a href="#">Windows hibernation files are created whenever a system has been placed in hibernation, or "power save" mode. This most commonly occurs in laptop computers when the lid is closed on a running system. However, it can occur on any modem system running Windows and thus should be a routine check performed during an examination.
+
+
+<li><a href="#">Memory analysis differs somewhat from traditional media forensics: • The data is much more of a snapshot in time: Things might have changed dramatically from the instant before. • Establishing context is more complicated: We are dealing with much more information than simple files and directories. • The data is not in a format designed to be extracted and understood, it is in a format designed to execute: It requires more analysis and understanding of environment.
+
+
+<li><a href="#">Kernel Debugger Datablock (KDBG). The KDBG is the key to many tools understanding a Windows memory image. It is a data structure whose pointers can be followed to eventually find the process list for the system.
+
+
+<li><a href="#">Once the KDBG (or equivalent) is found, it leads to the EPROCESS, or executive process block list by identifying the PsActiveProcessHead pointer. This is a list of all the currently running processes in memory. Similar to a file in a file system, nearly everything revolves around processes in memory.
+
+
+<li><a href="#">Kernel modules are code used to extend the functionality of the system. Device drivers are perhaps the most common of these modules, extending the ability of the system to communicate with new hardware. Our memory analysis tools need to identify where in memory these modules exist because they are frequently employed by malware to control aspects of the running system.
+
+
+<li><a href="#">Many parts of memory forensics lend themselves to identifying malware using the three traditional malware detection methods: signature, contradiction, and heuristic/behavioral. Detection by contradiction is especially fruitful given the variety of analysis methods memory forensics provides to the examiner.
+
+
+<li><a href="#">Start with a review of processes because they are the most important objects in memory. Continue your analysis by scrutinizing all of the various helper objects assigned to each process. In this second and third phase, you will review items like loaded libraries (DLLs), files, registry keys, mutants, and network sockets. If you do not yet find anything out of the ordinary, consider searching for signs of code injection, looking to see whether malware might have taken over a legitimate process.
+
+
+<li><a href="#">Also pay attention for signs of rootkit techniques. Rootkits might be difficult to spot on a file system, but are often glaringly obvious when looked at through the lens of memory. Finally, extract any suspicious processes, drivers, and memory pages and continue your analysis outside of the memory image via malware reverse engineering techniques or simple anti-virus scans.
+
+
+<li><a href="#">Memory analysis tools like Redline will easily get us a list of all processes and their associated metadata. The harder part is knowing how to analyze the information and identify anomalies. When reviewing processes in a memory image, concentrate on these six items:
+
+
+<li><a href="#">Image name: The name of the process executable itself might give us useful information. Seasoned incident responders can often spot process names that don't belong on a standard Windows system. Attackers can name their processes to blend in, or hide in plain sight. This can be a successful technique owing to how complicated Windows systems and how many processes might be running.
+
+
+<li><a href="#">Full path: Malware will sometimes camouflage itself with legitimate image names that are run from different locations. Explorer.exe should always run from the Windows directory and iexplore.exe from the Program Files directory. If you see a process with these names running from the \Windows\System32 directory, you should take notice.
+
+
+<li><a href="#">Parent process: Knowing what process spawned another can help us in our search. Many user applications have a parent process ofExplorer.exe, which is the user shell. If you see a process named like a system process, say "svchost.exe," running with Explorer.exe as its parent, that is suspicious.
+
+
+<li><a href="#">Command line: The Process Environment Block records the full command line used to start a process. This allows us to check that the actual executable matches its image name and identify strange arguments that might have been used.
+
+
+<li><a href="#">Start time: The start time is underutilized, but can be a great source of information. If you have evidence of an attack occurring near a certain time, look for processes started after that time. Once you identify a suspicious process, you can look more closely at other processes started around that time.
+
+
+<li><a href="#">Security identifiers: The security identifier can tell us what level of account spawned a process. Was the process started by System when it should have been started by LocalService?
+
+
+<li><a href="#">There is a whole lot more to processes than just image names and parent processes. To identify some harder to- find malware, we are going to have to dig deeper. Processes can have hundreds of associated objects.
+
+
+<li><a href="#">The following objects can be reviewed:
+
+
+<li><a href="#">• DLLs: Dynamically Linked Libraries define the capabilities of a process. For instance, if a process needs to communicate via HTTP, it will load the WININET.dll file. In some cases, malware will load its own malicious DLLs to take control of a process. • Handles: A pointer to a resource, handles exist in many different forms. Some of the most important to memory analysis are: • File handles: Identify which items in the file system or which I/O devices are being accessed by the process. • Registry handles: These are the registry keys the process is reading or writing to. • Mutex or semaphore handles: Also called "mutants," these objects control or limit access to a resource. • Event handles: Events are a way for process threads to communicate. Malware will occasionally use unique event handles • Threads: A process is just a container for all of the items that do the real work. Multiple threads run within every process interacting with various system objects. • Sockets: These are network connection endpoints. Every network socket is assigned to a specific process, allowing us to trace back suspicious network activities.
+
+
+<li><a href="#">The problem with analyzing process objects is that they can be so numerous. How do you identify the one malicious process mutex out of hundreds? Redline (and Memoryze before it) is pioneering the use of Least Frequency of Occurrence (LFO) to help with this problem. The LFO concept is easy: Anything related to malware should be among the least frequently occurring objects on a system
+
+
+<li><a href="#">Having a low occurrence count does not prima facie indicate something is malicious. But it has a higher chance of being malicious than another similar object found in 75% of the processes. Thus, we can use LFO to help us eliminate large numbers of objects so we can focus our efforts on a smaller set.
+
+
+<li><a href="#">When we move down to process objects, our job becomes more difficult. Now instead of maybe one hundred or less processes to review, we might have thousands of process objects. Perhaps the most effective tool for making process object analysis feasible is Least Frequency of Occurrence, allowing us to sort objects by how often they are referenced and focusing our limited resources on just the outliers.
+
+
+<li><a href="#">There are several things we look for when analyzing network connections for suspicious activity:
+
+
+<li><a href="#">Suspicious ports: Although we don't see listening ports serving as backdoors nearly as frequently, they are still out there. Pay attention to what ports are active on a typical system in the environment and look for those that don't fit.
+
+
+<li><a href="#">Suspicious connections: Modern malware has largely moved to outbound connectivity (for example, beaconing) over highly utilized ports, such as 80 and 443. Although this traffic blends in well, it is still possible to detect, especially during memory analysis.
+
+
+<li><a href="#">Suspicious processes: Should the process communicate via the network at all? One of the amazing abilities we have with memory analysis is that old, terminated network sockets might still be recovered out of memory. Thus even if the evil process wasn't communicating during the short time when memory was acquired, we have a chance to identify it with previously opened sockets.
+
+
+<li><a href="#">When you are just starting to try to identify unusual network behavior, keep an eye out for the following: • Any process communicating over port 80, 443, or 8080 that is not a browser • Any browser not communicating over port 80, 443, or 8080 • Connections to unexplained internal or external IP addresses. • Web requests directly to an IP address rather than a domain name • RDP connections (port 3389), particularly if originating from odd IP addresses. • DNS requests for unusual domain names
+
+
+<li><a href="#">If we do find a suspicious connection, we can immediately tie that to a specific process because every socket is owned by a process. Further, we will have a creation time of the socket, allowing us to start performing time line analysis using other artifacts.
+
+
+<li><a href="#">The two most popular forms of code injections are DLL injection and process hollowing. Unfortunately, the Windows architecture makes DLL injection relatively trivial. The only hurdle is having administrator (or debug privileges) on the system. The attacking process can allocate space in a running process, shove the DLL file into it, and then create a new thread to load the DLL into the running process using the Windows Virtua!AllocEx() and CreateRemoteThread() function calls.
+
+
+<li><a href="#">Process hollowing is a little bit different, but looks very similar during memory analysis. In this case, the malware starts another copy of a legitimate system process. It pauses the process, de-allocates some of the original code and replaces it with malicious code. Items like the process image name, path, and command lines remain unchanged and serve to camouflage the now malicious process
+
+
+<li><a href="#">Hooking legitimate system functions and redirecting their output is the most common means for a rootkit to hide itself. A simple way to think about hooking is as a code detour. A malicious process or driver redirects the logical code flow in order to manipulate user input or output.
+
+
+<li><a href="#">System Service Descriptor Table (SSDT): Hooking the SSDT is a big win for malware. It is easy and highly effective, but also easily detectable. The Kernel uses the SSDT as a lookup table for system functions, and each table entry points to function code. A SSDT hook patches one or more of these pointers to redirect it to a location the rootkit controls. The advantage is that it is based in the kernel and hence is a global or system-wide hook.
+
+
+<li><a href="#">IRPs are how operating system processes interact with hardware drivers. They control any data being sent or received by hardware, so hooking these functions gives the ability to manipulate things like network traffic, disk reads, and keyboard entries. A large number of legitimate system drivers and processes hook various IRP functions. This makes separating the good from the bad very difficult. Look for suspicious driver names, or drivers with very low occurrences.
+
+
+<li><a href="#">Although we have the tools to identify rootkit hooking within our memory images, it is one of the harder analysis steps to complete. This is because hooking is not solely a malicious activity. A host of legitimate system processes and even protection applications like anti-virus or process monitors require hooking to perform their roles. Also, a small percentage ofmalware in the wild employ rootkits. For these reasons, we don't start our memory analysis process with hook detection. Often by the time you reach this step, you have already discovered some bad processes and are just trying to identify additional information about the attack.
+
+
+<li><a href="#">The final step in our memory analysis process is to extract the suspicious processes and drivers from the memory image so we can perform additional analysis. This is a key step and a reminder that we can't always wrap up our memory analysis by using just one tool. Memory forensics can usually get us very close to understanding what was compromised and how the malware works, but a complete understanding of the malware and all of its indicators usually requires dynamic and static malware analysis. So once we have narrowed down our items for additional analysis, we will need to dump them.
+
+
+<li><a href="#">Volatility has the most complete set of extraction features, so we will focus on it in the completion of this final step.
+
+
+<li><a href="#">The most important acquisition plugins for you to know are: • dlldump: Dump DLLs from a process. • moddump : Dump a kernel driver to an executable file sample. • procdump: Dump a process to an executable file sample. • memdump : Dump all addressable memory for a process into one file. • dumpfiles: Extract cached files from memory. • filescan: Search for file objects present in memory.
+
+
+<li><a href="#">We take a layered approach, not expecting any one step to solve the case for us, but instead finding clues as we look at the different components that make up a complete memory image.
+
+
+<li><a href="#">• Identify rogue processes: Reviewing processes is the obvious first step because processes are the most important construct in memory. By scrutinizing the image binary name, full path, parent process, command-line parameters, start time, security identifiers, and Redline MRI score, we have a good chance of finding suspicious processes early.
+
+
+<li><a href="#">• Analyze process DLLs and handles: Our next step is to dig deeper into any suspicious processes and review the objects that define each process. The multitude of objects makes this a more challenging step, but Redline features like digital signature checks (live memory analysis only) and especially Least Frequency of Occurrence checks can be very helpful focusing our efforts.
+
+
+<li><a href="#">• Review network artifacts: Network artifacts have long been a great place to identify strange activity on the system, and the best part of working with memory is that unlike on the running system, there is no way for the attacker to hide them. Analyzing behaviors like suspicious ports, network connections, and processes that should not be communicating can help identify evil processes.
+
+
+<li><a href="#">• Look for evidence of code injection: Process hollowing and especially DLL injections are a very popular means for malware to hide. Luckily, it is currently quite easy for our memory analysis tools to detect these actions.
+
+
+<li><a href="#">• Check for signs of a rootkit: Rootkits exist to hide processes and process objects and do this via a variety of different methods. The most popular are SSDT, IDT, IRP, and IA T hooks. Although some of these hooks are harder to find than others, memory analysis gives us an easy means to view and analyze hooked functions.
+
+
+<li><a href="#">• Dump suspicious processes and drivers: The final step in our process is to extract our findings for further review. Once we have a list of suspicious process and drivers, we can dump them from the memory image and analyze via string searching, anti-virus scans, automated malware analysis engines, and manual reverse-engineering techniques.
+
+
+<li><a href="#">Live analysis occurs by accessing physical memory, and not relying upon API calls, open handles, or debuggers. Thus, it is just as effective at defeating advanced malware and rootkits as analyzing a standard memory image. In fact, proof of concept code like Shadow Walker, which tries to page itself out of memory when a memory acquisition tool is detected, could be defeated through live analysis.[
+
+
+<li><a href="#">Indicator of Compromise (IOC) use allows automated analysis of systems, or in this case memory images. The idea is simple. Once malicious activity has been identified, an analyst creates an IOC defining a way to detect that activity in very specific terms. In terms of memory, this could be the presence ofa specific process name, command line, DLL path, port opened, unlinked DLL, hooked function, etc. An indicator is created and tested, and then can be used to automatically identify the malicious activity in the future.
+
+
+<li><a href="#">As malware is discovered in your enterprise, it should be analyzed and signatures created. These signatures can then be used to identify similar malware found in the future. This process can save an enormous amount of time, preventing team members from "re discovering" the same malware over and over again.
+
+
+<li><a href="#">In many situations, attackers will do a decent job of removing or eliminating their trace artifacts from a system. Use of file wipers and data cleaners are often seen by some of the more advanced groups to hide their more sensitive capabilities. For example, if adversaries use a local system privilege escalation tool, they might consider wiping it so that responders will not discover it. In addition, adversaries often wipe the archive files (.rar) from the system they exfiltrated them from.
+
+
+<li><a href="#">These files might not be permanently lost. With the existence ofXP restore points and its more evolved cousin, Volume Shadow Copies, it is possible to recover some of the cleared data by examining evidence of historical artifacts from earlier snapshots of the system, using System Restore.
+
+
+<li><a href="#">Shadow copy enables a user to essentially revert an entire volume, a folder, or a file back in time to a previous version. An investigator can also copy out of the Shadow Copy a previous version of the file and examine the differences.
+
+
+<li><a href="#">When performing incident response it is important to understand attacker behavior so you can quickly "get to where the hackers are". Lateral movement is essential to the ability to compromise a network and accomplish the attacker's objectives. Understanding the universe of possible lateral movement tools and techniques allows responders to better find and anticipate attacker activity.
+
+
+<li><a href="#">Microsoft has recently taken major steps to reduce hash vulnerabilities. Windows 8.1+ no longer stores WDigest and TsPkg credentials by default. Windows 8.1 also introduced several pass the hash mitigations including restricted administrator accounts, the protected user's security group and protected processes.
+
+
+<li><a href="#">Credential Guard debuted with Windows 10, which uses a hypervisor to move domain credentials, tickets, and hashes from LSASS into an isolated process (LSAiso) that can better protect them. All of these mitigations can be defeated, but in short, it is now much more difficult to gather hashes and execute pass the hash techniques on Win8.1+ systems.
+
+
+<li><a href="#">The Windows enterprise relies heavily on the Kerberos authentication protocol. This protocol uses Ticket Granting Tickets (TGT) to prove successful authentication of user accounts and service tickets to authenticate for particular services. Since nearly everything in Windows is tied to an account, the authentication burden can be massive. To reduce the number of authentication requests that bombard a domain controller (DC), issued tickets are valid for 10 hours by default. This means that anyone in possession of that ticket is already preauthenticated during that time period. Attackers can use tickets to impersonate privileged users, evade the authentication process, and reduce logging of their efforts.
+
+
+<li><a href="#">Tickets are cached in memory during the time they are valid, and a tool like Mimikatz allows an attacker with administrator privileges to dump all of the tickets present on the system to individual files. They can then pass them to other systems to authenticate as that account (TGT) or service. This is a particularly difficult attack to identify and mitigate. Windows 10 Credential Guard can protect against ticket attacks since tickets will now be stored in the protected credential enclave.
+
+
+<li><a href="#">The domain controller is usually one of the first places attackers traverse to after achieving domain administrator credentials. And their primary objective is the NTDS.DIT file. This database has the "keys to the kingdom", and can provide access to nearly resource in the domain, including those special accounts protecting resources even domain administrators can't access.
+
+
+<li><a href="#">The most common ways to extract the file is by loading a driver or tool that gives raw access to the disk (evading Windows API protections), or using the built in Volume Shadow Copy service. The Volume Shadow Copy extraction technique requires no extra files and is currently the most popular choice in the wild. If there are no Volume Shadow Copies on the system, an attacker can simply create one! Once the files are collected, offline extraction can be accomplished using the open-source tool, NTDSXtract. The result is every NT hash in the domain, which can then be cracked or used immediately via Pass the Hash attacks. It goes without saying that this attack is by far the most dangerous and devastating that can be accomplished in the enterprise.
+
+
+<li><a href="#">When investigating lateral movement, we need to understand where our evidence will be recorded. In most cases, the remote, or target, system will have the most information. While this is helpful, it often only tells us that a particular system was accessed, and does not help us quickly identify all of the systems an attacker touched, as is sometimes the case with evidence present on the originating, or source, system. This is one reason centralizing logs is so important. Once a malicious pattern is identified, it can be quickly searched across all endpoints if their logs are all in one place.
+
+
+<li><a href="#">Services are commonly used to execute binaries remotely and establish persistence, if necessary. However, they do leave excellent artifacts behind for detection. Services are recorded in the registry and include the binary that was executed. Attackers may delete the service in an effort to clean up, but deleted registry keys can persist. In addition, there is extensive Windows event logging in the system log for service-related activity.
+
+
+<li><a href="#">Tasks can be scheduled either locally or remotely and can be run as any user (assuming the credentials are known). Scheduled tasks leave behind ".job" files indicated what was scheduled (and who scheduled it) as well as decent event log evidence.
+
+
+<li><a href="#">The registry can be manipulated for all sort of evil, and of course there is a built-in windows tool to allow it to be done remotely. The Remote Registry service must be started on the target and prior authentication with the system must be in place since there is no option in reg.exe to provide credentials (attackers often mount an admin share to pre-authenticate). Registry key last write times are some of the best detection mechanisms.
+
+
+<li><a href="#">WMI is a powerful remote (and local) management infrastructure. PowerShell can leverage and script WMI commands, in addition to employing the WinRM protocol to for remote management capabilities. The use of WMI and PowerShell across the kill chain is increasing as sophisticated attackers seek to evade security mechanisms and leave smaller forensic footprints. Sadly, attackers currently have an advantage when using these tools. In most enterprises, there are few forensic artifacts left behind to show WMI/PowerShell activity. However, there are ways to better architect a network to detect this activity.
+
+
+<li><a href="#">Discovering malicious WMI and PowerShell usage can be daunting for defenders. Application execution artifacts like Prefetch and Shimcache should identify their use on target machines. Wmiprvse.exe, powershell.exe, and wsmprovhost.exe are good places to start... Process tracking and command line auditing are absolutely critical to piecing together many attacks, including WMVPowerShell. Adding this capability is perhaps the most important detective technique.
+
+
+<li><a href="#">Amidst all of the deployment complexities, securing access to the deployment application itself is often forgotten, allowing anyone with the proper credentials full access. Once an adversary has access to the deployment server, it takes only modest skills to successfully create a deployment package and get it installed on a small or large population of the network.
+
+
+<li><a href="#">Accounts and systems used in the patch deployment process must be limited and heavily monitored. Creation of unique accounts (instead of just domain admin) can facilitate alerting. Patch management cycles are usually strictly controlled, and by going further to limit them to specific days and times, out-of-band use of tools can be more readily identified.
+
+
+<li><a href="#">Detecting malware-based lateral movement efforts can be difficult. Paying attention to system crashes recorded in event logs can be effective. Endpoint security software reporting such as anti-virus, host intrusion prevention systems (HIPS), and the Enhanced Mitigation Experience Toolkit (EMET) from Microsoft are useful.
+
+
+<li><a href="#">Logon Events can give us very specific information regarding the nature of account authorizations on a system if we know where to look and how to decipher the data that we find. In addition to telling us the date, time, usemame, hostname, and success/failure status of a logon, we can also determine by exactly what means a logon was attempted.
+
+
+<li><a href="#">While less common today due to the popularity of pass-the-hash and ticket based attacks, rogue accounts are still a very viable way to evade some auditing and create "sleeper" accounts that can be used by attackers in times of distress. Luckily, detecting account creation is very easy via proper auditing of account management events.
+
+
+<li><a href="#">In a Windows domain environment, the vast majority of user accounts are actually domain accounts, with their credentials stored on the domain controller NOT the local system. This is invisible to most users who use the same computer day in and day out. However, behind the scenes, before that user can log onto a workstation in a domain environment, his or her usemame and password must be validated by the domain controller using either the NTLM or Kerberos authentication protocol.
+
+
+<li><a href="#">Auditing of network shares can be useful for many different types of investigations. Whether you are investigating internal access by employees, or access from external threats, knowing what file shares were touched can be helpful to understand data flows. Mounting file shares is a very common technique used by adversaries to move laterally through an environment-both to distribute malware and to collect data to steal.
+
+
+<li><a href="#">Don't forget that even on a single system, we are rarely just reviewing one log file! Correlation of events found via multiple logs is challenging, but is absolutely necessary. You will often need to piece together information using Application, System, and Security logs from many different systems.
+
+
+<li><a href="#">Services are governed by the Service Control Manager (SCM). It transmits control requests to running services and drivers and maintains status information about those services. The SCM is responsible for updating the System log with service-related events. When looking for suspicious services, five System log events are the most useful:
+
+
+<li><a href="#">7034: Service crashed unexpectedly-Services should crash only on rare occasions, thus this is an interesting anomaly that might be worth investigating
+
+
+<li><a href="#">7035: Service sent a Start/Stop control-The SCM has ordered the service to either launch or shutdown.
+
+
+<li><a href="#">7036: Service started or stopped-Indicates that the service is either fully operational, or completely shutdown.
+
+
+<li><a href="#">7040: Start type changed (Boot I On Request I Disabled)-Reports on any changes to the Start Type of a service.
+
+
+<li><a href="#">One of the easiest methods to quickly scan application installations is to sort the Event Viewer by Event ID and review the 1000+ and 11000+ events, looking for applications of interest. You should be looking for installations and un-installations that were accomplished at strange times and dates (or are within a specific window that you are investigating) and that were performed by user accounts that are relevant to the case.
+
+
+<li><a href="#">Tracking command-line interface (CLI) usage has always been a particularly bad blind spot for forensic analysts. As PowerShell becomes ubiquitous in the enterprise and allows nearly complete control, auditing CLI is in fact becoming a necessity.
+
+
+<li><a href="#">Although this is a step in the right direction, few organizations are taking advantage of it at the moment. The biggest hurdle is it requires successful process creation auditing to be enabled. Historically, process tracking audits have been disabled in most environments due to the sheer number of events, but they can be incredibly useful on critical servers and systems.
+
+
+<li><a href="#">PowerShell is becoming ubiquitous in the Microsoft ecosystem and although it is making administrators lives much easier, it opens a nearly unprecedented suite of capabilities for attackers. Nearly every malicious activity imaginable is possible with PowerShell, including privilege escalation, credential stealing, data destruction, and data exfiltration. PowerShell is commonly used by top-level adversaries in the wild, is difficult to restrict access to, and has historically been difficult to audit.
+
+
+<li><a href="#">Time line is the capability that allows an investigator to automatically assemble artifacts from the registry, filesystem, and operating system in temporal order. The timeline can then be examined to see the interaction of many of these items. The result is that in many cases it is much easier to analyze and eventually tell the sequence of events or the story of what happened on a system during a specific timeframe.
+
+
+<li><a href="#">There is a tremendous amount of knowledge required to accomplish and analyze a super timeline accurately. The three core areas that every analyst must know are Filesystem Data, Windows Artifact Data, and Registry Keys. You need to understand all three areas and how they inter-relate to each other. In most situations, it helps if the analyst is able to identify the artifact by name and the significance of the artifact's parts.
+
+
+<li><a href="#">Many artifacts you will uncover will help substantiate a fact. Multiple artifacts that all substantiate the same fact are much more effective at increasing the overall weight of your evidence. For example, you will learn that there are commonly four to six locations on an average Windows system that will point to a user's File Opening or File Creation.
+
+
+<li><a href="#">One method to help an analyst ease into a timeline is what we call the "pivot" point. This is the point (file, time, artifact) that you find in your timeline and then examine what happened before and after that instance.
+
+
+<li><a href="#">Determine Timeline Scope through analysis of the key questions and the case type. Generally, you can identify that the activity occurred between date A and date B. Narrowing the scope will be important in managing your overall data.
+
+
+<li><a href="#">Narrow Pivot Points through determining the closest time around when you think the incident occurred (time-based) or possibly identifying a key file that might have been used in the activity in question (filebased).
+
+
+<li><a href="#">Determine the Best Process for Timeline Creation by looking at how much data you might possibly need. Generally Automated Timeline Creation is preferred if you do not know what you are looking for and you might need to include everything. However, if you know exactly the type of data you need to solve your case, Targeted Timeline Creation is the preferred method.
+
+
+<li><a href="#">Filter Timeline using your scope and filter out data that you do not need to examine. Also consider using keywords to identify relevant data for your analysis.
+
+
+<li><a href="#">Analyze Timeline through Focusing on the context of evidence. Look before and after the element to determine how the artifact was potentially used.
+
+
+<li><a href="#">The most common type oftimeline that is used for analysis is the Filesystem Timeline. Timeline tools are able to parse many filesystem types including NTFS, FAT, EXT, HFS+, and UFS making it one of the most flexible analysis tools out there.
+
+
+<li><a href="#">The tools collect the timestamps from the filesystem metadata. Specifically, the timestamps would include the data modification (m-modification), the data access (a-access), the metadata change (c-change), and the metadata creation (b-birth) timestamps. The combination of these timestamps will mean many things and could possibly tell the investigator when a file was created on a volume, copied to a location, or deleted at a certain point.
+
+
+<li><a href="#">With today's large-scale intrusions and massive amounts of data, we can no longer expect to image every system of interest. A full physical image (and memory image) is still the "gold standard" because it gives us the most number of analysis options, but it simply isn't feasible in every situation. Preparing for this situation, if you can't do a full disk image, what files should you consider archiving off a system to perform limited analysis and triage?
+
+
+<li><a href="#">Windows Management Instrumentation (WMI) has been in place and improved upon since Windows 2000. It was designed for administrative data collection of both local and remote systems. As such, it scales easily (though it will require a VB, PowerShell, or equivalent script to do so), allows detailed querying ofa vast number of objects, classes, and properties throughout the OS, uses Kerberos network logons to authenticate so that credentials and tokens are not cached on the remote system, and provides a robust output capability including support for XML, HTML, and CSV formats that can be ingested into a database.
+
+
+<li><a href="#">A common criticism of all live response collection is its susceptibility to being fooled by a malicious rootkit on the system. Rootkits are used by malware to hide its existence and often exist at low levels in the system like the kernel. Because most live response tools (including system commands, WMI, .NET, and PowerShell) rely upon the Windows API to collect data, a rootkit can easily subvert those API functions to return incomplete data.
+
+
+<li><a href="#">If a rootkit is present, then data collection should be accomplished via memory or disk forensics-both of which can identify a rootkit and its activities. However, deep-dive forensics is much too time-consuming to run on hundreds of systems. Hence, we typically make the trade-off of speed and efficiency of live response toolkits for large-scale collection while augmenting that analysis with deep-dive forensics of a smaller sample of systems.
+
+
+<li><a href="#">Data chunks will be in one of two states on the filesystem: used or not used. Each chunk of data ( cluster) is either owned by an existing file or is waiting to be used. This is generally referred to as free space. Even though the space is free, it does not necessarily mean that it is free of data. Files that were deleted on the system could have written to these clusters at one point. This space is considered unallocated by the filesystem. Even though the space is unallocated, critical evidence can be recovered from these clusters despite not being recoverable by ordinary file recovery.
+
+
+<li><a href="#">Typical filesystems store virtually all data in files. The most important of these are a set of special files, which are typically called metadata structure or inodes. The prefix "meta-" means self-referring. So "metadata structures" are structures that contain data about data. And that's exactly what these structures do. They contain internal information about the real data stored on the filesystem. For example, it could contain a listing of directory, timestamps, and file owners.
+
+
+<li><a href="#">Like data blocks/clusters, inodes are also allocated or unallocated. An allocated inode is a file that is in use by the filesystem. A file with a name points to that inode structure to tell the operating system where the file data can be found. If an inode is unallocated, it was never written to, or it might contain the inode data of a file that was recently deleted.
+
+
+<li><a href="#">The Filename layer is typically a separate structure that gives names to files. The Metadata layer can describe everything about a file, but it is often inconvenient to have to remember that /etc/password is inode 312. The filename structures are typically stored in the data units allocated to the parent directory. They contain the name of the file and the address of the metadata structure
+
+
+<li><a href="#">Most hunting organizations are also reactive organizations, but they begin to task their incident response team to actively engage and hunt for adversaries inside their environment. To accomplish this task, the hunting team typically will be armed with known malware, patterns of activity, or accurate threat group intelligence aiding them in their search.
+
+
+<li><a href="#">The sorter tool is a Perl script that combines many small tools from The Sleuth Kit... The tool can also look up into hash databases to see if the file is known. Typically, if you have a basic baseline image to compare it to, excluding will result in a good percentage of known files being examined deeply which is useful.
+
+
+<li><a href="#">Sorter is able to carve files out based on the following data types based on the CONTENT of the file, not the extension. It will then create a directory and an .html file that will map the file back to the original filename. This is useful because it will sort files (existing and deleted files) regardless of their status. This will make finding malware or Adobe PDF files much easier.
+
+
+<li><a href="#">You will need to do your indexing and your collection for both known good and known evil hash lists. You will then use your sorter tool to be able to go through and alert on the hash list for known evil files,
+
+
+<li><a href="#">One of the inaccuracies a responder would face is when he encounters a situation in which a file is similar to another file. How can you accomplish this? By performing a new hashing algorithm called context triggered piecewise hashing (CTPH). MDS can only say ifa file is exactly matching or ifit is different. With CTPH using ssdeep, you can compare two files that are different but are close to being the same.
+
+
+<li><a href="#">Antivirus scanners are also useful in incident response verification as they can quickly parse through your filesystem looking for malicious files. However, ensure that your antivirus software is configured correctly, or it may automatically quarantine the evidence you are searching for. In addition, it is best advised to use several NV scanners and not rely on one. Set the scanner to accomplish a "deep" scan of the files on the system.
+
+
+<li><a href="#">Your indicators of compromise usually are created by reversing malware and through application footprinting. Some professional groups that are responding to incidents have massive IOC lists that range in the thousands of indicators collected from previous intrusions that they have collected.
+
+
+<li><a href="#">The Malware Risk Index (MRI) is a prominent feature in Redline and a fantastic innovation. The idea behind MRI is that ifwe have all these heuristics to identify a bad process, why not create a means to automatically check them instead of relying upon the analyst to remember them all? You can think of this feature as a first pass on the memory image from a junior analyst. It won't catch everything, but it can catch the most obvious anomalies.
+
+
+<li><a href="#">The goal of this feature is twofold. First, it is going to help pinpoint specific processes that should be investigated further while attempting to eliminate some of the nonsuspicious processes and get them out of the analyst's way. It's also designed to try and make malware detection easier.
+
+
+<li><a href="#">How is the score created? The score is created by two components: behavior rule set and verification of digital signatures.
+
+
+<li><a href="#">The behavior ruleset is made up of three different types of rules: 1. Process Path Verification allows users to define what processes should be launched from what directories. This triggers on malware that copies and names itself after svchost or other system processes to subdirectories within system folders. 2. Process User - you can define a rule saying svchost.exe should be running as local service, network service, or system. When Redline sees svchost running as administrator, it gets flagged. 3. Process Handle Inspection allows you to define specific rules pertaining to malware or generic behavior. For example, a default rule is to flag svchost or iexplore anytime it has a process handle to cmd.exe. There is just no good reason for this to ever happen.
+
+
+<li><a href="#">The most often used capability to achieve persistence is through scheduled tasks using the "at" command. In many cases, adversaries would create a service with their malware or replace an existing service with the new malware. The next most popular malware persistence mechanism is using the registry auto-start at boot or login mechanisms.
+
+
+<li><a href="#">Some of the more common anti-forensic techniques in employ today include:
+
+
+<li><a href="#">• Deleting indicators of entry to a system after it's compromised, such as log file entries, file modification/access dates, and system processes. • Obfuscating running malware by changing its name or execution profile such that it appears to be something benign. • Storing data on disk in a "packed" format. Packing is a technique that obfuscates or encrypts data or software and encapsulates it in a file along with a program to perform decryption/de-obfuscation. • Encrypting data through use of an encryption algorithm and encryption key.
+
+
+<li><a href="#">Commonly a simple action by a user can cause multiple event log entries to be recorded throughout the network. When reviewing Event Logs in a networked environment, it is important to understand all the locations where logs may reside. To get the full picture of activities (and when they occurred), it may be necessary to recover logs from multiple systems.
+
+</div>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\\w\' -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+
+
+
+
+</html>

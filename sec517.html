@@ -1,0 +1,369 @@
+<html>
+<title>SANS Notes</title>
+<meta name="robots" content="noindex,nofollow" />
+
+<link rel="stylesheet" href="w2.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="roboto.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<head>
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+	z-index: 3;
+	width: 375px;
+	top: 35px;
+	bottom: 0;
+	height: inherit;
+	text-align: justify
+}
+
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 50%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+
+#keywords {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 30%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 20px;
+  text-align: justify;
+width: 750px;
+}
+
+#myUL li a {
+  margin-top: -1px; 
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+}
+</style>
+</head>
+
+<body>
+<!-- Topbar -->
+<div class="w3-bar w3-theme w3-top w3-left-align w3-small"></div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+
+
+<center><H2>SANS COURSE NOTES</H2></center>
+<BR>
+<p>
+<BR>
+<a class=" w3-button w3-hover-blue" href="sec401.html">SEC 401 - Security Essentials</a>
+<a class="w3-button w3-hover-blue" href="sec450.html">SEC 450 - Blue Team Fundamentals</a>
+<a class="w3-button w3-hover-green" href="for500.html">FOR 500 - Windows Forensic Analysis</a>
+<a class="w3-button w3-hover-blue" href="sec502.html">SEC 502 - Perimeter Protection</a>
+<a class="w3-button w3-hover-red" href="sec504.html">SEC 504 - Hacker Tools</a>
+<a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
+<a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
+<a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<a class="w3-button w3-hover-red" href="sec517.html">SEC 517 - Cutting Edge Hacking Techniques</a>
+
+
+</nav>
+
+<div class="w3-main" style="margin-left:350px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+
+
+<center>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Keyword" title="Search">
+
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="20" name="hilite" placeholder="Highlight Multiple Keywords">
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+
+
+<ul id="myUL">
+
+  <h2> Cutting Edge Hacking Techniques, Ed Skoudis</h2>
+<p>
+    We'll start out with Reconnaissance, whereby an attacker learns about the
+    technologies in use in a target without firing a single malicious packet.
+    With thorough recon, the attacker's later components of the attack are much
+    simpler.
+</p>
+<p>
+    After finishing their reconnaissance, attackers usually turn to Phase 2,
+    Scanning. In this component of the attack, the bad guys launch packets
+    across the network to find openings in the target environment.
+</p>
+<p>
+    Goals of the Nmap Scripting Engine (NSE)
+</p>
+<p>
+    - Allow for messages to be sent to multiple targets, running scripts in parallel<br>
+    - Be easily extendable with community-developed scripts<br>
+    - Support extended network discovery (whois, DNS, etc.)<br>
+    - Perform more sophisticated version detection<br>
+    - Conduct vulnerability scanning<br>
+    - Detect infected or backdoored systems<br>
+    - Exploit discovered vulnerabilities<br>
+<p>
+    Each NSE scripts is put in one or more categories:
+
+<p>
+    - Safe: Not designed to crash targets, consume bandwidth, or exploit vulns<br>
+    - Intrusive: May leave logs, guess passwords, or otherwise impact the target<br>
+    - Malware: Detect network-accessible malware or backdoors<br>
+    - Version: Detect the version of target's services<br>
+    - Discovery: Info gathering about target environment<br>
+    - Vulnerability: Look for a given vulnerability in the target<br>
+
+<p>
+    In the scripts directory, there are several dozen scripts. Some of the more
+    interesting include: <p>
+A script to determine if an FTP server supports Nmap
+    bounce scans <br>
+A script that attempts to do a DNS zone transfer from a target<br>
+    A script that analyzes whether an SMTP server can be used as a mail relay,
+    thus leaving them open to abuse by spammers <br>
+A script that looks for SQL
+    injection flaws on web servers, by spidering the site, looking for
+    variables passed via the URL, injecting quotation marks of various kinds,
+    and analyzing output for common SQL injection flaw error messages
+</p>
+<p>
+    Buffer overflow vulnerabilities are very common, with new holes discovered
+    on a daily basis . Buffer overflow flaws involve not checking the size of
+    user input before moving it into a memory location. The user input
+    overflows the memory allocated for a variable, changing not only that
+    variable, but other nearby elements in memory.
+</p>
+<p>
+    Here are the essential components of Metasploit. The tool holds a
+    collection of exploits themselves, little snippets of code that force a
+    victim machine to execute the attacker's payload. Metasploit has over one
+    hundred different exploits today, including numerous common buffer overflow
+    attacks. Next, the tool offers a set of payloads, the code the attacker
+    wants to run on the target machine. Some payloads create a command-shell
+    listener on a network port, waiting for the attacker to connect and get a
+    command prompt. Other payloads give the attacker direct control of the
+    victim machine GUI across the network by surreptitiously installing VNC,
+    the GUI remote-control tool.
+</p>
+<p>
+    After exploitation has occurred and the Meterpreter is loaded into the
+    memory of a target machine, an attacker can run a variety of Meterpreter
+    scripts to automate various actions on the box. To invoke a script, the
+    attacker merely has to type "run [scriptname]" at the Meterpreter prompt,
+    letting the attacker wield significant control over a target system.
+</p>
+<p>
+    Numerous scripts have been released for the Meterpreter, including:
+</p>
+<p>
+    Disable_ audit: This script turns off event logging, stopping the system
+    from writing any logs until the script is used again to re-enable logging.
+</p>
+<p>
+    Getcountermeasure: This one detects (and can kill) over 200 different AV,
+    HlPS, HIDS, and third-party firewall products, as well as the Windows
+    built-in firewall. ft also can check whether Data Execution Prevention
+    (DEP) and User Account Control (UAC) are configured, although it cannot
+    turn off DEP or UAC. GetGUI: This script enables the Remote Desktop
+    Protocol service, giving an attacker remote GUI access of a target.
+</p>
+<p>
+    Keylogrecorder: This keystroke logger grabs all keystrokes (or just those
+    typed into the Windows GINA for logging on), storing them in a SQLite
+    database.
+</p>
+<p>
+    Memdump: This script dumps memory using the Mandiant mdd tool, for local
+    storage on the target machine in a file or transfer back to the attacker.
+</p>
+<p>
+    Soundrecorder: This script records audio from the default microphone device
+    into a file.
+</p>
+<p>
+    Wmic: This one runs one or more Windows Management Instrumentation
+    Command-line tools commands of the attacker's choosing.
+</p>
+<p>
+    Metasploit 3 includes numerous impressive features, including:
+</p>
+<p>
+    Multi-session support: Metasploit can exploit multiple target machines at
+    the same time, with command shell or Meterpreter sessions opened to
+    multiple machines from a single Metasploit instance at the same time.
+</p>
+<p>
+    Db_autopwn: This feature allows an attacker to configure Metasploit to
+    shoot all relevant exploits at a target, with the hope that at least one of
+    the exploits will successfully work in exploiting and getting access to a
+    target.
+</p>
+<p>
+    Disabling keyboard and mouse input: To prevent investigators from stopping
+    an attack, the attacker can shut down the user interface input options for
+    the person at the console.
+</p>
+<p>
+    Priv module: This feature includes the ability to dump the SAM database
+    from a target machine so that it can be cracked or used in a pass-the-hash
+    attack.
+</p>
+<p>
+    Rootkits are indeed Trojan Horses in that they take normal programs
+    associated with the Operating System running on the target, and replace
+    them with malicious versions. The malicious versions are disguised to look
+    like happy, normal programs, but really mask hidden capabilities used by
+    the bad guy.
+</p>
+<p>
+    Various Rootkits offer attackers backdoor access by implementing a backdoor
+    password or a remote shell listener. Using a Rootkit's Trojan Horse
+    replacements for various commands on the target system, an attacker can
+    remotely control the machine.
+</p>
+<p>
+    Rootkits include a variety of features that let attackers mask their
+    presence on a machine so that system administrators cannot detect them.
+    Most Rootkits let an attacker login to a system without generating any
+    system logs. Likewise, they also let an attacker hide files, processes, and
+    network usage on the system.
+</p>
+<p>
+    Many attacks (Rootkits especially) require the bad guy to have superuser
+    privileges. - root (Unix)/ Administrator or System (Windows). Protect
+    superuser by ... - Hardening the box by hand, or ... - Using a good
+    security template
+</p>
+<p>
+    By looking for various system anomalies introduced by kernel-mode Rootkits,
+    the free Chkrootkit tool can detect Adore, SucKIT, and several other
+    kernel-mode Rootkits... The scripts included in Chkrootkit perform tests
+    that can be used to catch the kernel in a lie about the existence of
+    certain files and directories, network interface promiscuous mode, and
+    other issues that kernel-mode Rootkits generally fib about. Rootkit Hunter
+    is a similar tool that is also immensely useful in investigations.
+</p>
+<p>
+    Windows Rootkit Detection:
+</p>
+<p>
+    &#8226; Rootkit Revealer, by Mark Russinovich, free from Microsoft
+    Sysinternals
+</p>
+<p>
+    &#8226; Looks for files and reg keys that are invisible in user mode, but
+    visible within the kernel - Lists the differences - Very, very useful in an
+    investigation
+</p>
+<p>
+    &#8226; Beware of false positives - Windows creates some such files itself
+    - NTFS metadata - Some applications create such flies
+</p>
+<p>
+    &#8226; Anti-virus and personal firewall tools - Also, running this tool
+    can trigger real-time anti-virus and anti-spyware alerts
+</p>
+<p>
+    Although they can be tricked by very thorough kernel-mode Rootkits, you
+    should still use file integrity checking tools, such as the Tripwire, AIDE,
+    and the related programs... Even a single mistake in the file-hiding
+    configuration of the kernel-mode Rootkit by the bad guys could expose them
+    to detection by your file integrity checker. Therefore, file integrity
+    checking tools remain very valuable, even though a kernel-mode Rootkit can
+    foil them if the attacker is very careful.
+</p>
+<p>
+    When a kernel-mode rootkit is suspected, you cannot trust anything the
+    kernel is telling you about the system. Solution? Toss out the kernel and
+    investigate with trusted tools. Boot from a CD-ROM (Linux bootable CDs).
+</p>
+<p>
+    Defending Against Hash Collisions... how do you defend against such
+    attacks? Well, don't use MD5 alone. Combine it with other hashing
+    algorithms, such as SHA-1 and/or RIPEMD-160. Although SHA-1 has had some
+    problems discovered, it remains pretty darned unlikely that someone could
+    find an x and y that have collisions in both MD5 and SHA-1. So, it's not
+    perfect, but you get a reasonable level of protection by applying two or
+    more hash algorithms in parallel.
+</p>
+
+</div>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\\w\' -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+
+
+
+
+
+</html>

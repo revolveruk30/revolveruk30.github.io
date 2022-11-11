@@ -1,0 +1,453 @@
+<html>
+<title>SANS Notes</title>
+<meta name="robots" content="noindex,nofollow" />
+
+<link rel="stylesheet" href="w2.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="roboto.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<head>
+<style>
+
+
+
+html, body {
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+oncontextmenu="return false";
+onselectstart="return false";
+ondragstart="return false";
+background-color: #f0f0f0;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+	z-index: 3;
+	width: 345px;
+	top: 30px;
+	bottom: 0;
+	height: inherit;
+	text-align: justify
+	height: 100%;
+	background-color: #f0f0f0;
+	position: fixed;
+	overflow: auto;
+	line-height: 0.2
+}
+.w3-searchbox {
+	height: 25%;
+	width: 110%;
+	left:405px;
+	top: 23px;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	z-index: 1;
+	line-height: 2;
+ margin-top: -7px; 
+
+}
+
+.w3-topbar {
+	width: 100%;
+	height:5%;
+	background-color: black;
+	position: fixed;
+	top: -3px;
+	overflow: hidden;
+
+	
+}
+
+
+#myInput {
+  background-repeat: no-repeat;
+  width: 40%;
+  border: 1px solid #ddd;
+ margin-top: 20px; 
+ margin-bottom: 12px;
+  margin-left: 95px;
+  text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+
+#keywords {
+  background-repeat: no-repeat;
+  width: 20%;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 120px;
+
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+  margin-top: 150px;
+  width: 70%;
+}
+
+#myUL li a {
+  margin-top: -1px; 
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+}
+</style>
+</head>
+
+<body>
+<!-- Topbar -->
+<div class="w3-topbar"></div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+
+<BR>
+<p>
+<BR>
+<center><H3>SANS COURSE NOTES</H3></center>
+<BR>
+<p>
+<BR>
+<a class=" w3-button w3-hover-blue" href="sec401.html">SEC 401 - Security Essentials</a>
+<a class="w3-button w3-hover-blue" href="sec450.html">SEC 450 - Blue Team Fundamentals</a>
+<a class="w3-button w3-hover-green" href="for500.html">FOR 500 - Windows Forensic Analysis</a>
+<a class="w3-button w3-hover-blue" href="sec502.html">SEC 502 - Perimeter Protection</a>
+<a class="w3-button w3-hover-red" href="sec504.html">SEC 504 - Hacker Tools</a>
+<a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
+<a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
+<a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<P>
+<center>
+<a class="w3-button" href="standards.html">Security Standards</a><br>
+<a class="w3-button" href="books.html">Security Books</a><br>
+<a class="w3-button" href="tools.html">Security Tools</a>
+</center>
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter Paragraph by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="20" name="hilite" placeholder="Highlight Multiple Keywords">
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+
+</nav>
+
+
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+
+
+<center>
+
+
+
+
+<ul id="myUL">
+
+<p>    Continuous Security Monitoring, Seth Misenar<p>
+
+<li><a href="#">Traditional attack techniques primarily focus on service-side exploitation, which may also be referred to as server-side exploitation. With service-side exploitation the adversary attacks a listening service that contains a known vulnerability... While servers can be the victims of these attacks, service-side exploitation is relevant to desktops, mobile devices, or anything with a vulnerable listening service.
+
+
+<li><a href="#">One of the key characteristics associated with traditional approaches to cyber defense is being predominantly prevention oriented. Naturally, we would rather prevent evil from ever making it into our organization in the first place than to, for example, simply detect the badness. Emphasis on prevention leads organizations to keep the bad guys out, keep malware from ever executing, and simply blocking badness. Again, on the surface this seems perfectly reasonable, but we will assess the efficacy of this approach later.
+
+
+<li><a href="#">Rarely do we see many standalone thick client/server applications anymore that are separate from web browsers. The main way that most networking devices are administered these days is via a browser connecting to a web application.
+
+
+<li><a href="#">The first principle of modern cyber defense requires an organization to emphasize a detection-oriented approach to security. While conceptually simple, this represents a paradigm shift for the majority of organizations.
+
+
+<li><a href="#">An additional aspect of reorienting our organizations to be more focused on detection is the establishment of Hunt Teams. The idea of a Hunt Team is to have a team separate from that of traditional analysts.
+
+
+<li><a href="#">Modern cyber defense also has a change in focus too. What exactly are we looking to detect? Traditionally, the goal has been to detect the malware, the exploit, or the scanning that presages an attack. The emphasis of modern cyber defense is to detect the post-exploitation activity.
+
+
+<li><a href="#">Post-exploitation activity is both more likely to cause actual damage, and, surprisingly to some, also generally an easier detect. Simply focusing on an adversary's attempts to persist and pivot pays huge defensive dividends.
+
+
+<li><a href="#">To migrate to a more detection-dominant approach to information security necessarily requires visibility into traffic. Many organizations fail rather critically to allow for visibility into key portions of network traffic. Most organizations have some degree of visibility into traffic coming into their networks from the Internet, but lack fundamental visibility within the internal network segments.
+
+
+<li><a href="#">Where will adversaries attempt to pivot? What data is being targeted? How can that data be accessed? These represent some of the various questions that relate to another key practice of data visualization. Adversaries are largely focused on data these days. Understanding the location and accessibility of our high value data becomes key to our defensive posture.
+
+
+<li><a href="#">A major posture improvement required for organizations wanting to enable modern cyber defense involves migration toward a default deny approach to egress ( outbound) traffic. Though organizations have long since moved to a default deny stance for inbound traffic, outbound traffic is still primarily allowed unless specifically blocked. A policy of blocking everything outbound by default can be a cumbersome initial shift, but the security benefits are huge.
+
+
+<li><a href="#">Some examples of potential wins for outbound blocking:
+
+
+<li><a href="#">• Helps detect internal compromised assets reaching back for C2
+
+
+<li><a href="#">• Helps detect simplistic data exfiltration attempts
+
+
+<li><a href="#">• Helps detect some policy violation attempts
+
+
+<li><a href="#">• Helps detect some assets unwittingly attacking third-parties
+
+
+<li><a href="#">Web application attacks, client-side exploitation, and pivoting are very commonly elements of modern cyber campaigns. They also happen to be two particular areas where many traditional technologies (and some newer ones) are wanting, particularly from the prevention of compromise vantage point.
+
+
+<li><a href="#">The router is typically the edge of a traditional perimeter. At the edge, the router represents the last opportunity for outbound filtering/monitoring, and also the first opportunity for inbound filtering/monitoring. Another reason to consider the router is due to the fact that it often represents the edge of our control and ownership
+
+
+<li><a href="#">Though NetFlow has been widely used by network engineers for years, and is likely already enabled, many security practitioners are still unaware of this capability.
+
+
+<li><a href="#">NetFlow records will all provide the following information:
+
+
+<li><a href="#">• Timestamps, Start and Finish
+
+
+<li><a href="#">• Source IP Address
+
+
+<li><a href="#">• Destination IP Address
+
+
+<li><a href="#">• ICMP Type Code (if applicable)
+
+
+<li><a href="#">• UDP/TCP Port Numbers (if applicable)
+
+
+<li><a href="#">• TCP Flags (if applicable)
+
+
+<li><a href="#">• Bytes transferred
+
+
+<li><a href="#">The router would likely only be able to attribute the traffic to the device performing NAT for outbound traffic, quite likely the firewall. This is unfortunate, but could still allow us to find issues that warrant further review.
+
+
+<li><a href="#">Data compromise represents many adversaries' primary goal, and likewise, many organizations' primary security concern.
+
+
+<li><a href="#">There is no Easy Button on advanced monitoring. The high volume detect can be a successful one, but it can also have you chase your tail for a while trying to figure out what if anything explains the volume. Clipping levels and determining baseline volume can make this a much more successful process.
+
+
+<li><a href="#">On the detection front, the router is suitably positioned to help provide insight into our outbound traffic. Specifically, we recommend looking for "abnormal" connections... Also look at persistent outbound connections, the destination IP and service of outbound traffic, and also the volume of the traffic.
+
+
+<li><a href="#">From a prevention standpoint, the router can do some very basic filtering such as blocking obviously forged packets, but more advanced prevents should likely be performed elsewhere.
+
+
+<li><a href="#">Though the router can prove helpful, primarily due to its location, the router is not an overt security product. The perimeter Stateful Inspection (SI) firewall is likely the first security tool to be encountered on the ingress and the last security tool to be seen for egress... The primary focus of the perimeter SI firewall in the modern enterprise is to provide somewhat basic, but fast security screening.
+
+
+<li><a href="#">For some organizations it makes sense to perform geographical blocking, which is blocking based on the region or country the traffic is sourced from. Typically, this is achieved with a GeoIP lookup database, like the ones available from MaxMind (some of which, like GeoLite2 databases are free.)
+
+
+<li><a href="#">With any sort of blacklist/blacklist, you need to be mindful that the data can change over time. Also understand that you run definitely run the risk of some blocking of potentially legitimate traffic.
+
+
+<li><a href="#">Traditional security devices, including NGFW, IDS, IPS, and Malware Detonation Devices, are rather poor when it comes to protecting custom web applications Web application firewalls are built with custom web applications in mind, and, with proper tuning, can be tailored to protect individual custom web applications.
+
+
+<li><a href="#">While the perimeter-focused NIDS is without question worthwhile, they are far from the only place that NIDS should live. Yes, it is true that the overwhelming majority of adversaries originate from the outside, but it is also true that they do not stay outside for very long.
+
+
+<li><a href="#">Once they bypass the external facing sensors with a cool client-side exploit adversaries will, almost without question, move laterally within the organization. Your external focused NIDS has zero visibility at that level.
+
+
+<li><a href="#">One major security posture improvement that every organization should consider is employing internal NIDS, especially in order to better protect key internal systems.
+
+
+<li><a href="#">A false positive on a NIDS is an annoyance to be sure, but does not cause business disruption. Whereas a false positive on an IPS causes service outages. Necessarily then the configuration of an IPS must be such that false positives cannot occur.
+
+
+<li><a href="#">Bro monitors network activity and logs any connections, DNS requests, detected network services and software, SSL certificates, and HTTP, FTP, IRC SMTP, SSH, SSL, and Syslog activity that it sees, providing a real depth and visibility into the context of data and events on your network.
+
+
+<li><a href="#">Signature matching is the simplest form of detection. - Alert when specific patterns are recognized. Signature matching is a form of blacklisting. - Works well for known exploits and malware that doesn't change. It tends to fail against. - New malware. - Polymorphic malware. - Custom malware.
+
+
+<li><a href="#">Protocol behavior is the 2nd major NIDS design. One approach - Read RFCs (Request For Comments) for a protocol such as TCP. - Model expected protocol usage. TCP: SYN-> SYN/ACK-> ACK. - Alert for non-standard protocol usage. TCP: SYN/AN or SYN/RST. This works, but remember Hanlon's Razor. - Never attribute to malice that which is adequately explained by stupidity.
+
+
+<li><a href="#">Anomaly Detection models expected behavior, and ignores it. - It then alerts on anomalous behavior. Anomaly detection is best when used for specific high-risk cases. - It can fare poorly when applied broadly to large complex networks.
+
+
+<li><a href="#">Client-side exploits "turn your firewall inside out". - Source: victim. - Destination: attacker. Most firewalls are far more permissive outbound than inbound. -The majority of recent major incidents have begun with client-side exploitation.
+
+
+<li><a href="#">Network firewalls were designed to stop outsiders from getting into a network, and could originally filter at layer 3 (IP addresses) and layer 4 (ports) only. "Next generation" firewalls add additional functionality, including filtering at layer 7 (data). They are still an immature technology. For example: determining whether a PDF is malicious at wire speed is very difficult. This is why client-side attacks represent one of the most common vectors for initial network compromise.
+
+
+<li><a href="#">Service-side exploits are initiated by the attacker. - The attacker sends the initial SYN (for TCP), or the first packet (UDP and ICMP). Also known as server-side exploits. - "Service" is more accurate, as both server and client systems (such as laptops) typically have listening services. Proper firewall and DMZ design has largely mitigated this threat from the Internet. - Service-side attacks are usually seen after a pivot, as part of the post-exploitation phase.
+
+
+<li><a href="#">Remember: malware will evade signature-based antivirus (and NIDS) detection. We recommend you add behavioral detection to your defensive repertoire, beginning with tracking the transfer of EXEs across your network.
+
+
+<li><a href="#">Modern malware usually tries to "phone home" and reach a command and control (C2) server. It also tends to do so persistently: reaching out 24/7/365. This outbound traffic offers one of the best ways to catch attacks that have evaded both prevention and detection.
+
+
+<li><a href="#">A core defensible network concept is: be aware of all persistent network connections that transfer data between your network and a less trusted network (such as the Internet). Inventory these connections, and ignore the benign ones (such as legitimate VPN connections).
+
+
+<li><a href="#">Adversaries' goals are focused largely on data, which is necessarily situated on endpoints. Conceptually, protecting an individual endpoint is far simpler than providing protection for multiple disparate devices, as we do with network protections. However, in practice, the difficulty of successfully employing robust security practices on endpoints proves difficult due to the volume of the endpoints that need to be protected.
+
+
+<li><a href="#">The primary distinguishing feature that make desktops more challenging than servers to secure is simple: users. Active users drastically change the security posture of a system. They want to install applications, access data/resources, and also provide a more obvious conduit for adversaries to introduce their malicious content.
+
+
+<li><a href="#">Center for Internet Security
+
+
+<li><a href="#">• Leveraging an established third-party configuration as a starting point is a good choice
+
+
+<li><a href="#">• The Center for Internet Security's benchmarks have long been a trusted source for good security baseline configurations
+
+
+<li><a href="#">• The benchmarks are developed via consensus from an working group from industry
+
+
+<li><a href="#">• The benchmarks are provided free-of-charge
+
+
+<li><a href="#">• Importantly, there is significant documentation and guidance explaining the various settings and their potential implications
+
+
+<li><a href="#">Perhaps even more important than establishing the initial security baseline configuration is systematically managing the changes to the baseline. Every new application, configuration change, or update could impact the effective security posture. Most organizations fail rather miserably at truly managing the changes.
+
+
+<li><a href="#">Developing a solid, vetted, inventory of software is necessarily a time-consuming process, but also one that often results in the discovery and subsequent removal of malicious, suspicious, or simply even unnecessary software.
+
+
+<li><a href="#">Below is a quick list of items that can be compared to determine whether there is a white list match or not. The top represents the most obvious, easiest to administer, but unfortunately also easiest to bypass approaches. The bottom of the spectrum represents the highest degree of administrative overhead, but also the highest level of integrity. • Filename • Full path • Publisher • MD5 Hash • SHA256 Hash • Digital Signature
+
+
+<li><a href="#">Most commercial antivirus products are much more than just AV now: they are now fancy endpoint security suites. The suites typically include many additional capabilities beyond pure AV.
+
+
+<li><a href="#">These suites will be much more all-encompassing and will likely include standard, primarily signature based, antivirus, a host-based firewall, perhaps some HIPS capabilities, some RIDS capabilities though they are less overt about this one, perhaps too a dash of application whitelisting, removable device control, something they will suggest provides DLP ( data leakage prevention capabilities, and more).
+
+
+<li><a href="#">One of the most significant justifications for HIDS/HIPS is that they are suitably positioned to provide a substantially improved degree of visibility within our enterprises. HIDS/HIPS do not require traffic to traverse a choke point where a gateway lives in order to provide value.
+
+
+<li><a href="#">HIDS/HIPS are suitably positioned to better protect assets where key users, data, or applications reside. Perhaps the most significant WIN from HIDS/HIPS is their ability to help prevent, but most importantly detect attempts by adversaries to pivot.
+
+
+<li><a href="#">• Keep in mind that tremendous detective capabilities are offered by host based security tools that are not HIDS • Connections blocked by the endpoint firewall can be a significant detect - Highly useful for detecting attempts to pivot - Egress blocking can expose attempted C2 • Application Whitelisting blocks, after initial tuning, can also be a huge boon to detection - Adversaries want to persist on endpoints and typically will try to leverage an untrusted executable
+
+
+<li><a href="#">• Deploy Application Whitelisting - Only allow previously identified and vetted binaries to execute • Remove key Windows privileges - Most importantly, remove Debug Programs privilege from all user accounts that lack explicit need • Disable the built-in administrator account - Review any/all attempts to interact with this account • Review and revoke excessive user rights - Target servers/services accounts to block local logon
+
+
+<li><a href="#">The five tenets behind the Twenty Critical Security Controls for Effective Cyber Defense are:
+
+
+<li><a href="#">• Offense informs defense: Use knowledge of actual attacks that have compromised systems to provide the foundation to build effective, practical defenses. Include only those controls that can be shown to stop known real-world attacks.
+
+
+<li><a href="#">• Prioritization: Invest first in controls that will provide the greatest risk reduction and protection against the most dangerous threat actors, and that can be feasibly implemented in your computing environment.
+
+
+<li><a href="#">• Metrics: Establish common metrics to provide a shared language for executives, IT specialists, auditors, and security officials to measure the effectiveness of security measures within an organization so that required adjustments can be identified and implemented quickly.
+
+
+<li><a href="#">• Continuous monitoring: Carry out continuous monitoring to test and validate the effectiveness of current security measures.
+
+
+<li><a href="#">• Automation: Automate defenses so that organizations can achieve reliable, scalable, and continuous measurements of their adherence to the controls and related metrics
+
+
+<li><a href="#">There are many service logs we could focus on, but one stands out as a missed opportunity for most organizations: DNS logs. Most mid-to-large organizations deploy internal DNS servers that perform recursion, meaning the server will use the Internet to resolve domains that are not local. Most recursive DNS servers are also caching: they will remember a given DNS response for a period of time.
+
+
+<li><a href="#">Malware, like most network software, uses DNS for resolving names to IP addresses (etc.) • It also uses DNS for command and control (C2) traffic - It's usually allowed outbound - It's usually ignored • The following should be monitored: - Large DNS queries with high entropy - Large TXT record responses - High volumes of DNS resolution failures can also be a sign of compromise
+
+
+<li><a href="#">A default stance of "proxy all outbound connections unless whitelisted" is a great control. Specific exceptions may be granted (for connections like static VPN tunnels). This choke point gives time to assess a threat in real time, plus remember specific actions, such as every URL accessed, and the contents of every executable download.
+
+
+<li><a href="#">Malware often uses the following ports to spread, communicate, send spam, etc.: - 25/TCP (SMTP) - 1900/UDP (SSDP) - 135/TCP (DCE/RPC) - 3389/TCP (RDP) -137/UDP (NetBIOS Name Service) - 139/TCP (NetBIOS Session Service) - 445/TCP (SMB over TCP) • In addition to blocking these outbound ports, monitor blocked traffic.
+
+
+<li><a href="#">Critical Windows Events to Monitor: 1. Service creation 2. User creation 3. Adding users to privileged groups 4. Clearing the event Log 5. RDP/Terminal Services certificate creation 6. Disabling the Windows Firewall 7. External media detection 8. Lateral movement 9. App Locker events
+</div>
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\\w\' -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+
+
+
+
+</html>

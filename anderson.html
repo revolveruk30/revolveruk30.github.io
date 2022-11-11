@@ -1,0 +1,644 @@
+<html>
+<title>NOTES</title>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow" />
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+<body>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+<BR>
+<BR>
+<p>
+<a class="w3-button w3-hover-black" href="anderson.html"><u>Security Engineering, Ross Anderson</u></a><br>
+<a class="w3-button w3-hover-black" href="bishop.html"><u>Introduction to Computer Security, Matt Bishop</u></a><br>
+<a class="w3-button w3-hover-black" href="bellovin.html"><u>Thinking About Security, Steven Bellovin</u></a><br>
+<a class="w3-button w3-hover-black" href="iracf.html"><u>Incident Response & Computer Forensics, Luttgens, Pepe, Mandia</u></a><br>
+<a class="w3-button w3-hover-black" href="conklin.html"><u>Computer Security Principles, Conklin, White</u></a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Digital Security in a Networked World, Bruce Schneier</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Security Warrior, Anton Chuvakin</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Counter Hack Reloaded, Ed Skoudis</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">The Practice of Network Security Monitoring, Richard Bejtlich</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Building Secure and Reliable Systems, Heather Adkins</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Information Assurance Handbook, Schou & Hernandez</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Zero Trust Networks, Gilman & Barth</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Intelligence-Driven Incident Response, Roberts & Brown</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Defensive Security Handbook, Brotherston & Berlin</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Threat Modeling: Designing for Security, Adam Shostack</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking Exposed: Network Security, McClure & Scambray</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking Exposed:  Windows Security, McClure & Scambray</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Applied Incident Response, Steve Anson</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Ethical Hacking and Penetration Testing Guide, Rafay Baloch</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Hacking: The Art of Exploitation, Jon Erickson</a><br>
+<a class="w3-button" <a href="#" onclick="return false;">Practical Malware Analysis, Michael Sikorski</a><br>
+
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+<input type="text" id="myInput" size="3" onkeyup="myFunction()" placeholder="Filter Standard by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="10" name="hilite" placeholder="Highlight Keywords">  
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+</nav>
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+<center>
+<ul id="myUL">
+<P>
+Security Engineering, Ross Anderson 
+<P>
+<li><a href="#">The essence of good security engineering is understanding the potential threats to a system, then applying an appropriate mix of protective measures - both technological and organizational - to control them. Knowing what has worked, and more importantly what has failed, in other applications is a great help in developing judgment. 
+
+<li><a href="#">Security engineering is about building systems to remain dependable in the face of malice, error, or mischance. As a discipline, it focuses on the tools, processes, and methods needed to design, implement, and test complete systems, and to adapt existing systems as their environment evolves. 
+
+<li><a href="#">Security requirements differ greatly from one system to another. One typically needs some combination of user authentication, transaction integrity and accountability, fault-tolerance, message secrecy, and covertness. But many systems fail because their designers protect the wrong things, or protect the right things but in the wrong way. 
+
+<li><a href="#">Good security engineering requires four things to come together. 
+
+<br>&#183; Policy : what you're supposed to achieve. 
+
+<br>&#183; Mechanism : the ciphers, access controls, hardware tamper&#8208;resistance and other machinery that you assemble in order to implement the policy. 
+
+<br>&#183; Assurance : the amount of reliance you can place on each particular mechanism. 
+
+<br>&#183; Incentive : the motive that the people guarding and maintaining the system have to do their job properly, and also the motive that the attackers have to try to defeat your policy. 
+
+<li><a href="#">We need to be able to put risks and threats in context, make realistic assessments of what might go wrong, and give our clients good advice. That depends on a wide understanding of what has gone wrong over time with various systems; what sort of attacks have worked, what their consequences were, and how they were stopped. 
+
+<li><a href="#">An engineer or programmer needs to learn about what systems there are, how they work, and - at least as important - how they have failed in the past. Civil engineers learn far more from the one bridge that falls down than from the hundred that stay up; exactly the same holds in security engineering. 
+
+<li><a href="#">A system can denote: 
+
+<br>&#183; 1. a product or component, such as a cryptographic protocol, a smartcard or the hardware of a PC. 
+
+<br>&#183; 2. a collection of the above plus an operating system, communications and other things that go to make up an organization's infrastructure; 
+
+<br>&#183; 3. any or all of the above plus customers and other external users. 
+
+<li><a href="#">Ignoring the human components, and thus neglecting usability issues, is one of the largest causes of security failure. So we will generally use definition 3. 
+
+<li><a href="#">By a subject I will mean a physical person (human, ET) in any role including that of an operator, principal or victim. By a person, I will mean either a physical person or a legal person such as a company or government A principal is an entity that participates in a security system. This entity can be a subject, a person, a role, or a piece of equipment such as a PC, smartcard, or card reader terminal. By a group I will mean a set of principals, while a role is a set of functions assumed by different persons in succession. 
+
+<li><a href="#">Identity ... I will use it to mean a correspondence between the names of two principals signifying that they refer to the same person or equipment. 
+
+<li><a href="#">We'll use the NSA definition that a trusted system or component is one whose failure can break the security policy, while a trustworthy system or component is one that won't fail. 
+
+<li><a href="#">Secrecy is a technical term which refers to the effect of the mechanisms used to limit the number of principals who can access information, such as cryptography or computer access controls. 
+
+<li><a href="#">Confidentiality involves an obligation to protect some other person's or organization's secrets if you know them. 
+
+<li><a href="#">Privacy is the ability and/or right to protect your personal information and extends to the ability and/or right to prevent invasions of your personal space. In short, privacy is secrecy for the benefit of the individual while confidentiality is secrecy for the benefit of the organization. 
+
+<li><a href="#">Authenticity means integrity plus freshness: you have established that you are speaking to a genuine principal, not a replay of previous messages. 
+
+<li><a href="#">A vulnerability is a property of a system or its environment which, in conjunction with an internal or external threat, can lead to a security failure, which is a breach of the system's security policy. By security policy I will mean a succinct statement of a system's protection strategy. 
+
+<li><a href="#">A security target is a more detailed specification which sets out the means by which a security policy will be implemented in a particular product. 
+
+<li><a href="#">Protection profile ... is like a security target except written in a sufficiently device&#8208;independent way to allow comparative evaluations among different products and different versions of the same product. 
+
+<li><a href="#">Protection will mean a property such as confidentiality or integrity, defined in a sufficiently abstract way for us to reason about it in the context of general systems rather than specific implementations. 
+
+<li><a href="#">The security engineer should develop sensitivity to the different nuances of meaning that common words acquire in different applications, and to be able to formalize what the security policy and target actually are. Robust security design requires that the protection goals are made explicit. 
+
+<li><a href="#">Usability and Psychology 
+
+<li><a href="#">The fastest&#8208;growing online crime is phishing, in which victims are lured by an email to log on to a website that appears genuine but that's actually designed to steal their passwords. 
+
+<li><a href="#">Deception , of various kinds, is now the greatest threat to online security. It can be used to get passwords, or to compromise confidential information or manipulate financial transactions directly. The most common way for private investigators to steal personal information is pretexting - phoning someone who has the information under a false pretext, usually by pretending to be someone authorized to be told it. Such attacks are sometimes known collectively as social engineering. 
+
+<li><a href="#">Resisting attempts by outsiders to inveigle your staff into revealing secrets is known in military circles as operational security. Protecting really valuable secrets, such as unpublished financial data, not&#8208;yet&#8208;patented industrial research or military plans, depends on limiting the number of people with access, and also having strict doctrines about with whom they may be discussed and how. 
+
+<li><a href="#">There are many well&#8208;known results [in psychology relevant to security]. For example, it is easier to memorize things that are repeated frequently, and it is easier to store things in context. However, many of these insights are poorly understood by systems developers. 
+
+<li><a href="#">It's said that 'to err is human' and error research confirms this: the predictable varieties of human error are rooted in the very nature of cognition. The schemata, or mental models, that enable us to recognise people, sounds and concepts so much better than computers do, also make us vulnerable when the wrong model gets activated. 
+
+<li><a href="#">Actions performed often become a matter of skill, but this comes with a downside: inattention can cause a practiced action to be performed instead of an intended one. 
+
+<li><a href="#">In computer systems, people are trained to click 'OK' to pop&#8208;up boxes as that's often the only way to get the work done; some attacks have used the fact that enough people will do this even when they know they shouldn't. 
+
+<li><a href="#">Errors also commonly follow interruptions and perceptual confusion. One example is the postcompletion error: once they've accomplished their immediate goal, people are easily distracted from tidying&#8208;up actions. More people leave cards behind in ATMs that give them the money first and the card back second. 
+
+<li><a href="#">What makes security harder than safety is that we have a sentient attacker who will try to provoke exploitable errors. What can the defender do? Well, we expect the attacker to use errors whose effect is predictable, such as capture errors. We also expect him to look for, or subtly create, exploitable dissonances between users' mental models of a system and its actual logic. 
+
+<li><a href="#">Perhaps the most promising field of psychology for security folks to mine in the short term is that which studies the heuristics that people use, and the biases that influence them, when making decisions. This discipline, known as behavioral economics or decision science, sits at the boundary of psychology and economics. 
+
+<li><a href="#">In many circumstances, people dislike losing $100 they already have more than they value winning $100. That's why marketers talk in terms of 'discount' and 'saving' - by framing an action as a gain rather than as a loss makes people more likely to take it. 
+
+<li><a href="#">We base inferences on familiar or easily&#8208;imagined analogies (the availability heuristic whereby easily&#8208;remembered data have more weight in mental processing), and by comparison with recent experiences (the anchoring effect whereby we base a judgement on an initial guess or comparison and then adjust it if need be). 
+
+<li><a href="#">Satisficing - as situations are often too hard to assess accurately, we have a tendency to plump for the alternative that's 'good enough' rather than face the cognitive strain of trying to work out the odds perfectly... many people just plump for the standard configuration of a system, as they assume it will be good enough. This is one reason why secure defaults matter. 
+
+<li><a href="#">Fundamental attribution error ... people often err by trying to explain things by intentionality rather than by situation. Attempts to curb phishing by teaching users about the gory design details of the Internet - for example, by telling them to parse URLs in emails that seem to come from a bank - will be of limited value if users get bewildered. Safe defaults would be better - such as 'Our bank will never, ever send you email. Any email that purports to come from us is fraudulent.' 
+
+<li><a href="#">Affect heuristic ... by asking an emotional question (such as 'How many dates did you have last month?') you can get people to answer subsequent questions using their hearts more than their minds, which can make people insensitive to probability. This work starts to give us a handle on issues from people's risky behavior with porn websites. 
+
+<li><a href="#">Passwords are one of the biggest practical problems facing security engineers today. In fact, as the usability researcher Angela Sasse puts it, it's hard to think of a worse authentication mechanism than passwords, given what we know about human memory: people can't remember infrequently used, frequently&#8208;changed, or many similar items; we can't forget on demand; recall is harder than recognition; and non&#8208;meaningful words are more difficult. 
+
+<li><a href="#">There are basically three broad concerns concerning password security: 
+
+<li><a href="#">1. Will the user enter the password correctly with a high enough probability? 
+
+<li><a href="#">2. Will the user remember the password, or will they have to either write it down or choose one that's easy for the attacker to guess? 
+
+<li><a href="#">3. Will the user break the system security by disclosing the password to a third party, whether accidentally, on purpose, or as a result of deception? 
+
+<li><a href="#">Our first human&#8208;factors issue is that if a password is too long or complex, users might have difficulty entering it correctly. If the operation they are trying to perform is urgent, this might have safety implications. 
+
+<li><a href="#">Our second psychological issue with passwords is that people often find them hard to remember when customers are expected to memorize passwords, they either choose values which are easy for attackers to guess, or write them down, or both. 
+
+<li><a href="#">Problems related to password memorability can be discussed under four main headings: naive password choice, user abilities and training, design errors, and operational failures. 
+
+<li><a href="#">The best compromise will often be a password checking program that rejects 'clearly bad' user choices, plus a training program to get your compliant users to choose mnemonic passwords. Failure to change default passwords as supplied by the equipment vendor has affected a wide range of systems. To this day there are web applications running on databases that use wellknown default master passwords - and websites listing the defaults for everything in sight. 
+
+<li><a href="#">The biggest practical threat to passwords nowadays is that the user will break system security by disclosing the password to a third party, whether accidentally or as a result of deception. This is the core of the 'phishing' problem. 
+
+<li><a href="#">The second thread in the background of phishing is trusted path, which refers to some means of being sure that you're logging into a genuine machine through a channel that isn't open to eavesdropping. Here the deception is more technical than psychological; rather than inveigling a bank customer into revealing her PIN to you by claiming to be a policeman, you steal her PIN directly by putting a false ATM in a shopping mall. 
+
+<li><a href="#">What makes phishing hard to deal with is the combination of psychology and technology. On the one hand, users have been trained to act insecurely by their bankers and service providers, and there are many ways in which people can be conned into clicking on a web link. 
+
+<li><a href="#">A certificate is supposed to identify its holder to the other principals in a transaction and to enable the traffic between them to be securely encrypted. Server certificates identify web sites to your browser, causing the lock icon to appear when the name on the certificate corresponds to the name in the toolbar. 
+
+<li><a href="#">Banks often have a rule that a terminal and user account are frozen after three bad password attempts; after that, an administrator has to reactivate them. This could be rather dangerous in a military system, as an enemy who got access to the network could use a good of false logon attempts to mount a service denial attack; if he had a list of all the user names on a machine he might well take it out of service completely. Many commercial websites nowadays don't limit guessing because of the possibility of such an attack. 
+
+<li><a href="#">Protocols 
+
+<li><a href="#">Security protocols are the rules that govern these communications. They are typically designed so that the system will survive malicious acts such as people telling lies on the phone, hostile governments jamming radio, or forgers altering the data on train tickets. Protection against all possible attacks is often too expensive, so protocols are typically designed under certain assumptions about the threats. 
+
+<li><a href="#">Evaluating a protocol thus involves answering two questions: first, is the threat model realistic? Second, does the protocol deal with it? A very common cause of protocol failure is that the environment changes, so that assumptions which were originally true no longer hold and the security protocols cannot cope with the new threats. 
+
+<li><a href="#">It has since been shown that many protocols, though secure in themselves, can be broken if their users can be inveigled into reusing the same keys in other applications. This is why, for CAP to be secure, it may well have to be implemented in a stand&#8208;alone device into which the customer enters all the transaction parameters directly. 
+
+<li><a href="#">In general, using crypto keys (or other authentication mechanisms) in more than one application is dangerous, while letting other people bootstrap their own application security off yours can be downright foolish. 
+
+<li><a href="#">The basic idea behind key distribution protocols is that where two principals want to communicate, they may use a trusted third party to effect an introduction. 
+
+<li><a href="#">Key management is a complex and difficult business and is often got wrong because it's left as an afterthought. A good engineer will sit down and think about how many keys are needed, how they're to be generated, how long they need to remain in service and how they'll eventually be destroyed. 
+
+<li><a href="#">In addition, things go wrong as applications evolve; it's important to provide extra keys to support next year's functionality, so that you don't compromise your existing ones by reusing them in protocols that turn out to be incompatible. 
+
+<li><a href="#">Getting security protocols right is hard. You should not design them at home, any more than you design your own explosives. 
+
+<li><a href="#">Formal methods can be an excellent way of finding bugs in security protocol designs as they force the designer to make everything explicit and thus confront difficult design choices that might otherwise be fudged. However, they have their limitations, too. 
+
+<li><a href="#">One problem is in the external assumptions we make. For example, we assumed that the key wasn't available to anyone who might use it in an unauthorized manner. In practice, this is not always true. 
+
+<li><a href="#">A common problem in security engineering&#8230; is that vulnerabilities arise at the boundary between two protection technologies. Different protection technologies are often the domain of different experts who don't completely understand the assumptions made by the others. 
+
+<li><a href="#">For these reasons, people have explored alternative ways of assuring the design of authentication protocols, including the idea of protocol robustness. Just as structured programming techniques aim to ensure that software is designed methodically and nothing of importance is left out, so robust protocol design is largely about explicitness. 
+
+<li><a href="#">Passwords are just one (simple) example of a more general concept, the security protocol. Protocols specify the series of steps that principals use to establish trust relationships in a system, such as authenticating a claim to identity, demonstrating ownership of a credential, or granting a claim on a resource. 
+
+<li><a href="#">It is difficult to design effective security protocols. They suffer from a number of potential problems, including middleperson attacks, modification attacks, reflection attacks, and replay attacks. These threats can interact with implementation vulnerabilities such as poor random number generators. 
+
+<li><a href="#">Some of the most pernicious failures are caused by creeping changes in the environment for which a protocol was designed, so that the protection it gives is no longer adequate. 
+
+<li><a href="#">Access Control 
+
+<li><a href="#">Access control is the traditional center of gravity of computer security. It is where security engineering meets computer science. Its function is to control which principals (persons, processes, machines) have access to which resources in the system - which files they can read, which programs they can execute, how they share data with other principals, and so on. 
+
+<li><a href="#">As we work up from the hardware through the operating system and middleware to the application layer, the controls become progressively more complex and less reliable. Most actual computer frauds involve staff accidentally discovering features of the application code that they can exploit in an opportunistic way, or just abusing features of the application that they were trusted not to. As with the other building blocks discussed so far, access control makes sense only in the context of a protection goal, typically expressed as a security policy. 
+
+<li><a href="#">Now one of the biggest challenges in computer security is preventing one program from interfering with another. You don't want a virus to be able to steal the passwords from your browser, or to patch a banking application so as to steal your money. However, it's difficult to separate applications when the customer wants to share data. It would make phishing much harder if people were simply unable to paste URLs from emails into a browser, but that would make everyday life much harder too. 
+
+<li><a href="#">Sandboxing is an application&#8208;level control, run for example in a browser to restrict what mobile code can do; virtualization runs underneath the operating system, creating two or more independent virtual machines between which information flows can be controlled or prevented; and Trusted Computing is a project to create two virtual machines side&#8208;by&#8208;side, one being the 'old, insecure' version of an operating system and the second being a more restricted environment in which security&#8208;critical operations such as cryptography can be carried out. 
+
+<li><a href="#">Access control matrices (whether in two or three dimensions) can be used to implement protection mechanisms as well as just model them. But they do not scale well. For instance, a bank with 50,000 staff and 300 applications would have an access control matrix of 15,000,000 entries. This is inconveniently large. It might not only impose a performance problem but also be vulnerable to administrators' mistakes. 
+
+<li><a href="#">We will usually need a more compact way of storing and managing this information. The two main ways of doing this are to compress the users and to compress the rights. As for the first of these, the simplest is to use groups or roles to manage the privileges of large sets of users simultaneously, while in the second we may store the access control matrix either by columns (access control lists) or rows (capabilities, sometimes known as 'tickets'). 
+
+<li><a href="#">Access control list ... ACLs are a natural choice in environments where users manage their own file security. Where access control policy is set centrally, ACLs are suited to environments where protection is data&#8208;oriented; they are less suited where the user population is large and constantly changing, or where users want to be able to delegate their authority to run a particular program to another user for some set period of time. 
+
+<li><a href="#">Windows provides a richer and more flexible set of access control tools than any system previously sold in mass markets. It does still have design limitations. Implementing roles whose requirements differ from those of groups could be tricky in some applications; SSL certificates are the obvious way to do this but require an external management infrastructure. 
+
+<li><a href="#">A vulnerability has a typical lifecycle whereby it is discovered; reported to CERT or to the vendor; a patch is shipped; the patch is reverse&#8208;engineered, and an exploit is produced for the vulnerability; and people who did not apply the patch in time find that their machines have been recruited to a botnet when their ISP cuts them off for sending spam. There is a variant in which the vulnerability is exploited at once rather than reported - often called a zero&#8208;day exploit as attacks happen from day zero of the vulnerability's known existence. 
+
+<li><a href="#">The basic idea behind the stack&#8208;smashing attack is that programmers are often careless about checking the size of arguments, so an attacker who passes a long argument to a program may find that some of it gets treated as code rather than data. 
+
+<li><a href="#">Despite the training and the tools, memory overwriting attacks are still appearing, to the great frustration of software company managers. However, they are perhaps half of all new vulnerabilities now rather than the 90% they were in 2001. 
+
+<li><a href="#">SQL insertion attacks commonly arise when a careless web developer passes user input to a backend database without checking to see whether it contains SQL code. The game is often given away by error messages, from which a capable and motivated user may infer enough to mount an attack. The remedy in general is to treat all user input as suspicious and validate it. 
+
+<li><a href="#">The basic problem faced by operating system security designers: their products are huge and therefore buggy, and are tested by large numbers of users in parallel, some of whom will publicize their discoveries rather than reporting them to the vendor. Even if all bugs were reported responsibly, this wouldn't make much difference; almost all of the widely exploited vulnerabilities over the last few years had already been patched. 
+
+<li><a href="#">Making many applications and utilities run as root has repeatedly introduced horrible vulnerabilities where more limited privilege could have been used with only a modicum of thought and a minor redesign. 
+
+<li><a href="#">Some classes of vulnerability can be fixed using automatic tools. Stack overwriting attacks, for example, are largely due to the lack of proper bounds checking in C (the language most operating systems are written in). 
+
+<li><a href="#">In general, much more effort needs to be put into design, coding and testing. Architecture matters; having clean interfaces that evolve in a controlled way, under the eagle eye of someone experienced who has a long&#8208;term stake in the security of the product, can make a huge difference. 
+
+<li><a href="#">Programs should only have as much privilege as they need: the principle of least privilege. Software should also be designed so that the default configuration, and in general, the easiest way of doing something, should be safe. 
+
+<li><a href="#">Economics 
+
+<li><a href="#">Many security system failures weren't due to technical errors so much as to wrong incentives: the classic case is where the people who guard a system are not the people who suffer when it fails. Indeed, security mechanisms are often designed quite deliberately to shift liability, which often leads to trouble. 
+
+<li><a href="#">Network insecurity is somewhat like air pollution or congestion, in that people who connect insecure machines to the Internet do not bear the full consequences of their actions. So how much of the protection effort can (or should) be left to individuals, and how much should be borne by vendors, regulators or the police? 
+
+<li><a href="#">Public goods are goods which are non&#8208;rivalrous (my using them doesn't mean there's less available for you) and non&#8208;excludable (there's no practical way to exclude people from consuming them). Uncoordinated markets are generally unable to provide public goods in socially optimal quantities. 
+
+<li><a href="#">If our air&#8208;defense threat in 1987 was mainly the Russian airforce, and our cyber&#8208;defense threat in 2007 is mainly from a small number of Russian gangs, and they are imposing large costs on US and European Internet users and companies, then state action may be needed now as it was then. Instead of telling us to buy anti&#8208;virus software, our governments could be putting pressure on the Russians to round up and jail their cyber&#8208;gangsters. 
+
+<li><a href="#">It turns out that many primates have an inbuilt sense of fairness and punish individuals who are seen to be cheating - the instinct for vengeance is part of the mechanism to enforce sociality. Doves can get a better result against hawks if they can recognise each other and interact preferentially, giving a model for how social movements such as freemasons and maybe even some religions establish themselves. 
+
+<li><a href="#">I showed in 2002 that, under standard assumptions of reliability growth, open systems and proprietary systems are just as secure as each other; opening up a system helps the attackers and defenders equally. 
+
+<li><a href="#">Disclosure of exploits : since exploits are often based on vulnerabilities inferred from patches, some argue against disclosure and frequent patching unless the same vulnerabilities are likely to be rediscovered. Ashish Arora and others responded with data showing that public disclosure made vendors respond with fixes more quickly; attacks increased to begin with, but reported vulnerabilities declined over time. 
+
+<li><a href="#">Microsoft's software security is improving. Windows 95 was dreadful, Windows 98 slightly better, and the improvement's continued through NT, XP and Vista. But the attackers are getting better too, and the protection in Vista isn't all for the user's benefit. Products are insecure at first, and although they improve over time, many of the new security features are for the vendor's benefit as much as the user's. 
+
+<li><a href="#">Multilevel Security 
+
+<li><a href="#">Where a top&#8208;down approach to security engineering is possible, it will typically take the form of threat model - security policy - security mechanisms. The critical, and often neglected, part of this process is the security policy. 
+
+<li><a href="#">By a security policy, we mean a document that expresses clearly and concisely what the protection mechanisms are to achieve. It is driven by our understanding of threats, and in turn drives our system design. It will often take the form of statements about which users may access which data. 
+
+<li><a href="#">A security policy model is a succinct statement of the protection properties which a system, or generic type of system, must have. Its key points can typically be written down in a page or less. 
+
+<li><a href="#">A security target is a more detailed description of the protection mechanisms that a specific implementation provides, and how they relate to a list of control objectives (some but not all of which are typically derived from the policy model). The security target forms the basis for testing and evaluation of a product. 
+
+<li><a href="#">A protection profile is like a security target but expressed in an implementation&#8208;independent way to enable comparable evaluations across products and versions. This can involve the use of a semiformal language, or at least of suitable security jargon. A protection profile is a requirement for products that are to be evaluated under the Common Criteria. 
+
+<li><a href="#">A study by James Anderson led the US government to conclude that a secure system should do one or two things well; and that these protection properties should be enforced by mechanisms which were simple enough to verify and that would change only rarely. It introduced the concept of a reference&#8208;monitor - a component of the operating system which would mediate access control decisions and be small enough to be subject to analysis and tests, the completeness of which could be assured. In modern parlance, such components - together with their associated operating procedures - make up the Trusted Computing Base (TCB). 
+
+<li><a href="#">The Department of Defense access control policy was simple: an official could read a document only if his clearance was at least as high as the document's classification. So an official cleared to 'Top Secret' could read a 'Secret' document, but not vice versa. The effect is that information may only flow upwards, from confidential to secret to top secret, but it may never flow downwards unless an authorized person takes a deliberate decision to declassify it. 
+
+<li><a href="#">The Bell&#8208;La Padula model enforces two properties: The simple security property: no process may read data at a higher level. This is also known as no readup(NRU); The *&#8208;property: no process may write data to a lower level. This is also known as no write down (NWD). 
+
+<li><a href="#">So we must prevent programs running at 'Secret' from writing to files at 'Unclassified', or more generally prevent any process at High from signaling to any object (or subject) at Low. In general, when systems enforce a security policy independently of user actions, they are described as having mandatory access control, as opposed to the discretionary access control in systems like Unix where users can take their own access decisions about their files. 
+
+<li><a href="#">The Biba model deals with integrity alone and ignores confidentiality. The key observation is that confidentiality and integrity are in some sense dual concepts - confidentiality is a constraint on who can read a message, while integrity is a constraint on who can write or alter it. 
+
+<li><a href="#">We must never read down or write up, as either could allow High integrity objects to become contaminated with Low - that is potentially unreliable - data. The integrity of an object is the lowest level of all the objects that contributed to its creation. 
+
+<li><a href="#">Biba has the same fundamental problems as Bell&#8208;La Padula. It cannot accommodate real&#8208;world operation very well without numerous exceptions. For example, a real system will usually require 'trusted' subjects that can override the security model, but Biba on its own fails to provide effective mechanisms to protect and confine them; and in general it doesn't work so well with modern software environments. 
+
+<li><a href="#">Engineers learn more from the systems that fail than from those that succeed, and MLS systems have certainly been an effective teacher. The large effort expended in building systems to follow a simple policy with a high level of assurance has led to the elucidation of many second&#8208; and thirdorder consequences of information flow controls. 
+
+<li><a href="#">In general, the problem of how to compose two or more secure components into a secure system is hard, even at the relatively uncluttered level of proving results about ideal components. Most of the low&#8208;level problems arise when some sort of feedback is introduced into the system; without it, composition can be achieved under a number of formal models. However, in real life, feedback is pervasive, and composition of security properties can be made even harder by detailed interface issues, feature interactions and so on. 
+
+<li><a href="#">A covert channel is a mechanism that was not designed for communication but which can nonetheless be abused to allow information to be communicated down from High to Low. A typical covert channel arises when a high process can signal to a low one by affecting some shared resource. It is also possible to limit the covert channel capacity by introducing noise. Some machines have had randomized system clocks for this purpose. But some covert channel capacity almost always remains. 
+
+<li><a href="#">There are always system components - such as memory management - that must be able to read and write at all levels. The practical outcome is that often a quite uncomfortably large part of the operating system (plus utilities, plus windowing system software, plus middleware such as database software) ends up part of the trusted computing base. ' TCB bloat' constantly pushes up the cost of evaluation and reduces assurance. 
+
+<li><a href="#">Multilateral Security 
+
+<li><a href="#">Often our goal is not to prevent information flowing 'down' a hierarchy but to prevent it flowing 'across' between departments. Relevant applications range from healthcare to national intelligence, and include most applications where the privacy of individual customers', citizens' or patients' data is at stake. They account for a significant proportion of information processing systems but their protection is often poorly designed and implemented. This has led to a number of expensive fiascos. 
+
+<li><a href="#">There are (at least) three different models of how to implement access controls and information flow controls in a multilateral security model. These are compartmentation, used by the intelligence community; the Chinese Wall model, which describes the mechanisms used to prevent conflicts of interest in professional practice; and the BMA model, developed by the British Medical Association to describe the information flows permitted by medical ethics. Each of these has potential applications outside its initial field. 
+
+<li><a href="#">In general, the real problems facing users of intelligence systems have to do with combining data in different compartments, and downgrading it after sanitization. Multilevel and lattice security models offer little help here. Indeed, one of the biggest problems facing the U.S. intelligence community since 9/11 is how to handle search over systems with many compartments. 
+
+<li><a href="#">The second model of multilateral security is the Chinese Wall model, developed by Brewer and Nash. Its name comes from the fact that financial services firms from investment banks to accountants have internal rules designed to prevent conflicts of interest, which they call Chinese Walls. It also introduces the concept of separation of duty into access control; a given user may perform transaction A or transaction B, but not both. 
+
+<li><a href="#">The main threat to medical privacy is abuse of authorized access by insiders, and the most common threat vector is social engineering. 
+
+<li><a href="#">Operational security measures are much more important than most technical protection measures, but they are difficult. If everyone was as unhelpful as intelligence&#8208;agency staff are trained to be, the world would grind to a halt. And the best staff training in the world won't protect a system where too many people see too much data. There will always be staff who are careless or even crooked; and the more records they can get, the more harm they can do. Also, organizations have established cultures; we have been simply unable to embed even lightweight operational&#8208;security measures on any scale in healthcare, simply because that's not how people work. Staff are focused on delivering care rather than questioning each other. 
+
+<li><a href="#">A more general problem is that even where staff behave ethically, a lack of technical understanding - or, as we might more properly describe it, poor security usability - causes leaks of personal information. 
+
+<li><a href="#">The fundamental problem is this. The likelihood that a resource will be abused depends on its value and on the number of people who have access to it. Aggregating personal information into large databases increases both these risk factors at the same time. 
+
+<li><a href="#">It is much harder to assure patient privacy in secondary applications such as databases for research, cost control and clinical audit. This is one respect in which doctors have a harder time protecting their data than lawyers; lawyers can lock up their confidential client files and never let any outsider see them at all, while doctors are under all sorts of pressures to share data with third parties. 
+
+<li><a href="#">The standard way of protecting medical records used in research is to remove patients' names and addresses and thus make them anonymous. Indeed, privacy advocates often talk about ' Privacy Enhancing Technologies' (PETs) and de&#8208;identification is a frequently cited example. But this is rarely bullet&#8208;proof. If a database allows detailed queries, then individuals can still usually be identified, and this is especially so if information about different clinical episodes can be linked. 
+
+<li><a href="#">Some kinds of security mechanism may be worse than useless if they can be compromised. Weak encryption is a good example. The main problem facing the world's signals intelligence agencies is traffic selection - how to filter out interesting nuggets from the mass of international phone, fax, email and other traffic. A terrorist who helpfully encrypts his important traffic does this part of the police's job for them. If the encryption algorithm used is breakable, or if the end systems can be hacked, then the net result is worse than if the traffic had been sent in clear. 
+
+<li><a href="#">The easy problem is setting up systems of access controls so that access to a particular record is limited to a sensible number of staff. Such systems can be designed largely by automating existing working practices, and role&#8208;based access controls are currently the technology of choice. The harder problem is statistical security - how one designs databases of medical records (or census returns) so as to allow researchers to make statistical enquiries without compromising individuals' privacy. The hardest problem is how to manage the interface between the two, and in the specific case of medicine, how to prevent the spread of payment information. The only realistic solution for this lies in regulation. 
+
+<li><a href="#">Electronic and Information Warfare 
+
+<li><a href="#">In general, while people say that computer security is about confidentiality, integrity and availability, electronic warfare has this reversed and back&#8208;to&#8208;front. The priorities are: 1. denial of service, which includes jamming, mimicry and physical attack; 2. deception, which may be targeted at automated systems or at people; and 3. exploitation, which includes not just eavesdropping but obtaining any operationally valuable information from the enemy's use of his electronic systems. 
+
+<li><a href="#">Deception is central to electronic attack. The goal is to mislead the enemy by manipulating his perceptions in order to degrade the accuracy of his intelligence and target acquisition. Its effective use depends on clarity about who (or what) is to be deceived, about what and how long, and - where the targets of deception are human - the exploitation of pride, greed, laziness and other vices. Deception can be extremely cost effective and is increasingly relevant to commercial systems. 
+
+<li><a href="#">One obvious type of traffic is the communications between fixed sites such as army headquarters and the political leadership. A significant historical threat here was that the cipher security might be penetrated and the orders, situation reports and so on compromised, whether as a result of cryptanalysis or - more likely - equipment sabotage, subversion of personnel or theft of key material. The insertion of deceptive messages may also be a threat in some circumstances. 
+
+<li><a href="#">There are more stringent requirements for communications with covert assets such as agents in the field. Here, in addition to cipher security issues, location security is important. The agent will have to take steps to minimize the risk of being caught as a result of communications monitoring. 
+
+<li><a href="#">So the protection of communications will require some mix, depending on the circumstances, of content secrecy, authenticity, resistance to traffic analysis and radio direction finding, and resistance to various kinds of jamming. 
+
+<li><a href="#">Before communications can be attacked, the enemy's network must be mapped. The most expensive and critical task in signals intelligence is identifying and extracting the interesting material from the cacophony of radio signals and the huge mass of traffic on systems such as the telephone network and the Internet. The technologies in use are extensive and largely classified, but some aspects are public. 
+
+<li><a href="#">Traffic analysis - looking at the number of messages by source and destination - can also give very valuable information, not just about imminent attacks (which were signaled in World War 1 by a greatly increased volume of radio messages) but also about unit movements and other more routine matters. However, traffic analysis really comes into its own when sifting through traffic on public networks, where its importance (both for national intelligence and police purposes) is difficult to overstate. 
+
+<li><a href="#">Contrary to one's initial expectations, cryptography can make communications more vulnerable rather than less (if used incompetently, as it usually is). If you just encipher all the traffic you consider to be important, you have thereby marked it for collection by the enemy. Now if everyone encrypted all their traffic, then hiding traffic could be much easier (hence the push by signals intelligence agencies to prevent the widespread use of cryptography, even if it's freely available to individuals). 
+
+<li><a href="#">Once you have mapped the enemy network, you may wish to attack it. People often talk in terms of 'codebreaking' but this is a gross oversimplification. First, although some systems have been broken by pure cryptanalysis, this is fairly rare. Most production attacks have involved theft of key material. 
+
+<li><a href="#">Even where attacks based on cryptanalysis have been possible, they have often been made much easier by operational errors. The pattern continues to this day. The history of Soviet intelligence during the Cold War reveals that the USA's technological advantage was largely nullified by Soviet skills in 'using Humint in Sigint support' - which largely consisted of recruiting traitors who sold key material, such as the Walker family. Second, access to content is often not the desired result. In tactical situations, the goal is often to detect and destroy nodes, or to jam the traffic. 
+
+<li><a href="#">The increasing use of civilian infrastructure, and in particular the Internet, raises the question of whether systematic denial&#8208;of&#8208;service attacks might be used to jam traffic. This threat is still considered real enough that many Western countries have separate intranets for government and military use. 
+
+<li><a href="#">Encryption alone cannot protect against RDF, jamming, and the destruction of links or nodes. For this, different technologies are needed. The obvious solutions are: redundant dedicated lines or optical fibers; highly directional transmission links, such as optical links using infrared lasers or microwave links using highly directional antennas and extremely high frequencies; lowprobability&#8208;of&#8208;intercept (LPI), low&#8208;probability&#8208;of&#8208;position&#8208;fix (LPPF) and anti&#8208;jam radio techniques. 
+
+<li><a href="#">Although communications security on the net has until now been interpreted largely in terms of message confidentiality and authentication, the future may become much more like military communications in that jamming, service denial, anonymity, and deception will become increasingly important. 
+
+<li><a href="#">What's information warfare anyway? There is little agreement on definitions. The conventional view, arising out of Desert Storm, was expressed by Whitehead: "The strategist should employ (the information weapon) as a precursor weapon to blind the enemy prior to conventional attacks and operations." 
+
+<li><a href="#">Meanwhile, the more aggressive view is that properly conducted information operations should encompass everything from signals intelligence to propaganda, and given the reliance that modern societies place on information, it should suffice to break the enemy's will without fighting. In fact, there are roughly three views on what information warfare means: 
+
+<li><a href="#">That it is just 'a remarketing of the stuff that the agencies have been doing for decades anyway', in an attempt to maintain the agencies' budgets post&#8208;Cold&#8208;War; 
+
+<li><a href="#">That it consists of the use of 'hacking' in a broad sense - network attack tools, computer viruses and so on - in conflict between states or sub&#8208;state groups, in order to deny critical military and other services whether for operational or propaganda purposes. 
+
+<li><a href="#">That it extends the electronic warfare doctrine of controlling the electromagnetic spectrum to control all information relevant to the conflict. It thus extends traditional ewar techniques such as radar jammers by adding assorted hacking techniques, but also incorporates propaganda and news management. 
+
+<li><a href="#">Edward Waltz defines information superiority as 'the capability to collect, process and disseminate an uninterrupted flow of information while exploiting or denying an adversary's ability to do the same'. The theory is that such superiority will allow the conduct of operations without effective opposition. 
+
+<li><a href="#">At the technical level, there are many concepts which may go across from electronic warfare to information protection in general. 
+
+<li><a href="#">The electronic warfare community uses guard band receivers to detect jamming, so it can be filtered out (for example, by blanking receivers at the precise time a sweep jammer passes through their frequency). The use of bait addresses to detect spam is essentially the same concept. 
+
+<li><a href="#">There is also an analogy between virus recognition and radar signal recognition. Virus writers may make their code polymorphic, in that it changes its form as it propagates, in order to make life harder for the virus scanner vendors; similarly, radar designers use very diverse wave&#8208;forms in order to make it harder to store enough of the waveform in digital radio frequency memory to do coherent jamming effectively. 
+
+<li><a href="#">Our old friends, the false accept and false reject rate, continue to dominate tactics and strategy. As with burglar alarms or radar jamming, the ability to cause many false alarms (however crudely) will always be worth something: as soon as the false alarm rate exceeds about 15%, operator performance is degraded. As for filtering, it can usually be cheated. 
+
+<li><a href="#">Although defense in depth is in general a good idea, you have to be careful of interactions between the different defenses. The classic case in e&#8208;war is when chaff dispensed to defend against an incoming cruise missile knocks out the anti&#8208;aircraft gun. 
+
+<li><a href="#">Electronic warfare is much more developed than most other areas of information security. There are many lessons to be learned, from the technical level up through the tactical level to matters of planning and strategy. We can expect that if information warfare takes off, and turns from a fashionable concept into established doctrine and practice, these lessons will become important for engineers. 
+
+<li><a href="#">Network Attack and Defense 
+
+<li><a href="#">The ease with which a bad machine on your network can take over other machines depends on how tightly you have the network locked down, and the damage that a bad machine can do will depend on the size of the local network. Separate networks for each department can limit the damage that a compromised machine can do. There may be particularly strong arguments for this if some of your departments may have high protection requirements, while others need great flexibility. 
+
+<li><a href="#">SYN Flooding ... The attack is quite simply to send a large number of SYN packets and never acknowledge any of the replies. This leads the recipient to accumulate more records of SYN packets than his software can handle. 
+
+<li><a href="#">A common way of bringing down a host in the 90s was smurfing. This exploited the Internet control message protocol (ICMP), which enables users to send an echo packet to a remote host to check whether it's alive. The problem was with broadcast addresses that are shared by a number of hosts. A collection of such hosts at a broadcast address is called a smurf amplifier. Bad guys would construct a packet with the source address forged to be that of the victim, and send it to a number of smurf amplifiers. These would then send a flurry of packets to the target, which could swamp it. For a while this was a big deal, and the protocol standards were changed in August 1999 so that ping packets sent to a broadcast address are no longer answered. 
+
+<li><a href="#">The distributed denial of service (DDoS) attack made its appearance in October 1999 with an attack on a New York ISP, Panix. In DDoS, the attacker subverts a large number of machines over a period of time and, on a given signal, these machines all start to bombard the target with traffic. 
+
+<li><a href="#">Microsoft changed their network stack to make it much harder for an infected machine to send a packet with a spoofed IP address; you now need to hack the operating system, not just any old application. Second, more and more equipment at the edges of the network won't accept spoofed packets, and now about half of broadband ISPs filter them out. 
+
+<li><a href="#">Botnets started to become so large, that the whole game changed. Instead of using a handful of compromised machines to send out clever attacks via amplifiers using spoofed source addresses, the bad guys simply burn thousands of end&#8208;of&#8208;life botnet machines to send the bad packets directly. 
+
+<li><a href="#">Spam is in some respects similar to a DDoS attack: floods of generally unwanted traffic sent out for the most part by botnets, and often with clear criminal intent. The technical aspects are related, in that both email and the web protocols (smtp and http) assume wrongly that the lower levels are secure. Just as DDoS smtp bots may forge IP addresses, spam bots may forge the sender's email address. 
+
+<li><a href="#">A number of researchers have worked on a proposed upgrade to the security of DNS, but they have turned out to be hard to deploy for economic reasons; most of the things that secure DNS would do can be done by TLS without the need for new infrastructure, and individual network operators don't get enough benefit from DNS security until enough other operators have adopted them first. 
+
+<li><a href="#">The most rapidly&#8208;growing problem is the rootkit - a piece of software that once installed on a machine surreptitiously places it under remote control. Rootkits can be used for targeted attacks (law enforcement agencies use them to turn suspects' laptops into listening devices) or for financial fraud (they may come with keyloggers that capture passwords). One of the most salient features of rootkits nowadays is stealth; they try to hide from the operating system so that they can't be located and removed using standard tools. 
+
+<li><a href="#">In 1984, Ken Thompson wrote a classic paper 'On Trusting Trust', in which he showed that even if the source code for a system were carefully inspected and known to be free of vulnerabilities, a trapdoor could still be inserted. Thompson's trick was to build the trapdoor into the compiler. If this recognized that it was compiling the login program, it would insert a trapdoor such as a master password that would work on any account. So even if you can buy a system with verifiably secure software for the operating system, applications and tools, the compiler binary can still contain a Trojan. The moral is that vulnerabilities can be inserted at any point in the tool chain, so you can't trust a system you didn't build completely yourself. 
+
+<li><a href="#">A virus or worm typically has two components - a replication mechanism and a payload. A worm simply makes a copy of itself somewhere else when it's run, perhaps by breaking into another system (as the Internet worm did) or mailing itself as an attachment to the addresses on the infected system's address list (as many recent worms have done). The second component of a virus is the payload. This will usually be activated by a trigger, such as a date, and may then do one or more of a number of bad things: 
+
+<li><a href="#">Make selective or random changes to the machine's protection state. 
+
+<li><a href="#">Make changes to user data (some early viruses would trash your hard disk while some recent ones encrypt your disk and ask you to pay a ransom for the decryption key); 
+
+<li><a href="#">Lock the network (e.g., start replicating at maximum speed); 
+
+<li><a href="#">Install spyware or adware in your machine. This might just tell marketers what you do online - but it might steal your bank passwords and extract money from your account; 
+
+<li><a href="#">Install a rootkit - software that hides in your machine having taken it over. This is typically used to recruit your machine into a botnet, so that it can be used later for spam, phishing and distributed denial of service attacks at the botnet herder's pleasure. 
+
+<li><a href="#">Bad Java applets flourished in the late 1990s as people found ways of penetrating Java implementations in browsers. By the start of the 21st century, the main vector was the macro languages in products such as Word, and the main transmission mechanism had become the Internet. 
+
+<li><a href="#">In the early 2000s, we saw a significant rise in the amount of spyware and adware. Spyware is technology that collects and forwards information about computer use without the owner's authorization. Adware may bombard the user with advertising popups and can be bundled with spyware. 
+
+<li><a href="#">Now that the writers are focused on money rather than bragging rights, they release more attacks but limited ones. Furthermore, rather than using self&#8208;replicating worms - which attract attention by clogging up the Internet - the modern trend is towards manually&#8208;controlled exploit campaigns. 
+
+<li><a href="#">Early antivirus software came in basically two flavors - scanners and checksummers. Scanners are programs that search executable files for a string of bytes known to be from an identified virus. Virus writers responded in various ways, such as specific counterattacks on popular antivirus programs; the most general technique is polymorphism. The idea here is to change the code each time the virus or worm replicates, to make it harder to write effective scanners. 
+
+<li><a href="#">Checksummers keep a list of all the authorized executables on the system, together with checksums of the original versions, typically computed using a hash function. The main countermeasure is stealth, which in this context means that the virus watches out for operating system calls of the kind used by the checksummer and hides itself whenever a check is being done. 
+
+<li><a href="#">People have also tried to use immune&#8208;system models to develop distributed strategies for malware detection. One medical lesson which does seem to apply is that the most effective organizational countermeasure is centralized reporting and response using selective vaccination. 
+
+<li><a href="#">A company may filter executables out at the firewall, and see to it that users have prudent default settings on their systems - such as disabling active content on browsers and macros in word processing documents. Of course, this creates a clash with usability. 
+
+<li><a href="#">In defending against network attack, there are broadly speaking four sets of available tools. 
+
+<li><a href="#">1. First is management - keeping your systems up&#8208;to&#8208;date and configured in ways that will minimize the attack surface; 
+
+<li><a href="#">2. Next is filtering - the use of firewalls to stop bad things like Trojans and network exploits, and to detect signs of attack and compromise if any&#8208;thing gets through; 
+
+<li><a href="#">3. Next is intrusion detection - having programs monitoring your networks and machines for signs of malicious behavior; 
+
+<li><a href="#">4. Finally there's encryption - protocols such as TLS and SSH that enable you to protect specific parts of the network against particular attacks. 
+
+<li><a href="#">The great majority of technical attacks on systems in the period 2000-07 exploited already known vulnerabilities. The typical cycle is that Microsoft announces a set of security patches once a month; as soon as they come out, the attackers start reverse engineering them; within a few days, the vulnerabilities that they fixed are understood and exploits appear. 
+
+<li><a href="#">Tight configuration management is not just about patches, though. Many software products ship with unsafe defaults, such as well&#8208;known default passwords. It's a good idea to have someone whose job it is to understand and deal with such problems. It's also common to remove unnecessary services from machines; there is usually no reason for every workstation in your company to be running a mail server, and ftp server and DNS, and stripping things down can greatly reduce the attack surface. 
+
+<li><a href="#">Frequent reinstallation is another powerful tool: when this was first tried at MIT during Project Athena, a policy of overnight reinstallation of all software greatly cut the number of sysadmins needed to look after student machines. Operations like call centers often do the same; that way if anyone wants to install unauthorized software they have to do it again every shift, and are more likely to get caught&#8230; There are many tools to help the sysadmin in these tasks. Some enable you to do centralized version control so that patches can be applied overnight and everything kept in synch; others look for vulnerabilities in your network. 
+
+<li><a href="#">Patches may break critical applications, and it seems to be a general rule that an organization's most critical systems run on the least secure machines, as administrators have not dared to apply upgrades and patches for fear of losing service. 
+
+<li><a href="#">The most widely sold solution to the 'problems of Internet security' is the firewall. This is a machine which stands between a local system and the Internet and filters out traffic that might be harmful&#8230;. Firewalls are just one example of systems that examine streams of packets and perform filtering operations. Bad packets may be thrown away, or modified in such a way as to make them harmless. They may also be copied to a log or audit trail. 
+
+<li><a href="#">The simplest kind of filter merely inspects packet addresses and port numbers. This functionality is also available in routers, in Linux and indeed in Windows. A firewall can block IP spoofing by ensuring that only 'local' packets leave a network, and only 'foreign' ones enter. It can also stop denial&#8208;of&#8208;service attacks in which malformed packets are sent to a host. It's also easy to block traffic to or from 'known bad' IP addresses. 
+
+<li><a href="#">The third type of firewall is the application relay, which acts as a proxy for one or more services. Examples are mail filters that try to weed out spam, and web proxies that block or remove undesirable content. The classic example is a corporate rule about stripping out code, be it straightforward executables, active content in web pages, macros from incoming Word documents. 
+
+<li><a href="#">Where security's taken seriously, one possible approach is to invest in a really serious firewall system, which might consist of a packet filter connecting the outside world to a screened subnet, also known as a demilitarized zone (DMZ), which in turn contains a number of application servers or proxies to filter mail, web and other services. The DMZ may then be connected to the internal network via a further filter that does network address translation. 
+
+<li><a href="#">Factors to consider when designing a network security architecture are simplicity, usability, maintainability, deperimeterisation, underblocking versus overblocking, and incentives. 
+
+<li><a href="#">First, since firewalls do only a small number of things, it's possible to make them very simple and remove many of the complex components from the underlying operating system, removing a lot of sources of vulnerability and error. 
+
+<li><a href="#">Second, elaborate central installations not only impose greater operational costs, but can get in the way so much that people install back doors, such as cable modems that bypass your firewall, to get their work done. 
+
+<li><a href="#">Third, firewalls (like other filtering products) tend only to work for a while until people find ways round them. 
+
+<li><a href="#">Next, there's deperimiterization - the latest buzzword. Progress is making it steadily harder to put all the protection at the perimeter. The crumbling of the perimeter will be made even worse by mobility, and by the proliferation of web applications. 
+
+<li><a href="#">No filtering mechanism has complete precision, so there's inevitably a trade&#8208;off between underblocking and overblocking. Things are made worse by the fact that the firewall systems used to filter web content for sex, violence and bad language also tend to block free&#8208;speech sites. 
+
+<li><a href="#">Finally, security depends at least as much on incentives as on technology. A sysadmin who's looking after a departmental network used by a hundred people he knows, and who will personally have to clear up any mess caused by an intrusion or a configuration error, is much more motivated than someone who's merely one member of a large team looking after thousands of machines. 
+
+<li><a href="#">It's a good idea to assume that attacks will happen, and it's often cheaper to prevent some attacks and detect the rest than it is to try to prevent everything. The systems used to detect bad things happening are referred to generically as intrusion detection systems. 
+
+<li><a href="#">The simplest intrusion detection method is to sound an alarm when a threshold is passed. Three or more failed logons, a credit card expenditure of more than twice the moving average of the last three months, or a mobile phone call lasting more than six hours, might all flag the account in question for attention. 
+
+<li><a href="#">Misuse detection systems operate using a model of the likely behavior of an intruder. A banking system may alarm if a user draws the maximum permitted amount from a cash machine on three successive days; and a Unix intrusion detection system may look for user account takeover by alarming if a previously naive user suddenly started to use sophisticated tools like compilers. Indeed, most misuse detection systems, like antivirus scanners, look for a signature - a known characteristic of a particular attack. 
+
+<li><a href="#">Anomaly detection systems attempt the much harder job of looking for anomalous patterns of behavior in the absence of a clear model of the attacker's modus operandi. The hope is to detect attacks that have not been previously recognized and cataloged. Systems of this type often use AI techniques. 
+
+<li><a href="#">Another fundamental limitation comes from the fact that there are basically two different types of security failure - those which cause an error (which we defined as 'an incorrect state') and those which don't. It's a good idea to design systems so that as many failures as possible fall into the former category, but it's not always practicable. 
+
+<li><a href="#">In general, if you build an intrusion detection system based on data mining techniques, you are at serious risk of discriminating. If you use neural network techniques, you'll have no way of explaining to a court what the rules underlying your decisions are, so defending yourself could be hard. 
+
+<li><a href="#">Network intrusion detection products still don't work very well, with both high missed alarm and false alarm rates. The Internet is a very noisy environment - not just at the level of content but also at the packet level&#8230;. There are 'too few attacks'. If there are ten real attacks per million sessions - which is almost certainly an overestimate - then even if the system has a false alarm rate as low as 0.1%, the ratio of false to real alarms will be 100. In general, where the signal is far below the noise, the guards get tired and even the genuine alarms get missed. 
+
+<li><a href="#">In many cases, commercial organizations appear to buy intrusion detection systems simply in order to tick a 'due diligence' box to satisfy insurers or consultants. That means the products aren't always kept up to date. 
+
+<li><a href="#">You can filter at the packet layer, which is fast but can be defeated by packet fragmentation; or you can reconstruct each session, which takes more computation and so is not really suitable for network backbones; or you can examine application data, which is more expensive still - and needs to be constantly updated to cope with the arrival of new applications and attacks. 
+
+<li><a href="#">Some attacks are stealthy - the opponent sends 1-2 packets per day to each of maybe 100,000 hosts. Such attacks are unlikely to be found by local monitoring; you need a central monitor that keeps histograms of packets by source and destination address and by port. 
+
+<li><a href="#">IPsec defines a security association as the combination of keys, algorithms and parameters used to protect a particular packet stream. Protected packets are either encrypted or authenticated (or both); in the latter case, an authentication header is added that protects data integrity using HMAC&#8208;SHA1, while in the former the packet is encrypted and encapsulated in other packets. 
+
+<li><a href="#">IPsec is widely used by firewall vendors who offer a virtual private network facility with their products; that is, by installing one of their boxes in each branch between the local LAN and the router, all the internal traffic can pass encrypted over the Internet. 
+
+<li><a href="#">The topology of a network is the pattern in which its nodes are connected. The Internet classically is thought of as a cloud to which all machines are attached, so in effect every machine is (potentially) in contact with every other one. However, in many networks each node communicates with only a limited number of others. This may result from physical connectivity, as with PCs on an isolated LAN. 
+
+<li><a href="#">In the corporate world, there are grounds for hope that firewalls can keep out the worst of the attacks, careful configuration management can block most of the rest, and intrusion detection can catch most of the residue that make it through. Home users are less well placed, and most of the machines being recruited to the vast botnets we see in action today are home machines attached to DSL or cable modems. 
+
+<li><a href="#">Seven years ago, the center of gravity in network security research was technical: we were busy looking for new attacks on protocols and applications as the potential for denial&#8208;of&#8208;service attacks started to become clear. Now, in 2007, there are more threads of research. Getting protocols right still matters and it's unfortunate (though understandable in business terms) that many firms still ship products quickly and get them right later. This has led to calls for vendor liability. Computer scientists are looking at ways in which network protocols could be aligned with stakeholder interests, so that participants have less incentive to cheat. 
+
+<li><a href="#">The Bleeding Edge 
+
+<li><a href="#">Many of the attacks, and much of the cutting&#8208;edge work in security research, hinge on specific applications. There will still be exploits against platforms like Windows and Symbian, but there are many more vulnerabilities out there in apps. 
+
+<li><a href="#">There are many problems common to all manner of web sites. One is that web servers are often insufficiently careful about the input they accept from users, leading for example to the SQL insertion attacks. 
+
+<li><a href="#">Another increasingly common vulnerability is cross&#8208;site scripting (XSS). Scripting languages such as javascript are supposed to observe a same origin policy in that scripts will only act on data from the same domain; you don't want a script from a Mafia&#8208;run porn site acting on your electronic banking data. 
+
+<li><a href="#">A further bundle of problems with web services is that their structure is usually at least partially open to inspection. A user is passed from one page to another as he goes through a process such as browsing, search, product selection and payment; the attacker can read the html and javascript source, observe how parameters are passed, and look for nuggets such as SQL queries that can be manipulated. 
+
+<li><a href="#">The online Google Hacking Database has hundreds of examples of search strings that turn up everything from unpatched servers to files containing passwords. Suitable searches can also be used against human targets: these can be searches for anyone who's exposed themselves in some specific way, such as by leaving their social security number visible online, or searches for usable data on some specific person. Inquiries that previously would have taken the resources of a major government can now be conducted from anyone's laptop or mobile phone in seconds. 
+
+<li><a href="#">The big problem in 2006 was click&#8208;fraud; your firm's competitors click repeatedly on your ads, thereby burning up your ad budget. Click&#8208;fraud can also be done by publishers who want to maximize their commissions. Google added various algorithms to try to detect click fraud: repeated clicks from one IP address, for example, are discounted when it comes to billing. 
+
+<li><a href="#">There's no doubt that Tor is an extremely useful privacy tool, but it has to be used with care. It's more effective when browsing websites that try to respect users' privacy than when browsing sites that try to compromise them; and it's often used in combination with other tools. 
+
+<li><a href="#">Anonymity loves company; it's much easier to hide in a crowd than in the middle of a desert. And in some applications, deniability may be enough: Crowds was a system in which users group together and do web page forwarding for each other, so that if one of them downloaded a subversive web page, the secret police have several hundred suspects to deal with. 
+
+<li><a href="#">Much of what goes wrong with online services, as with anonymity services and digital elections, is just the same as we've seen elsewhere - the usual sad litany of bugs and blunders, of protection requirements ignored in the rush to market or just not understood by the developers of the early systems&#8230;. And how do you do security architecture whenever more functionality is provided to ever more people by ever more code written by constantly growing armies of inexperienced programmers? 
+
+<li><a href="#">Managing the Development of Secure Systems 
+
+<li><a href="#">The hardest part of the project manager's job is usually figuring out what to protect and how. Threat modelling and requirements engineering are what separate out the star teams from the also&#8208;rans. 
+
+<li><a href="#">The purpose of business is profit, and profit is the reward for risk. Security mechanisms can often make a real difference to the risk/reward equation but ultimately it's the duty of a company's board of directors to get the balance right. In this risk management task, they may draw on all sorts of advice - lawyers, actuaries, security engineers - as well as listening to their marketing, operations and financial teams. A sound corporate risk management strategy involves much more than attacks on information systems; there are non&#8208;IT operational risks such as fires and floods as well as legal risks, exchange rate risks, political risks, and many more. 
+
+<li><a href="#">It's not enough, when doing a security requirements analysis, to understand the education, training and capabilities of the guards (and the auditors, and the checkout staff, and everyone else within the trust perimeter). Motivation is critical, and many systems fail because their designers make unrealistic assumptions about it. 
+
+<li><a href="#">Some interesting and relevant work has been done on how people manage their exposure to risk. John Adams studied mandatory seat belt laws, and established that they don't actually save lives: they just transfer casualties from vehicle occupants to pedestrians and cyclists. Seat belts make drivers feel safer, so they drive faster in order to bring their perceived risk back up to its previous level. He calls this a risk thermostat and the model is borne out in other applications too. 
+
+<li><a href="#">The correlation between quality and security is a recurring theme in the literature. For example, it has been shown that investment in software quality will reduce the incidence of computer security problems, regardless of whether security was a target of the quality program or not; and that the most effective quality measure from the security point of view is the code walk&#8208;through. The knowledge that one's output will be read and criticized has a salutary effect on many programmers. 
+
+<li><a href="#">We've seen in system after system that the insiders are the main problem, whether because some of them are malicious or because most of them are careless. But it's often hard to enforce controls too overtly against line managers and IT staff, as this will alienate them, and it's also hard to get them to manage such controls themselves. 
+
+<li><a href="#">Companies often design systems so that the risk gets dumped on third parties. This can easily create a moral hazard by removing the incentives for people to take care, and for the company to invest in risk management techniques. 
+
+<li><a href="#">Critical computer systems can be defined as those in which a certain class of failure is to be avoided if at all possible. Depending on the class of failure, they may be safety&#8208;critical, businesscritical, security&#8208;critical, critical to the environment or whatever. Obvious examples of the safetycritical variety include flight controls and automatic braking systems. 
+
+<li><a href="#">The usual procedure is to identify hazards and assess risks; decide on a strategy to cope with them (avoidance, constraint, redundancy); to trace the hazards down to hardware and software components which are thereby identified as critical; to identify the operator procedures which are also critical and study the various applied psychology and operations research issues; and finally to decide on a test plan and get on with the task of testing. 
+
+<li><a href="#">Once as many hazards have been eliminated as possible, the next step is to identify failures that could cause accidents. A common top&#8208;down way of identifying the things that can go wrong is fault tree analysis as a tree is constructed whose root is the undesired behavior and whose successive nodes are its possible causes. 
+
+<li><a href="#">When doing security requirements engineering, special care has to be paid to the skill level of the staff who will perform each critical task and estimates made of the likelihood of error. Be cautious here: an airplane designer can rely on a fairly predictable skill level from anyone with a commercial pilot's licence. 
+
+<li><a href="#">As a general rule, safety must be built in as a system is developed, not retrofitted; the same goes for security. The main difference is in the failure model. Rather than the effects of random failure, we're dealing with a hostile opponent who can cause some of the components of our system to fail at the least convenient time and in the most damaging way possible. 
+
+<li><a href="#">Risk management must also continue once the system is deployed. It's rather hard to tell what a new invention will be useful for, and this applies to the dark side too: novel attacks are just as difficult to predict as anything else about the future. 
+
+<li><a href="#">So you can't expect to get the protection requirements completely right at the first attempt. We've also seen many cases where the policy and mechanisms were set when a system was first built, and then undermined as the environment (and the product) evolved, but the protection did not. 
+
+<li><a href="#">Most of the time, security requirements have to be tweaked for one of four reasons. First, we might need to fix a bug. Second, we may want to improve the system; as we get more experience of the kind of attacks that happen, we will want to tune some aspect of the controls. Third, we may want to deal with an evolving environment. Finally, there may be a change in the organization. 
+
+<li><a href="#">Most security enhancements fall into the category of bug fixes or product tuning. Fortunately, they are usually the easiest to cope with provided you have the right mechanisms for getting information about bugs, testing fixes and shipping upgrades. 
+
+<li><a href="#">First, you need to be sure that you learn of vulnerabilities as soon as you can - and preferably no later than the press (or the bad guys) do. Listening to customers is important: you need an efficient way for them to report bugs. 
+
+<li><a href="#">Second, you need to be able to respond appropriately. In organizations such as banks with time&#8208;critical processing requirements, it's normal for one member of each product team to be 'on call' with a pager in case something goes wrong at three in the morning and needs fixing at once. 
+
+<li><a href="#">Third, you need to be able to distribute the patch to your customers rapidly. So it needs to be planned in advance. There is a serious tension between the desire to patch quickly to forestall attacks, and the desire to delay so as to test the patch properly: pioneers who apply patches quickly end up discovering problems that break their systems, but laggards are more vulnerable to attack. Most recent malware exploits have targeted vulnerabilities that were already patched - the bad guys reverse&#8208;engineer the patches to find the vulnerabilities and then get the machines that were patched late or not at all. 
+
+<li><a href="#">Finally, you need a plan to deal with the press. The last thing you need is for dozens of journalists to phone up and be stonewalled by your switchboard operator as you struggle madly to fix the bug. 
+
+<li><a href="#">It is important for the security engineer to have some knowledge of internal controls. There is a shortage of books on this subject: audit is largely learned on the job, but know&#8208;how is also transmitted by courses and through accounting standards documents. 
+
+<li><a href="#">Whether our threat model and security policy evolve or are developed in a one&#8208;off project, at their heart lie business decisions about priorities: how much to spend on protection against what. This is risk management, and it must be done within a broader framework of managing non&#8208;IT risks. 
+
+<li><a href="#">A very important reason for large companies to take out computer crime cover - and do many other things - is due diligence. The risks that are being tackled may seem on the surface to be operational risks but are actually legal, regulatory and PR risks. 
+
+<li><a href="#">There is a growing consensus that, in order to get high&#8208;quality software, you have to make programmers test their own code and fix their own bugs. Microsoft took the view that they did not have programmers or testers, only developers: each programmer was responsible for fixing his own software, and a lot of attention was paid to ensuring that the software would build every night for testing. One of the consequences was that people who wrote buggy software ended up spending most of their time hunting and fixing bugs in their code, so more of the code base ended up being written by the more careful programmers. 
+
+<li><a href="#">System Evaluation and Assurance 
+
+<li><a href="#">Assurance fundamentally comes down to the question of whether capable motivated people have beat up on the system enough. But how do you define 'enough'? And how do you define the 'system'? How do you deal with people who protect the wrong thing, because their model of the requirements is out&#8208;of&#8208;date or plain wrong? And how do you allow for human failures? 
+
+<li><a href="#">There are many systems which can be operated just fine by alert experienced professionals, but are unfit for purpose because they're too tricky for ordinary folk to use or are intolerant of error. A working definition of assurance could be 'our estimate of the likelihood that a system will fail in a particular way'. 
+
+<li><a href="#">Incentives are critical, as we've seen time and again. If people don't actually want to protect a system, it's hard to make them. They fall somewhat outside the formal assurance process, but are the most critical part of the environment within which the security policy has to be defined. Policy is often neglected, as we've seen: people often end up protecting the wrong things, or protecting the right things in the wrong way. 
+
+<li><a href="#">Assurance traditionally focused on implementation, and was about whether, given the agreed functionality and strength of mechanisms, the product has been implemented correctly. As we've seen, most real&#8208;life technical security failures are due to programming bugs - stack overflows, race conditions and the like. Finding and fixing them absorbs most of the effort of the assurance community. 
+
+<li><a href="#">The big missing factor in the traditional approach to evaluation is usability. Most system&#8208;level (as opposed to purely technical) failures have a significant human component. However, designers often see assurance simply as an absence of obvious bugs, and tie up the technical protection mechanisms without stopping to consider human frailty. 
+
+<li><a href="#">Companies racing for dominance in platform markets start out by shipping too little security, as it gets in the way of complementers to whom they must appeal; and such security as they do ship is often of the wrong kind, as it's designed to dump costs on users even when these could be better borne by complementers. Once a firm has achieved dominance in a platform market, it will add security, but again of the wrong kind, as its incentive is now to lock its customers in. 
+
+<li><a href="#">In practice, security testing usually comes down to reading the product documentation, then reviewing the code, and then performing a number of tests. (This is known as white&#8208;box testing, as opposed to black&#8208;box testing in which the tester has the product but not the design documents or source code.) 
+
+<li><a href="#">A working definition of evaluation is 'the process of assembling evidence that a system meets, or fails to meet, a prescribed assurance target'. (It overlaps with testing and is sometimes confused with it.) &#8230; Another serious and pervasive problem is that the words 'assurance' and 'evaluation' are often interpreted to apply only to the narrow technical aspects of the system. 
+
+<li><a href="#">Many evaluation schemes (especially the Common Criteria) studiously ignore the human and organizational elements in the system. If any thought is paid to them at all, the evaluation of these elements is considered to be a matter for the client's IT auditors, or even a matter for a system administrator setting up configuration files. 
+
+<li><a href="#">A more realistic approach to evaluation and assurance would look not just at the technical features of the product but at how it behaves in real use. Usability is ignored by the Common Criteria, but is in reality all important. 
+
+<li><a href="#">The kind of features we described in the context of bookkeeping systems which are designed to limit the effects of human frailty, are also critical. In most applications, one must assume that people are always careless, usually incompetent and occasionally dishonest. 
+
+<li><a href="#">When you really want a protection property to hold it is vital that the design be subjected to hostile review. It will be eventually, and it's better if it's done before the system is fielded. As we've seen in one case history after another, the motivation of the attacker is almost allimportant; friendly reviews, by people who want the system to pass, are essentially useless compared with contributions by people who are seriously trying to break it. 
+
+<li><a href="#">There are a number of strong arguments in favor of open software, and a few against. First, if everyone in the world can inspect and play with the software, then bugs are likely to be found and fixed&#8230;. A standard defense&#8208;contractor argument against open source is that once software becomes large and complex, there may be few or no capable motivated people studying it, and major vulnerabilities may take years to be found. 
+
+<li><a href="#">Some people have argued that while openness helps the defenders find bugs so they can fix them, it will also help the attackers find bugs so they can exploit them. Will the attackers or the defenders be helped more? In 2002 I proved that, under the standard model of reliability growth, openness helps attack and defense equally. 
+
+<li><a href="#">Where a fully open design isn't possible, you can often still get benefits by opting for a partlyopen one. For example, the architectural design could be published even although some of the implementation details are not&#8230;. Another approach to semi&#8208;open design is to use an open platform and build proprietary components on top. The best&#8208;known example here may be Apple's 
+
+<li><a href="#">OS/X which combines the OpenBSD operating system with proprietary multimedia. 
+
+<li><a href="#">It has been the norm for protection to be got right only at the fifth or sixth attempt, when with a slightly more informed approach it might have been the second or third. Security professionals unfortunately tend to be either too specialized and focused on some tiny aspect of the technology, or else generalists who've never been exposed to many of the deeper technical issues. 
+
+<li><a href="#">Conclusions 
+
+<li><a href="#">Security engineering is about ensuring that systems are predictably dependable in the face of all sorts of malice, from bombers to botnets. And as attacks shift from the hard technology to the people who operate it, systems must also be resilient to error, mischance and even coercion. So a realistic understanding of human stakeholders - both staff and customers - is critical; human, institutional and economic factors are already as important as technical ones. 
+
+<li><a href="#">The security engineer of the twenty&#8208;first century will be responsible for systems that evolve constantly and face a changing spectrum of threats. She will have a large and constantly growing toolbox. A significant part of her job will be keeping up to date technically: understanding the latest attacks, learning how to use new tools, and keeping up on the legal and policy fronts. 
+
+<li><a href="#">But most important of all will be the ability to manage technology and play an effective part in the process of evolving a system to meet changing business needs. The ability to communicate with business people, rather than just with other engineers, will be vital.
+
+<!-- END MAIN -->
+
+
+</body>
+</ul>
+</div>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\w -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+</script>
+
+</html>

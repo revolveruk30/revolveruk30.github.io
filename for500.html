@@ -1,0 +1,454 @@
+<html>
+<title>SANS Notes</title>
+<meta name="robots" content="noindex,nofollow" />
+
+<link rel="stylesheet" href="w2.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="roboto.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<head>
+<style>
+
+
+
+html, body {
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+oncontextmenu="return false";
+onselectstart="return false";
+ondragstart="return false";
+background-color: #f0f0f0;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+	z-index: 3;
+	width: 345px;
+	top: 30px;
+	bottom: 0;
+	height: inherit;
+	text-align: justify
+	height: 100%;
+	background-color: #f0f0f0;
+	position: fixed;
+	overflow: auto;
+	line-height: 0.2
+}
+.w3-searchbox {
+	height: 25%;
+	width: 110%;
+	left:405px;
+	top: 23px;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	z-index: 1;
+	line-height: 2;
+ margin-top: -7px; 
+
+}
+
+.w3-topbar {
+	width: 100%;
+	height:5%;
+	background-color: black;
+	position: fixed;
+	top: -3px;
+	overflow: hidden;
+
+	
+}
+
+
+#myInput {
+  background-repeat: no-repeat;
+  width: 40%;
+  border: 1px solid #ddd;
+ margin-top: 20px; 
+ margin-bottom: 12px;
+  margin-left: 95px;
+  text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+
+#keywords {
+  background-repeat: no-repeat;
+  width: 20%;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 120px;
+
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+  margin-top: 150px;
+  width: 70%;
+}
+
+#myUL li a {
+  margin-top: -1px; 
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+}
+</style>
+</head>
+
+<body>
+<!-- Topbar -->
+<div class="w3-topbar"></div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+
+<BR>
+<p>
+<BR>
+<center><H3>SANS COURSE NOTES</H3></center>
+<BR>
+<p>
+<BR>
+<a class=" w3-button w3-hover-blue" href="sec401.html">SEC 401 - Security Essentials</a>
+<a class="w3-button w3-hover-blue" href="sec450.html">SEC 450 - Blue Team Fundamentals</a>
+<a class="w3-button w3-hover-green" href="for500.html">FOR 500 - Windows Forensic Analysis</a>
+<a class="w3-button w3-hover-blue" href="sec502.html">SEC 502 - Perimeter Protection</a>
+<a class="w3-button w3-hover-red" href="sec504.html">SEC 504 - Hacker Tools</a>
+<a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
+<a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
+<a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<P>
+<center>
+<a class="w3-button" href="standards.html">Security Standards</a><br>
+<a class="w3-button" href="books.html">Security Books</a><br>
+<a class="w3-button" href="tools.html">Security Tools</a>
+</center>
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter Paragraph by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="20" name="hilite" placeholder="Highlight Multiple Keywords">
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+
+</nav>
+
+
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+
+
+<center>
+
+
+
+
+<ul id="myUL">
+
+    <p>    Windows Forensic Analysis, Robert Lee<p>
+
+<li><a href="#">A forensic examiner/analyst should have a solid understanding of the operating system and the application he is examining. Only by understanding the OS and applications on the system you are examining will you understand where to look for evidence of an action. Many times, you will find that you will have to conduct tests in your lab on applications to find what evidence is created by the application when an action is taken, and then go to the hard drive you are analyzing and look for that piece of evidence. Evidence of action or activity is created by both the user of the computer and the system itself.
+<li><a href="#">Evidence created by a system action might be an audit log showing default system maintenance has run at the default time or file access times being changed by an antivirus scan automatically being run. Understanding what kinds of evidence are created, how they are created, and why will help you be a better examiner.
+
+<li><a href="#">Findings are the result of your key word searches or individual items of significance you find during the course of your examination. Analysis is the act of looking at all the individual findings, including the existence or lack thereof of data, as well as associated metadata (location of the file, timestamps), and determining which actions were taken on the computer that would have caused those artefacts to exist. Using this we can determine the who, what, when, where, why and how.
+
+<li><a href="#">The forensic examiner/analyst should be a master of problem solving because for each investigation, he should be asking himself what crime is being investigated and what actions might a user have taken to facilitate that crime. Of those actions, what evidence would be created by the user, application, or system when that action was taken?
+
+<li><a href="#">Many artifacts you will uncover will help substantiate a fact. Multiple artifacts that all substantiate the same fact are much more effective at increasing the overall weight of your evidence... There are commonly four to six locations on an average Windows system that will point to a user's file opening or file creation.
+
+<li><a href="#">Because incident responders and investigative agencies may not be immediately aware of what information is evidence when they arrive on scene, the Department of Justice advises incident responders to document and preserve as much information as they can. They suggest all incident responders be trained so they can collect and preserve as much volatile data as possible.
+
+<li><a href="#">With the increased popularity of encryption programs, pulling the power plug has already resulted in investigative agencies having nothing to examine. In addition, a growing popular claim from defense attorneys is that the system was being controlled by a remote administrative utility/Trojan or a virus was causing all the activity. Without the collection of volatile data, it becomes much more difficult to defend against or refute.
+
+<li><a href="#">Volatile data is what is referred to as data that will disappear or be destroyed once the computer system is powered off. Typically, this is RAM, but it goes further. Volatile data is also current active network connections, running applications, open/listening network connections, etc.
+
+<li><a href="#">Incident responders responding to computer intrusions/hacks have for a long time now understood the need for conducting onsite triage. That is, immediately looking for specific items needed to immediately further your investigation. This tactic is now being recognized as critically useful in non-intrusion related investigations. Before conducting any further activity, you should apply a write block. Triage's greatest benefits are the immediate identification of investigative leads.
+
+<li><a href="#">The second benefit, particularly to responding law enforcement, is the ability to immediately confront a suspect and with the benefit of specific incriminating information obtained by the triage the likelihood of a confession is greatly increased. After a triage, with the write block still attached you can initiate your physical or logical image of the drive.
+
+<li><a href="#">With the increased use of encryption, particularly whole disk encryption utilities like Windows Bit locker, PGP and True Crypt, it is more important now than ever before for incident responders to image RAM and collect volatile data on any powered-on system they respond to. While it is the most volatile piece of evidence, it is also one of the most valuable.
+
+<li><a href="#">Many Windows systems, particularly laptops, maintain a hibernation file named 'hiberfil.sys.' This file is created when the computer is placed into hibernation mode-often by closing the lid or selecting hibernate from the start menu.
+
+<li><a href="#">It turns out that "hiberfil.sys' is a complete copy of everything in RAM when that lid was closed! Simply copying this file from the root of the system drive gives us a ready-made memory image ready for analysis. Crash dump files are also great sources for RAM analysis. Look for "memory.dmp" files in the %WINDIR% folder. If a full crash dump was taken, it will be a complete copy of RAM.
+
+<li><a href="#">When you image memory, you generally want to avoid exporting memory to the host system for a variety of reasons, including that you would be overwriting unallocated space with your memory image file, (destroying your ability to recover files in that portion of unallocated space). It is usually best to export memory to another networked machine or your attached sanitized USB device.
+
+<li><a href="#">One of the most important things you should ever do before powering off a system to remove a hard drive is to check to see whether the drive is encrypted or not. If there were indications the drive was encrypted, it would be advisable to image the drive while it is powered on and live, if you power it off, you likely will not be able to recover the keys.
+
+<li><a href="#">If you perform a live image of a drive due to encryption, you should always image the logical drive instead of the physical one. The logical drive is seen as unencrypted by the local machine, whereas the physical disk is still encrypted at the disk level.
+
+<li><a href="#">Data chunks will be in one of two states on the filesystem: used or not used. Each chunk of data (cluster or block) is either owned by an existing file or is waiting to be used. This is generally referred to as free space. Even though the space is free, it does not necessarily mean that it is free of data. Files that were deleted on the system could have written to these blocks at one point. This space is considered unallocated by the filesystem. Even though the space is unallocated, critical evidence can be recovered from these blocks despite not being recoverable by ordinary file recovery.
+
+<li><a href="#">If a file is not fully recoverable, a piece of that file may still be recoverable. That piece of the file is called a file fragment. Windows writes file information in sector sized-chunks. If the file is 1280 bytes in length and the cluster size is 2048, then Windows will write into the first three sectors. Notice that the third sector is only partially written; when that occurs, Windows will use the null byte \xOO as a filler until the end of the sector, not the cluster. Any extra sectors not used in writing data for the file is slack space. Slack space could contain data from the previous file that was stored at that location.
+
+<li><a href="#">NTFS makes use of a log file to track changes to the metadata to track the state and integrity of the filesystem at all times and to correct inconsistencies causes by system crashes. Other filesystems call this "journaling," and NTFS calls it "transaction logging."
+
+<li><a href="#">NTFS is able to track all the files that have changed on the system via a USN Journal or Change Journal. This allows programs like a backup utility or virus scanner to know what files are new or changed since they last ran when they need to do an incremental pass over the drive. NTFS has incredibly robust security controls to prevent users from opening files they aren't allowed to, (Of course, that can all be bypassed by mounting the drive in Linux, but that is a whole other discussion.)
+
+<li><a href="#">The Master File Table (MFT) is a very structured database that tracks all the objects to be saved on an NTFS volume. Every object gets a FILE record within the MFT. Each FILE record contains a series of Attributes that contain the various data and metadata related to that file.
+
+<li><a href="#">One of the most important artifacts you will find in a case is being able to prove a file came from a USB or downloaded from the internet. One of the easier ways to tell comes in the form of an Alternate Date Stream. This unique artifact is incredibly important to determining if contraband was sourced from a browser, skype, P2P session, or an online application.
+
+<li><a href="#">Starting with XP SP2, when files are downloaded from the Internet via a browser to a NTFS volume, an alternate data stream is added to the file. The alternate data stream is named "Zone.Identifier." The Zone.Identifier usually has simple text with the stream ZoneID=3." Value 3 means that the file was downloaded from the Internet and it's potentially unsafe.
+
+<li><a href="#">Volume Snapshot Service (or Shadow Copy) is the new "System Restore" for VistalWin7 and 2008. Essentially, it is like Time Machine" for MACs. It performs a cluster by cluster diffing/backup and stores that information. In a nutshell, you can rewind a file, a directory, or even an entire volume to a previous state-wonderful for forensics.
+
+<li><a href="#">Shadow copy enables a user to essentially revert an entire volume, a folder, or a file back in time to a previous version. An investigator can also copy out of the Shadow Copy a previous version of the file and examine the differences. VSS takes a snapshot only once a day.
+
+<li><a href="#">The entire volume of C can be backed up to earlier dates. What this would mean to a forensic analyst is that if a user wipes a file today, it might still be recoverable from the previous snapshot. If an investigator examined the shadow volume created from yesterday's snapshot, the file is recoverable from that volume. The shadow volume that can be examined is an exact duplicate backup of the entire volume including unallocated space. How many shadow volumes will an investigator have access to? It depends on disk size. Generally, 3-5% of disk space is allocated for the volume shadow; however, upwards of 30% of disk space could be utilized.
+
+<li><a href="#">This capability would be incredibly useful in situations where a bad guy might have wiped or overwritten with zeros to the file. You could recover it by going back a day or two in the shadow copy volume to retrieve the file from allocated space.
+
+<li><a href="#">Examining Volume Shadow data is made easy with ShadowExplorer. ShadowExplorer allows for a user to browse through a familiar Explorer folder interface in the VSCs of their choosing. This allows the investigator to quickly parse and extract files of interest from the volume shadow. In my experience, ShadowExplorer is the perfect tool to attempt to extract targeted information from a previous time.
+
+<li><a href="#">Many discussions about proper acquisition techniques have always discussed whether or not to pull the power from a funning system to "freeze' the state of the hard drive from accidentally erasing data. For the most part, this is a good idea- except when it comes to solid state drives. This action could cause some serious problems.
+
+<li><a href="#">In fact, cutting the power could be the worst option for trying to ensure proper collection of data on the drive. The repair operation could be doing many things, including performing trimming operations and wear leveling while the drive is self-repairing after a power loss. Some thinking has recommended that the best options might include to image the system live.
+
+<li><a href="#">Data stream carving is the carving of small fragments and not the entire file. These smaller fragments could have great meaning, but usually are part of a larger data file or a fragment that could be useful to our case. For example, database files such as index.dat files might contain hundreds of websites that have been visited When deleted, those URLs embedded inside that index.dat file could still be extracted, even if you are unable to recover the entire and original index.dat file from your system.
+
+<li><a href="#">Fragments of data could be extracted from memory, unallocated space, or even existing files. An example of extracting deleted data from an allocated file would be the registry. Deleted registry keys can still be examined and extracted from the registry hives on a system but you need a tool to identify and extract those fragments from the registry.
+
+<li><a href="#">The second recover technique is "file carving." File carving is the practice of recovering intact files from memory or unallocated space. Generally, the process will scan for known file headers at cluster boundaries and carve a file out based on a "predicted" length or carving until a known footer of the file is found. A file header is a sequence of bytes that are generally unique to each file found at the beginning of the file itself. The process is flawed as it generally results in many false positives and is difficult to manage because there may be hundreds of files recovered.
+
+<li><a href="#">Office internal metadata is a key point of discussion for e-discovery cases. This metadata is embedded into the file itself and includes information that might be quite useful for a variety of litigation reasons.
+
+<li><a href="#">What kind of metadata might be included in Microsoft Office documents, picture files, and link files? In most cases, it is data about the file itself. Similar to MP3 metadata (artist, album, rating), metadata includes items that have nothing to do with the actual file, except it helps describe how the data was created, the location, and the author.
+
+<li><a href="#">Forensics is probably best known to the average individual for the ability of investigators to recover lost or deleted files from a filesystem. However, most of the time, the recovery of files is limited to Metadata layer extraction. What this means is that a file is recovered by examining the file properties such as the starting cluster, the file size, file name, and parent directory. On an average system, extracting deleted data is easiest using this methodology. The difficulty is that many modem operating systems recycle these deleted metadata locations quickly and as a result over write the data that is stored there.
+
+<li><a href="#">A file header is how a file usually identifies itself to the application trying to interpret the unique data. These common headers have key file information that is passed to the application so that the application can perform a sanity check to ensure the file is indeed valid. When a program is used to scan a filesystem volume looking for these headers, it has a good chance at carving the deleted files out of unallocated space by carving the file once a header it is looking for is found.
+
+<li><a href="#">Once the file carving begins, the file is carved out until it finds a file footer. If a file footer does not exist, then it usually makes a guess as to an appropriate file size usually based on similar files. In some cases, the file carving tool might be able to scan the header of the file for the exact size of the file. Certain files will embed the file size into the header itself and this information can be used to accurately extract the exact file from unallocated space.
+
+<li><a href="#">The registry is a collection of database files that store vital configuration data for the system. It stores software, hardware, and system component information. The registry can detail the software that has been installed, system configuration, recently used files, and startup programs.
+
+<li><a href="#">The registry can be accessed either on a live system or offline. If offline, you will need to know where the registry files are stored. The majority of the files are stored under the \%WINDIR%\systern32\config directory. These registry hives are DEFAULT, SAM, SECURITY, SOFTWARE, and SYSTEM. The files correspond to their meaning in the registry.
+
+<li><a href="#">The registry can be used to enumerate the most recently used files. It can also show you the last files that he searched for on the hard drive, It can also show the last typed URLs that he inputted into his browser windows. It can also show the last commands executed on the system as well as the files that were opened. You can also witness which files were last saved to the Windows system.
+
+<li><a href="#">Similar to file systems, registry hives have free and allocated areas of data. When a registry key is deleted, the key is simply unallocated similar to a file and this makes it recoverable using forensic tools on the market.
+
+<li><a href="#">There are many reasons as to why an individual would want to recover deleted keys. In many instances, deleted keys are the result of using privacy cleaners, uninstalling programs, and clearing browser history. Many artifacts that are extremely useful to case data might be found in deleted registry keys as more advanced users will begin to attempt to cover their tracks on an average Windows Operating System.
+
+<li><a href="#">The first place we are going to look for information is the SAM. The SAM hive will help us enumerate all the users that have a profile on the machine. If your machine is a part of a domain, the SAM file containing the user profiles will be located on the Domain Controller.
+
+<li><a href="#">For a forensic investigator, there are several things we are looking for here: 1) Tying a username to a RID (Relative Identifier): There are many artifacts on a Windows machine that point back to a user's RID and not his username. It is important to document the usemame and the corresponding RID for later purposes. This is a very important step. 2) Profiling the user: It is incredibly important to profile a user of a machine based on his login habits and mistakes. You can easily see the last login of each user and the total number of logins that this user has made.
+
+<li><a href="#">One of the most frustrating parts of many DFIR tools is the accidental misinterpretation of data. One of the biggest ones in the digital forensics world happens to be whether or not a password is required to log in to a specific account. This one fact could change the details of many cases. How did the user obtain the password? If a password was not required, how could you be sure that the actions are tied to a specific user.
+
+<li><a href="#">SAM Inside is a password-recovery program for cracking LM and NTLM passwords. Although we can use it to crack passwords, we can also check to see whether password fields are empty. SAMInside can be pointed to any specific SAM and SYSTEM hive files and tell you whether there are passwords set for an account.
+
+<li><a href="#">It is HIGHLY recommended that you set your local analysis machine time to UTC to avoid any bias that could be added accidentally from a forensic tool and potentially lead to the misinterpretation of time related data in your case. You can always refactor the local time in your report later, but UTC provides an easy format to perform analysis in and reduce exposure to conversion errors or misinterpretation.
+
+<li><a href="#">If the last access timestamp is turned off, we will not be able to see when file data was last accessed by the system. Without the last access time, it might be more difficult to tell when programs were last opened by the user, such as pictures being viewed, MP3s being played, or Office documents and PDFs being examined.
+
+<li><a href="#">One of the more interesting investigative strategies you can accomplish with the MAC Address and SSID of the wireless network you have uncovered is to to pinpoint the Geo-Location of the access point used for the connection. Being able to discover and pinpoint the exact location and time of where and when a specific computer or device was could be incredibly important to your case.
+
+<li><a href="#">Not only will the operating system keep track of the user's last documents saved, the Microsoft Office product will as well. Each version of Office will keep a list of all the files opened in a specific program. The location is always in a key called fiIeMRU. In this key will list many of the recent documents, spreadsheets, and PowerPoint presentations that the user has opened.
+
+<li><a href="#">The Windows Shell enables a user to have shortcut (aka link or Ink) files. A shortcut file is a file that has information used to access another file (or shell object). It is a form of a pointer. There is an abundant amount of useful information inside of lnk files. Some of the more useful information includes the type of drive the target file/object is on (a fixed drive, removable, remote, and more). Also included is the full path of the target file, including drive letters, volume labels, and Serial Numbers for locally attached volumes. for remote volumes (shares) the full server shares a path and a drive letter (if the share were mounted).
+
+<li><a href="#">Shortcut files are often useful in identifying files that no longer exist on a local machine. They might have been wiped or deleted, but often the shortcut file remains and provides an important clue that a file used to exist at that point.
+
+<li><a href="#">The Shellbag information is extremely useful because it can help us track a user through seeing which folders they have recently utilized. In some cases, Shellbag info collects information regarding the files in the folders that are listed.
+
+<li><a href="#">• We can tell what you executed through UserAssist examination. • We can tell what you touched through file/registry and timeline analysis. • We can tell which folders you opened through Shellbag analysis.
+
+<li><a href="#">The purpose of USB key forensic analysis is to determine if a specific USB device (key, printer, camera, iPod) was plugged in to a system. There is quite a bit of information you can map back to a device. Each device contains a specific Serial Number even if it is reformatted. That information can be used to see if a device was plugged into a specific machine or to find a specific device that was used in a crime.
+
+<li><a href="#">Mass Storage Class (MSC) is a transfer protocol that allows mounting of a device's storage area as removable media and provides direct access to sectors of data for reading and writing. The mounting of these devices occurs at the physical level, where if one were to open a mounted partition with a hex editor, all areas of the file system are available for view.
+
+<li><a href="#">Picture Transfer Protocol (PTP) deals only with images, videos, and its associated metadata; it does not provide support for transferring other file types such as word documents, zip, and so on.
+
+<li><a href="#">PTP allows only a unidirectional transfer of files, where users can download or copy files from the device to the computer or other peripheral but does not support uploading or copying files to the device. Mounting of these devices in Windows occurs at a logical level, so you cannot see the underlying file system structure for these devices.
+
+<li><a href="#">Media Transfer Protocol (MTP) was introduced by Microsoft and is an improvement over PTP partly in that it supports a variety of file types. This protocol emphasizes the importance of metadata associated with media files, just like PTP does with images, and is sometimes used by device vendors as a way to implement DRM. MTP is somewhat of a misnomer because it is not limited to only media files. Any type of file can be transferred to and from MTP-enabled devices.
+
+<li><a href="#">USB Key Analysis is one of the most talked about areas in computer forensics. The forensic analysis is useful because you can track USB devices that have been plugged in to a machine. With USB key analysis you can • Identify Vendor, Product, and Version of a USB device plugged into a machine. • Identify a unique USB device plugged into the machine. • Determine the time a device was plugged into the machine.
+
+<li><a href="#">Depending on the type of investigation and authorization, a wealth of evidence can be unearthed through the analysis of e-mail files. Recovered e-mail can bring excellent corroborating information to an investigation and its informality often provides very incriminating evidence. When conducting forensic reviews, and particularly in the eDiscovery world, an investigator must be savvy about the various locations where e-mail evidence can exist. It is common for a user to have e-mail that exists locally on his or her workstation, on the company e-mail server, and in multiple webmail accounts.
+
+<li><a href="#">When conducting e-mail examinations, we focus on answering four questions:
+
+<li><a href="#">• Who sent the e-mail? Computers don't generate e-mail autonomously and when reviewing e-mails, we will spend a considerable amount of time attempting to identify the originator of a message. This isn't always as easy as it sounds, particularly taking into account the ease with which e-mail communications can be faked. However, we do often have some good leads to follow, including the originating e-mail address, the IP address of the originating computer, and whatever contextual clues we can pick up from the message itself (such as signature block, textual anomalies, references, etc.).
+
+<li><a href="#">• When was it sent? We can usually determine when a message was sent with a high degree of accuracy. The message itself will have a timestamp associated with it, but more importantly, we will focus on the mail server timestamps that have been added to the message. These are more difficult to fake, and we often have logs and some control over at least one of those servers in an enterprise environment.
+
+<li><a href="#">• Where was it sent from? Determining where a message was sent from can be difficult, but we do have some good places to look. If it exists, the originating IP address can be very helpful, particularly when paired with geo-location databases that can pinpoint the physical location of that IP address. Tracking the domains and lP addresses of the various ISPs and mail servers referenced in the message header can also allow us to narrow down on a location and at a minimum give tis a starting location to issue subpoenas for ISP records.
+
+<li><a href="#">• Is there relevant content? This is usually where an investigator will start. After all, if the message isn't useful to the investigation what does it matter where it was sent from7 We see in this section that e mail evidence can provide an amazing amount of information, even beyond the messages and attachments we will find in e-mail stores. The contact information, calendar appointments, and task lists we find during e mail examinations can be extremely helpful in tying the case together.
+
+<li><a href="#">The easiest way to analyze e-mail messages is via manual review. This entails using an appropriate e-mail client (or forensic tool) to manually read each message. When working with foreign languages, care should be taken to use a client that can parse Unicode characters. If you are working with a large number of messages, string searches and de-duplication can be used as data reduction methods. A keyword list is created, and a forensic tool is used to search each message (and sometimes the entire image file) for instances of those keywords. Any duplicate emails are removed from the review pool. After data reduction is complete, a manual review is conducted on any keyword matches.
+
+<li><a href="#">E-mail attachments are a key source of information during forensic analysis. The e-mail industry estimates that 80% of e-mail data is stored via attachments. Thus, you should expect to spend 80% of your analysis time reviewing them. Attachments are a leading cause of virus infections, so it is important to treat them with care. Scanning attachments for viruses is critical. If the attachments have been exported, then a simple scan of the directory is sufficient. Otherwise, you can install virus software on your analysis machine with the correct e-mail client plug-in.
+
+<li><a href="#">The e-mail header is a required component of every e-mail and provides the "envelope" that a message relies upon for getting it to the proper destination. The header can be thought of as a transit ticket of sorts. It can tell you who made the booking (sender), the destination (recipient), the departure date and time (when the message was sent), what route the message took (the servers it traveled through), and the arrival date and time (last server that received the message).
+
+<li><a href="#">There is a wealth of information provided by the header, but as investigators, we will focus on data that can tie the message to a computer system. We do need to be careful because much of the header information can be spoofed (faked).
+
+<li><a href="#">Besides the client-issued values "from:" "To:" "CC:" "BCC:" "Subject" and "Date," five additional header values an investigator should focus on are:
+
+<li><a href="#">• Message-ID: Provided by the originating mail server and consisting of a unique identifier appended to the server name with an @ symbol. It is similar to a tracking number for the message and is logged by receiving mail servers. A search of mail server logs for the Message-ID will provide evidence of the e mail passing through.
+
+<li><a href="#">• Received: You can trace the path a message took by reading the "Received" entries starting from the bottom-most entry (the originating mail server). Each MTA traversed adds a "Received" entry and each entry includes the server IP address, server name, date, time, and time zone.
+
+<li><a href="#">• X-Mailer: Identifies the e-mail client used to create the e-mail message. Its inclusion is optional, and it can be a good indicator of whether the e-mail was created locally or via a web-based client.
+
+<li><a href="#">• Received-SPF: Sender Policy Framework ($PF) allows organizations to identify which mail servers are allowed to send email from your domain. It provides an easy means for receiving mail transfer agents to validate the sending IP address to the purported domain. The primary purpose is to prevent spammers from forging messages from a specific domain.
+
+<li><a href="#">DomainKeys Identified Mail (DKIM) information can also be seen in this header and is another mechanism for validating the source of a message by allowing the originating domain to identify itself via a digital signature. Since the originating mail server is legitimate, we can better trust the originating IP address information.
+
+<li><a href="#">Host-based e-mail stores can be defined as any e-mail archive stored locally on a computer, independent of an e mail server. Host-based e-mail typically employs an index file that acts as a table of contents and stores metadata such as read status, flags, replied/forwarded information, and whether the message has been marked for deletion. A separate message store houses the e-mail messages themselves. Both files are necessary to accurately parse and review e-mail in the e-mail archive.
+
+<li><a href="#">Webmail complicates our forensic efforts because there is often no offline archive. The lion's share of all webmail exists on the servers run by the service or ISP. An exception exists for users who have set up offline e-mail storage using the POP or IMAP protocols allowed by some services. In this case, we would expect to find mail in the user's e-mail client and the host-based e-mail techniques previously discussed could be used to recover and analyze it. Barring that, we are often left with recovering webmail fragments using traditional computer forensic techniques (such as keyword searching and carving) or requesting the preservation and release of e-mail data from the ISP using a court order.
+
+<li><a href="#">E-mail can be in many different locations. The first step is to identify what e-mail clients exist (or have existed) on the system and what e-mail servers they are connecting to. This usually requires reviewing the folder structure of the system as well as reviewing the Windows registry for installed applications. Webmail use can be identified through the Internet history, cookies, and cached files.
+
+<li><a href="#">All mail archives should be forensically acquired within the scope of authority to search. This includes both server archives as well as anything stored locally on the system. Because it is common to have many different types of e mail collected during an investigation, investigators often convert archives to a consistent format (.PST is the current favorite) to aid in review and with the dc-duplication process.
+
+<li><a href="#">Once relevant files are identified, they should be exported out into a portable, easy-to-review format. Hash values should be collected for these new files because they should be considered evidence. In an eDiscovery case, a subset of this collection of files might be those that are "produced" to the opposing counsel and will need to be rendered in the requested format (TIFF, PDF, and raw).
+
+<li><a href="#">The recycle bin is a very important location on a Windows file system to understand: It can help you when accomplishing a forensic investigation because every file that is deleted from a Windows recycle bin aware program is generally first put in the recycle bin. Generally, files that use command-line or third-party software are not placed into the recycle bin. The recycle bin is a hidden folder on your system and can be accessed from the root directory.
+
+<li><a href="#">The Recycle.Bin doesn't really mean a file is deleted because it is still considered allocated by the filesystem and operating system. To a certain extent, if a user forgets to use Shift-Delete to permanently delete a file, then the recycling operation is one of the few user-attributable actions related to attempted file deletion.
+
+<li><a href="#">The System Resource Usage Monitor (SRUM) is one of the newest digital artifacts discovered and can help prove several user actions even after execution of counter-forensic programs. A situation in which SRUM data could be useful is to document the activity of an employee transferring mass amounts of data from the corporate network to his or her laptop before leaving the company. SRUM would likely show the significant amount of network data inbound to the employee's computer using the Windows Explorer application.
+
+<li><a href="#">Four of the most exciting pieces of information include what applications were running on the system during a particular hour, what user account was responsible for launching each application, how much network bandwidth was sent and received as a result of that application in a particular hour, and what network the system was connected to.
+
+<li><a href="#">Event logging provides a standard, centralized way for the operating system and associated applications to record important software and hardware information. Microsoft describes an event as "any significant occurrence in the system or in a program that requires users to be notified, or an entry' added to a log."
+
+<li><a href="#">Events are collected and stored by the Event Logging Service. It stores events from various sources in a single collection called an event tog. Event logs provide historical information that can help illuminate system and security problems as well as tracking user actions and system resource usage.
+
+<li><a href="#">Event logs provide a wealth of information that can help an investigator piece together relevant actions that occurred on the system. Similar to other forensic artifacts, it is helpful to go through the mental exercise of determining what questions event log data can help answer. Some of the most common are:
+
+<li><a href="#">• What Happened? Event logs can be cryptic to the lay user, but they are designed to provide very specific information about activities that occurred on the system. Items like Event IDs and Event
+
+<li><a href="#">• Date/Time? Timestamps are a key part of event logs, providing a temporal context for the events. With systems recording thousands of events, timestamps can also help the investigator narrow his or her focus.
+
+<li><a href="#">• Users Involved? Everything accomplished within Windows is done within the context of an account. We can identify references to specific users as well as information about Windows operating system activities performed via special accounts like System and NetworkService.
+
+<li><a href="#">• Systems Involved? In a networked environment, we will very commonly find references to systems other than the host because resources are accessed remotely.
+
+<li><a href="#">• Resources Accessed? The Event Logging Service can be configured to store very' granular information regarding the use of various system objects. With nearly every resource considered an object, this provides very powerful auditing.
+
+<li><a href="#">• Security Log: Records events based on auditing criteria provided by local or global group policies.
+
+<li><a href="#">• System Log: Records events logged by the operating system or its components, such as the failure of a service to start during the boot cycle.
+
+<li><a href="#">• Application Log: Records events logged by applications, such as the failure of MS SQL to access a database or an antivirus alert.
+
+<li><a href="#">Most of the questions we are looking to answer during a forensic investigation tend towards answers found in the Security log. The System and Application logs store information more useful for troubleshooting by system administrators. The Security log records an audit event whenever a given system or user action meets the criteria set forth by the audit policy in use. They can provide details on a variety of actions, including user authentication (logons, runas command, remote access, etc.) and what a particular user did on a system after authentication.
+
+<li><a href="#">It is possible to tailor auditing for a specific user account using the gpedit.msc snap-in in Windows. Thus, if you suspect a specific account has been compromised by an intruder, or you would like more detailed auditing on critical accounts like administrators, this tool can provide that capability on a per account basis.
+
+<li><a href="#">Windows installations have never had adequate event logging enabled out of the box. Enabling proper logging requires an administrator to modify the security audit policies after installation. Workstations are where we typically find the least amount of logging. This is particularly true for standalone installations. Thus, in the average law enforcement search warrant served on a residence, there might be less security logging available than in an enterprise.
+
+<li><a href="#">Tracking account usage is one of the more common uses for reviewing event logs. Knowing when a user account logged on to a system and subsequently logged off can provide helpful corroborating evidence along with other forensic artifacts found. If account credentials are suspected to be compromised, reviewing successful logons throughout your network can help track where the hacker has been.
+
+<li><a href="#">When a hacker gains access to a system through some sort of an exploit (remote code execution, privilege escalation, service exploitation, client-side attacks resulting in backdoors, etc.), there is typically no record of "logon" within the event logs. This is intuitive because a backchannel is being used and the standard APIs for access are being circumvented.
+
+<li><a href="#">Utilizing event logging to monitor important files, folders, network files shares, the registry, and even the SAM database is a powerful feature that few administrators take the time to implement. They can give the analyst very detailed information about when critical resources are accessed, by what user accounts, and what actions were performed on them. With companies focusing more on intellectual property theft, you might find yourself lucky enough to have these events available during your investigations.
+
+<li><a href="#">An age-old anti-forensic technique relies upon backdating the system clock to manipulate file system timestamps. Need that contract to have been signed last week? No problem! Just set your system clock back, copy the document to a new volume, and make your modifications! Luckily, this type of bad behavior is quite easy to detect using a variety of techniques, including file application metadata artifacts. Time manipulation can be detected more broadly via event logs.
+
+<li><a href="#">Event Log Explorer is a third-party event log management software package that runs circles around the built-in Microsoft tools. It provides just about every feature that a forensic analyst could want when doing a log review and greatly speeds up the process.
+
+<li><a href="#">It allows many log files to be opened simultaneously and even merged, greatly aiding with event correlation and reducing the amount of time needed to search. This ability extends to being able to open logs on multiple remote systems simultaneously for live reviews. It has a very robust filtering capability, including access to the text-based Event Description field where so many of our forensic artifacts are located.
+
+<li><a href="#">Browser forensics is a critical skill because it can provide an overwhelming amount of information to the investigator. Accessing the Internet is one of the most frequent user activities, and browsers are the key portal used to facilitate that access. In some cases, such as employee misuse, Internet activity alone may provide the key pieces of evidence. In other cases, Internet activity may not be the focus but can provide valuable corroborating evidence.
+
+<li><a href="#">Although many different browser artifacts exist, three, in particular, provide the foundation of most browser evidence: • History Files • Browser Cache • Cookies
+
+<li><a href="#">Evidence from these locations goes a long way toward helping the investigator profile a user: determining what sites were visited, how often, at what times, and what kinds of activities were performed on that site. Although these three artifacts are invaluable, you need to be aware that there are ancillary locations that can greatly help us corroborate evidence and fill in the picture of what happened on a computer system.
+
+<li><a href="#">Items such as bookmarks can show knowledge and intent of the user who chose to save them. The download folder and temporary directories often house long forgotten downloads that could be relevant. And auto-complete information, although not always easy to get to, can provide excellent information on form data entered, search terms, and usemames utilized.
+
+<li><a href="#">From a forensic perspective, all of Chrome's artifacts are nicely stored in one location, under the user's profile: Win7+: %USERPROFILE%\AppData\Local\Google\Chrome\User Data\Default
+
+<li><a href="#">The majority of artifacts kept by Chrome are in SQLite databases, making them easy to access. That being said, the data stored isn't always in the most human-readable form. For example, artifacts like timestamps and page transition information often require processing to interpret. For data such as preferences, bookmarks, and loaded extensions, the browser uses the JavaScript Object Notation (JSON) format.
+
+<li><a href="#">Of all the browsers covered in this course, Chrome stores the most metadata about sites visited. The standard URL, page title, and referring page information are present. A historical record of each time a site was visited is stored in the visits table along with an extra field for the last visit time in the urls table. A fairly accurate visit count (unlike IE) is recorded along with whether the URL was typed by the user. finally, the transition information and visit duration provide much more information than other browsers. The latter is a unique feature among browsers and could help debunk claims that a site was visited and immediately closed after the banned content was identified. It also could help identify where users spent most of their time in the browser (on work versus nonwork sites for instance).
+
+<li><a href="#">Chrome and Firefox have implemented robust private browsing options. When using private browsing mode, no updates are made to the disk-based databases. Instead, all artifacts are kept in-memory and do not get written back to the default databases.
+
+<li><a href="#">Memory analysis will almost certainly pay the biggest dividends when trying to piece together private browsing sessions. RAM dumps, hibernation files (hiberfil.sys) and the pagefile (pagefile.sys) all provide excellent opportunities to recover private browsing artifacts.
+
+<li><a href="#">In general, modern browsers do a good job of eliminating browser artifacts when private browsing modes are enacted. Firefox, Tor, and Chrome barely touch the disk in these modes, which means that file recovery techniques are not usually successful. Internet Explorer and Edge do write files to disk, setting them to delete upon the browser session termination. Thus, it is possible to recover some IE/Edge InPrivate disk artifacts using forensic techniques. Finally, all browsers are susceptible to analysis of private sessions via system memory. RAM, pagefile.sys, and hiberfil.sys may all capture private browsing session information, which can be extracted by an analyst.
+</div>
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\\w\' -]+', "g")); // expanded to include spaces
+myHilitor.apply("highlight words");
+</script>
+
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+
+
+
+</html>

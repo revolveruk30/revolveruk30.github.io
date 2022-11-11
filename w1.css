@@ -1,0 +1,47 @@
+
+
+html, body {
+    height: 100%;
+	background-color: #f0f0f0;
+}
+.w3-sidebar {
+	width: 25%;
+	top: 10px;
+	margin-left: 5px;
+	height: 100%;
+	text-align: left;
+	background-color: #f0f0f0;
+	position: fixed;
+	overflow: auto;
+	line-height: .5;
+	letter-spacing: 0px;
+}
+
+.w3-btn,
+.w3-button {
+	border: none;
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.w3-btn,
+.w3-button {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+.w3-small {
+	font-size:1vw;
+
+}
