@@ -1,0 +1,813 @@
+<html>
+<title>SANS Notes</title>
+<meta name="robots" content="noindex,nofollow" />
+
+<link rel="stylesheet" href="w2.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+<link rel="stylesheet" href="roboto.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<head>
+<style>
+
+
+
+html, body {
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+oncontextmenu="return false";
+onselectstart="return false";
+ondragstart="return false";
+background-color: #f0f0f0;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.w3-sidebar {
+	z-index: 3;
+	width: 345px;
+	top: 30px;
+	bottom: 0;
+	height: inherit;
+	text-align: justify
+	height: 100%;
+	background-color: #f0f0f0;
+	position: fixed;
+	overflow: auto;
+	line-height: 0.2
+}
+.w3-searchbox {
+	height: 25%;
+	width: 110%;
+	left:405px;
+	top: 23px;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	z-index: 1;
+	line-height: 2;
+ margin-top: -7px; 
+
+}
+
+.w3-topbar {
+	width: 100%;
+	height:5%;
+	background-color: black;
+	position: fixed;
+	top: -3px;
+	overflow: hidden;
+
+	
+}
+
+
+#myInput {
+  background-repeat: no-repeat;
+  width: 40%;
+  border: 1px solid #ddd;
+ margin-top: 20px; 
+ margin-bottom: 12px;
+  margin-left: 95px;
+  text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+
+#keywords {
+  background-repeat: no-repeat;
+  width: 20%;
+  border: 1px solid #ddd;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  margin-left: 120px;
+
+ text-align: center;
+ font-family: "Roboto", sans-serif
+
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  text-align: justify;
+  margin-top: 150px;
+  width: 70%;
+}
+
+#myUL li a {
+  margin-top: -1px; 
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block
+}
+
+}
+</style>
+</head>
+
+<body>
+<!-- Topbar -->
+<div class="w3-topbar"></div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-small w3-theme-l5" id="mySidebar">
+
+<BR>
+<p>
+<BR>
+<center><H3>SANS COURSE NOTES</H3></center>
+<BR>
+<p>
+<BR>
+<a class=" w3-button w3-hover-blue" href="sec401.html">SEC 401 - Security Essentials</a>
+<a class="w3-button w3-hover-blue" href="sec450.html">SEC 450 - Blue Team Fundamentals</a>
+<a class="w3-button w3-hover-green" href="for500.html">FOR 500 - Windows Forensic Analysis</a>
+<a class="w3-button w3-hover-blue" href="sec502.html">SEC 502 - Perimeter Protection</a>
+<a class="w3-button w3-hover-red" href="sec504.html">SEC 504 - Hacker Tools</a>
+<a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
+<a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
+<a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<a class="w3-button w3-hover-blue" href="sec555.html">SEC 555 - SIEM with Tactical Analytics</a>
+<P>
+<center>
+<a class="w3-button" href="standards.html">Security Standards</a><br>
+<a class="w3-button" href="books.html">Security Books</a><br>
+<a class="w3-button" href="tools.html">Security Tools</a>
+</center>
+</nav>
+<nav class="w3-searchbox" id="searchbox">
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter Paragraph by Keyword" title="Search">
+<form method="GET" onsubmit="myHilitor.apply(hilite.value); return false;">
+<input type="text" id="keywords" size="20" name="hilite" placeholder="Highlight Multiple Keywords">
+<input type="submit" value="Apply">
+<input type="button" value="Remove" onclick="myHilitor.remove();">
+</span>
+</form>
+
+</nav>
+
+
+<div class="w3-main w3-theme-l5" style="margin-left:300px"> 
+<div class="w3-row w3-padding-64">               
+<h2 class="w3-text-teal"></h2>
+<div id="playground">
+
+
+<center>
+
+
+
+
+<ul id="myUL">
+
+
+<p>
+SEC 555: SIEM with Tactical Analytics, Justin Henderson
+<p>
+
+<li><a href="#">Without solid processes and procedures, SOCs become reliant on "tribal knowledge" of individuals. Absences or turnover of these individuals can cripple the capability of the SOC.".
+
+<li><a href="#">The lack of processes often is a result of either an organization rapidly building without stopping to document or a lack of leadership. Often times, there are key staff who can quickly develop and build out systems but do not take the time to document and share the information.
+
+<li><a href="#">One problem that universally seems to exist is what data do I need and how long do I need it? Having too much data makes finding something much harder. Too little data is like putting a puzzle together but with pieces missing.
+
+<li><a href="#">Logging requirements for compliance purposes are not always fully or clearly defined. As a result, many SlEMs designed around compliance tend to be bloated with logs. This causes them to become slow and unresponsive. If kicking off a basic search requires a coffee break then, you have a problem.
+
+<li><a href="#">Deploying a tactical SlEM requires thought exercises and finding out what things look like under normal conditions and also under adverse conditions. A tactical SIEM is one that is constantly evolving and being tuned regularly. It often contains significantly less data than a compliance SlEM yet yields more value.
+
+<li><a href="#">Gartner observes that "SIEM technology supports threat detection and security incident response through the real-time collection and historical analysis of security events from a wide variety of event and contextual data sources.".
+
+<li><a href="#">Input-driven is a strategy based on collecting everything from a device. The principal behind this is that you may need something later that you did not know you needed. lf you do not collect it then obviously you will not be able to use it.
+
+<li><a href="#">Output-driven is the opposite. With this strategy, you only collect logs that you have identified a need for.
+
+<li><a href="#">The hybrid method describes a strategy involving the combination of both input-driven and output-driven. With this method, you collect everything and then start removing events that trigger often but provide little or no value.
+
+<li><a href="#">lf you are not under a business or compliance requirement, you should consider the output- driven or hybrid strategies. This holds especially true if the SIEM performance is being affected due to the volume of logs and you have no budget to scale your SIEM.
+
+<li><a href="#">However, the hidden cost of output- driven collection is the cost of trying to stay current and attempting to collect things that are needed. This strategy also runs the risk of not identifying an attack because the log(s) were never collected.
+
+<li><a href="#">This author has found it common to remove 80% to 90% of events by identifying the top X events by event type and removing events that do not provide value. This lowers the ongoing cost of the SlEM, increases the performance of the SlEM, and decreases the amount of time it takes to perform manual investigations.
+
+<li><a href="#">Don Murdoch, "If you have to make a choice, choose user attributable data over all others. This will provide you with a point of contact that may explain the observed behavior more readily than any amount of guessing you can do on your own."
+
+<li><a href="#">Log Collector - While not directly part of the SIEM, log collection is a critical piece of the overall SIEM architecture. This can be done many different ways such as through the use of agents, agentless log collection, and scripts.
+
+<li><a href="#">Log Aggregator - This acts as central collection points of logs. They ingest raw logs and have the capability to parse and add context to the log. A log aggregator can also be used to generate alerts early on in log processing.
+
+<li><a href="#">Log Broker - A broker is a temporary storage location for logs go into the broker and are stored until an aggregator can pull them out.
+
+<li><a href="#">Storage - Once logs are finished being processed they end up being stored in a backend storage node.
+
+<li><a href="#">Search / Report - A report node is typically used to search and report on logs that are sitting in the storage node(s).
+
+<li><a href="#">Alert Engine - An alert engine is used to search for logs in the storage nodes and trigger alerts based on defined workflows.
+
+<li><a href="#">Most often logs are associated with having the following fields: • Time • Source System • Log Message.
+<li><a href="#">Outside these fields, there are often others. For example, the Linux auth.log example below has additional fields for source process and PID.
+
+<li><a href="#">The most common network protocol for transporting logs is probably syslog.
+
+<li><a href="#">Nearly every network, rack- mountable, or appliance- type device supports syslog. Linux and Mac operating systems natively support sys log and even Windows can have a third- party agent installed that takes Windows events and transmits them using syslog.
+
+<li><a href="#">The primary syslog fields are timestamp, source system, facility, severity, and message.
+
+<li><a href="#">The timestamp specifies the date and time. The source field specifies the system sending the syslog message. The facility specifies the source application or program the message was generated from.
+
+<li><a href="#">The severity describes the importance of the log starting with emergency and decreasing in importance down to debug.
+
+<li><a href="#">Due to the early adoption and varying implementations of sys log, message consistency is almost non-existent. The message layout used by one vendor or application varies dramatically from the next. This requires per application or device parsing which adds a lot of overhead.
+
+<li><a href="#">Windows Events are stored in channels which are simply groups of logs. The three most common are Application, Security, and System, but there are many more. Within these channels, events are given unique IDs to search and filter on. Event IDs are not unique across channels.
+
+<li><a href="#">The PowerShell cmdlet for EVTX format logs is Get- WinEvent.
+
+<li><a href="#">Windows Event Forwarding. Windows has its own built-in agent for handling the forwarding of Windows event logs. While it is not feature, rich compared to third-party agents, it does include filtering, encryption, compression, event throttling, and the ability to either push logs to a central collector or to have a collector pull the logs.
+
+<li><a href="#">It is possible to use a Windows Event Collector with third party agents or event agentless collection. This means that you could roll out Windows event collection using the native Windows Event Forwarding and then pull the logs from the Windows Event Collector into a SIEM solution.
+
+<li><a href="#">Third-party agents offer significantly more capabilities than native agents or syslog. They have more support for transporting logs such as supporting UDP, TCP, binary compression, TLS encryption, mutual authentication, and have page after page of additional value- added feature sets.
+
+<li><a href="#">lt is not uncommon for networks to crash simply due to network pipes being saturated by logs. The answer to this problem typically involves installing a specialized agent or an aggregator at each site to filter and handle the logs locally before sending them to the central location.
+
+
+<li><a href="#">ln order to avoid having to install an agent on systems, some organizations prefer to setup a server to perform agentless log collection. This works by having a server remotely log in to systems often over WMl or SSH and pulling backlogs. This works well as long as the server has proper credentials for the remote systems and network firewalls, host-based firewalls, and endpoint security suites are configured to allow this activity.
+
+<li><a href="#">Also, agentless collection can introduce a security risk due to constantly logging in over the network. An attacker can attempt to capture these credentials or the security token that is on the system.
+
+<li><a href="#">Due to the current and growing capabilities of log agents, it is likely that the use of an agent is the superior solution.
+
+<li><a href="#">Another method of log collection that is important to consider is scripts. There are some instances in which scripts are your only option for collecting logs. More importantly, scripts allow you to create custom logs that add value to your environment.
+
+<li><a href="#">Scripts are incredibly useful for pulling in additional information not found in regular logs. This can include pulling in baseline information, asset inventory, running processes, hashes of files, and more. Running a script to generate this information and then shipping it off to a SlEM provides incredible power for searching and data mining.
+
+<li><a href="#">Typically, when logs are first sent off, they are pointed to a central aggregation point. This point typically consists of one or more log aggregators. This ends up being where most of the magic is done- including parsing out the logs and morphing them into high-value data points. Ultimately, the log aggregator then sends the logs on. Common destinations are a message broker or the end log storage.
+
+<li><a href="#">Note that if logs come from a custom-built application, they sometimes go straight to storage because they are programmed in a way that they are already parsed and modified and ready for delivery directly to storage.
+
+<li><a href="#">After logs are accepted, it's time to perform the magic. This involves parsing them to pull out fields and their values, filtering out noise, and adding value to the logs.
+
+<li><a href="#">A majority of logs will require multiple filter plugins be used. There are no limits as to how many or what combination you use them. However, the order of what you do is important.
+
+<li><a href="#">Before customizing logs, you must fust parse out any fields that exist in the log. The amount of effort this takes is directly related to the format of the log message. If a log comes in as JSON, then all the fields and their values can automatically be parsed. If a syslog message comes in with a proprietary log format, then fields must be parsed out using pattern matching.
+
+<li><a href="#">After logs are parsed, most organizations call it a day. They have their logs and the fields have been extracted accordingly. And yet, many logs can have things added to them to add value and context. Log data should be studied and augmented as needed.
+
+<li><a href="#">A message broker is designed to temporarily hold logs until they have time to be processed and placed in long term storage. Logs are sent into a broker and stay there until they are able to be retrieved. This acts as a buffer to handle bursts in log traffic or outages on backend systems. Because of this, it also allows the ability to intentionally take down backend systems without loss of logs.
+
+<li><a href="#">A message broker is intended for systems that cannot check if logs were successfully sent and accepted. This applies to most network devices as syslog simply sends the log on with no verification of receipt. This also applies to most agents.
+
+<li><a href="#">When adding in a message broker, you should also add in another aggregator. This is because the initial aggregator should only accept logs and dump them into the message broker. From there, the backend aggregator retrieves logs from the broker, modifies as needed, and then stores the logs in storage.
+
+<li><a href="#">More than likely you should consider deploying a broker to provide extra stability and resiliency against above average traffic and, simply, so if backend systems go down, intentionally or not, you are covered.
+
+<li><a href="#">The reason for collecting logs is to use them, and you cannot use them if the storage system lacks the performance or architecture to perform quick searching.
+
+<li><a href="#">Speed is king. lf a SIEM takes more than 5 seconds to process a standard search, then, you have a problem.
+
+<li><a href="#">Should performance be an issue, consider separating compliance logs and tactical logs to either separate storage servers or at least separate storage partitions. This allows fast searches for certain logs, yet allows processing less important logs to slower disks.
+
+<li><a href="#">Knowing how attackers work may help in identifying search patterns. For example, if you were to attack your own systems within a lab, you could search for what logs existed before the attack and what occurred after. This helps identify events to search and alert on in the future.
+
+<li><a href="#">A generalized list of techniques can be found below: Blacklisting - Looking for known bad Whitelisting - Looking for known good and investigate everything else Long tail analysis - Identify events of least occurrence as they are likely to be of interest Anomaly detection - ldentify events that are not normal.
+
+<li><a href="#">A healthy combination of techniques tends to work best. Unfortunately, the industry has tilted the scale and leaned heavily in favor of blacklisting. This is primarily because it is easier to maintain and the concept is easy to market.
+
+<li><a href="#">Whitelisting tends to be operationally expensive to maintain, so it is less common, but when deployed properly, is one of the most powerful methods of discovering things that should not happen.
+
+<li><a href="#">Often dubbed the "whack-a-mole" approach, blacklisting is simply looking for a known bad. This could be something as simple as lP addresses being checked against a threat intelligence feed. lf the IP address is on the naughty list it gets marked as a blacklisted lP. This ends up being an easy-to-maintain search technique.
+
+<li><a href="#">However, blacklisting tends to be easily bypassed. For example, if an IP address shows up as a blacklisted lP address and an organization turns around and prevents communication to that IP, then, the attacker quickly becomes aware that they are being blocked. This ultimately leads to a change in attacker behavior and a likelihood of an unknown attack.
+
+<li><a href="#">Simple in concept, whitelisting involves knowing and allowing everything that should be in your environment and then identifying anything new. Effectively, this is the establishment of a baseline; then, monitoring for deviations. This works extremely well, but the maintenance is higher than other techniques.
+
+<li><a href="#">In the logging world, this could be targeted to specific use cases. For example, it could be specific in the way of looking for all new Windows service creation events, or it could be general, such as show me all new Windows event IDs never previously seen before.
+
+<li><a href="#">Long tail analysis takes a dataset and looks for events of least occurrence. Events that occur frequently often are normal and can be ignored, but events of least occurrence should be investigated to find out why, in a large dataset, they only occur a few times.
+
+<li><a href="#">Generically, anomaly detection is searching for anything that is not normal. For this to work, you have to have a sense of what is normal before you can identify what is abnormal. This ends up requiring a lot of work and often times manual analysis.
+
+<li><a href="#">An advanced technique for detecting anomalies is using machine learning. Machine learning is applying advanced mathematical algorithms against data to automatically identify normal patterns and to surface abnormal patterns. For example, this can be used to automatically profile user activity over timelines, processes that get executed, logon activity, and/or the combination of these and more.
+
+<li><a href="#">Once data is properly searchable and techniques are identified that match certain logs, it is time to set up some alerts are simply automated application of analysis techniques that identify something and trigger a notification or action in response.
+
+<li><a href="#">One of the more powerful capabilities a SIEM can offer is combining multiple searches and graphs. Doing so allows quickly identifying context and related information. A well-designed dashboard will present related information from multiple angles, empowering an analyst to new levels.
+
+<li><a href="#">Every environment requires common services such as DNS and HTTP. The dependency on core networking services means that our adversaries must use them as well, providing the opportunity for detection.
+
+<li><a href="#">Examples of common network services are: • DNS - Connections often dependent on name resolution • HTTP(S) - Web page browsing functions over HTTP(S) • SMB - Microsoft still dominant in organizations • SMTP - Email is common communication service • SSH - Secure shell used to manage Linux and network devices.
+
+<li><a href="#">A fuzzy search simply looks for things similar to whatever you are searching against. Fuzzy searching works best with longer search strings. If you had a small domain such as sec555 . com, it may still work but it is possible it may create false positives.
+
+<li><a href="#">Because of security devices, attackers often have to use randomness to evade filters.
+<li><a href="#">A normal DNS record for google.com has a score of 13.404. afecrej6h7cn5sdfhvjg9evmj.com has a score of 5.778. This massive gap in score clearly points to the latter being random.
+
+<li><a href="#">Service logs are actionable in detection. However, because key services like DNS and HTTP are used constantly, the number of logs generated is vast. Therefore, it is possible that some key decisions will need to be made.
+
+<li><a href="#">For example, often times 90%+ of DNS logs can be trimmed by filtering out requests to internal domains. Also, some systems generate large amounts of requests that are not actionable.
+
+<li><a href="#">If an aggregator cannot handle the volume of logs thrown at it, consider pre-filtering service logs before they are shipped off. Pre-filtering can sometimes decrease the number of logs by as much as 80 to 90%. This decrease is extremely helpful if you are using a commercial solution that is priced based on logs ingested.
+
+<li><a href="#">While GeolP lookups can be helpful for looking for traffic to other countries, this author finds its use more useful in filtering. For example, Windows systems make many calls out to Microsoft using various IP addresses and domain names. However, this kind of traffic can be easily filtered out using ASN 8075 for the Microsoft Corporation.
+
+<li><a href="#">Which would you rather do, filter out almost 20 million IP addresses that spread out over many subnets or filter out a single ASN?
+
+<li><a href="#">Threat intel feeds are effectively a blacklist of known bad actors. They cannot help with new attacks or targeted attacks.
+
+<li><a href="#">This author recommends focusing on good hygiene and people and processes. A threat intel feed is a great addition, but if it takes time away from proper hygiene and your people and processes then change your focus until those are addressed.
+
+<li><a href="#">ClF, or the Collective intelligence Framework, is a framework for pulling in feeds from multiple locations and making them usable for other systems or devices.
+
+<li><a href="#">This framework includes threat feeds but also includes feeds used for whitelisting. Effectively, it pulls down lists of known good sites such as Google and uses it to tag data. This works great for filtering out trusted noise. In fact, one of the default feeds is to pull in the Alexa top 1 million. Adding custom feeds to ClF is fairly easy.
+
+<li><a href="#">A question you probably need to ask yourself is should logs be collected pre- filtered or post- filtered? lf you are focusing on tactical enhancements to SPAM filters, then you only need post- filtered logs. If you want to be able to report on all e-mails including spam e-mails, then you need everything. The question then becomes centered on the cost to generate the report versus the value provided by the report.
+
+<li><a href="#">Because many phishing attempts act as key executives, also referred to as whaling, it makes sense to monitor the display names for incoming e-mails.
+
+<li><a href="#">Occasionally you may have a name collision but likely this would not trigger often. To apply this technique, take the names of your executive team and start monitoring for inbound e-mails that use their names.
+
+<li><a href="#">Knowing normal makes knowing abnormal easy. The hard part is knowing what is normal. Most organizations, if answering honestly, have no clue how many e- mails they send per hour, let alone how many per authorized system. Finding this amount and establishing a clipping level allows for finding abnormal spikes or unauthorized use.
+
+<li><a href="#">It is important to know the DNS types available and how they are used. Different techniques apply to different records. For example, when dealing with phishing attacks, MX records may be incredibly useful as they are involved with e- mail routing. Looking for DNS tunneling? This most likely is being done by abusing TXT records.
+
+<li><a href="#">At a high level, DNS comes with a few key fields such as requests, responses, query types, and answers. To add more value and weaponize your logs, you should consider adding the following fields: 1. Frequency Score - Entropy test for how random a field is 2. Parent Domain - High- level domain name (Example: would be google.com in mail. google. com) 3. Child Domain - Domains below parent domain (Example: would be mail in mail.google.com) 4. Domain Lengths 5. Domain Age.
+
+<li><a href="#">Because of lP blacklisting being commonplace, most of today's malware uses DNS names.
+
+<li><a href="#">If attacks are going to be coming in using DNS domains, then it is possible to catch them simply by inspecting new domains being used.
+
+<li><a href="#">This can be done continuously using a SIEM alert engine or can be done by once daily having someone investigate a list of new domains that appeared the previous day. This technique is easier to apply if you first filter out alexa domains or a list of known good domains.
+
+<li><a href="#">Another technique that is interesting is the monitoring of domain age. Domains are registered with ICANN1 and part of this registration record keeps track of when a domain was created. This information can be retrieved by querying WHOIS lookups.
+
+<li><a href="#">This technique is not something that would scale well if applying against every DNS query log. instead, it works best when filtering out alexa domains and, if possible, only running it once against new domains.
+
+<li><a href="#">Providing domain creation_ date lookups and even the Alexa top I million or Cisco top l million lookups at scale is a challenging problem. In order to combat this Mark Baggett created domain_ stats. pyl . This script provides a web API for submitting domains to pull back specific results.
+
+<li><a href="#">The top 1 million sites from Cisco Umbrella works with this script. Because it is an API, any commercial SIEM can query it.
+
+<li><a href="#">When a DNS query is for a name that does not exist or for some reason cannot be found, an NXDOMAIN response is generated. This stands for non- existent domain. An NXDOMAJN is a normal occurrence but tends to happen at a low frequency.
+
+<li><a href="#">However, if NXDOMAlN responses begin happening in high occurrences this usually is a sign of misconfiguration or malware using a domain generating algorithm (DGA).
+
+<li><a href="#">In many ways, fast flux can look like normal DNS traffic as it closely resembles DNS load balancing or the use of content delivery networks. Both have widespread use on the Internet. The main difference is the repetitive DNS queries and the possible use of higher than normal answer counts.
+
+<li><a href="#">Therefore, monitoring the number of DNS queries by source lP address, DNS queries with more than 12 answers provided, or monitoring DNS connections for persistent connections are all methods of detecting fast flux .
+
+<li><a href="#">A more modem use of DNS for hiding is the use of domain generation algorithms by malware. These are used to avoid IP and DNS blacklists and can be extremely difficult to catch. Basically, an algorithm is used to generate a large number of possible DNS domains with only a small subset of the domains actually having a system registered to the domain name. These domains, typically, have high entropy to bypass preventative measures.
+
+<li><a href="#">By simply monitoring NXDOMAIN responses by lP addresses, you will be able to uncover the use of DGA, DNS recon, and misconfigured systems. Again, NXDOMAlN is a normal occurrence, but the frequency of the occurrence is typically low.
+
+<li><a href="#">To monitor NXDOMAlN responses, consider setting a threshold, such as show all systems, that have generated more than 50 NXDOMAIN responses within a given time period.
+
+<li><a href="#">DNS tunneling is one of the methods that almost every organization fails to detect. In its simplest form, DNS tunneling uses the DNS protocol directly to an attacker's external DNS server to communicate.
+
+<li><a href="#">This is simple to protect against and detect. Simply block all DNS outbound traffic, except from authorized DNS servers to authorized external DNS servers, and then monitor for attempts to use DNS to unauthorized systems.
+
+<li><a href="#">Also, since the goal is to communicate or send large amounts of data DNS tunneling is often performed over DNS TXT records. Monitoring the number of TXT record request by a given source IP is a quick way to detect tunneling.
+
+<li><a href="#">Ideally, organizations would limit external DNS from authorized internal servers to authorized external servers and then establish monitoring. This, combined with DNS query logging, will catch misuse of DNS.
+
+<li><a href="#">Normally, everything that's accessing the Internet does so using a name rather than an IP address. Flipping this statement, one would say anything that's that's accessing the Internet directly using an IP address is abnormal. Vendors occasionally will hard code IP addresses in their hardware/ software and DNS servers themselves are directly communicated to with lP addresses. Outside of this, you often will find malware.
+
+<li><a href="#">Time should be taken to compare the list of external IP address destinations against any IP addresses answers given by DNS.
+
+<li><a href="#">It is easy to filter out all of these so that all that is left are the malware and policy violations To make this filtering easier, use ASN numbers for things like CDN networks.
+
+<li><a href="#">If you take the time to implement both new domain monitoring and direct IP monitoring, you will effectively detect 99% of all Internet- based network attacks. This is because every new connection, whether by DNS domain or by IP address, will end up on a dashboard for review.
+
+<li><a href="#">What kind of Internet-based attacks would this miss? These two techniques would not see traffic from known good domains. For example, modem malware occasionally will use things like social media sites for command and control. If these are authorized sites, these solutions would not see the attack. Basically, an attacker can use authorized sites to attack or control systems and these two techniques would be oblivious to it.
+
+<li><a href="#">The techniques used around HTTP apply differently based on direction. Techniques revolving around attacks against an internal web server will apply to inbound connections while techniques around internal systems talking to the internet in an unauthorized manner will be applied to outbound connections. Some techniques apply to both inbound and outbound.
+
+<li><a href="#">Some of the most common sources for HTTP logs are web servers and web proxies. Other sources for HTTP logs can include advanced firewalls, malware detonation devices, and network extraction of logs.
+
+<li><a href="#">Web proxies, in general, are a completely underrated prevention and detection technology. If outbound HTTP requests were only allowed from a proxy, then lots of malware would fail because they are not proxy aware. This, in tum, allows the detection of failed malware runs. Outside of that, tunneling all HTTP traffic through a proxy makes it an easy central location to collect and analyze logs.
+
+<li><a href="#">A simple trick that most organizations are not doing is to look for unauthorized proxies. Ideally, HTTP access to the Internet is restricted to only authorized proxies. However, this simply is not the case in most organizations. Regardless of if it is or is not, monitoring for proxy use over anything but known proxies is a quick way to find internal users trying to bypass internal security or malicious proxy use.
+
+<li><a href="#">HTTP consists of multiple fields but a few stand out for some simple yet effective detection techniques. These are methods, status codes, and virtual hosts. A method is what a web client uses to tell the receiving system what action it wishes to perform. For example, Internet browsers typically use the GET method to request a web page for viewing. 
+
+<li><a href="#">Status codes are a numeric response from the receiving system, back to the web client, describing that status of the response. For example, if a page was requested that did not exist, a web server would still respond back to the client but it would have a response code of 404. The virtual host field is used to specify what you are trying to access, whether it is an IP address or a website domain name.
+
+<li><a href="#">A simple technique any SIEM can perform is to monitor a threshold. For instance, it is simple to setup a rule that states if more than a specific number of GET or POST requests are found by a given field, such as source IP address, alert. This technique applies very differently to workstation subnets versus server subnets. However, it can work across both if a high enough threshold is specified.
+
+<li><a href="#">Making an HTTP request using an IP address is sometimes referred to as a naked IP address request.
+
+<li><a href="#">Filtering out "valid" naked IP address requests is quite simple, especially if you can filter out the data based on ASN numbers.
+
+<li><a href="#">ASN can quickly and easily filter out CDN networks or other large IP blocks associated with certain businesses.
+
+<li><a href="#">A technique that works fairly well on internal or DMZ facing web servers is simple URL length checks. Often times, the length of URLs tends to fall below a certain threshold such as 100 characters in length. Yet, under attack, the URLs get bloated and large.
+
+<li><a href="#">The technique of monitoring URL lengths is often used by Web Application Firewalls. However, many organizations do not have a web application firewall.
+
+<li><a href="#">For URL length checks to be most effective, a threshold needs to be set and monitored. A possible starting size to monitor is 250 characters in length. This is because different sites have different use cases and some may exceed 100 characters while others may always be less than 50 characters.
+
+<li><a href="#">Online ads tend to have really long parameters for tracking end user activity. If you take the time to filter out URLs from ads, this technique could be applied across all HTTP URLs.
+
+<li><a href="#">An HTTP user agent is used to identify the web client being used to connect to a resource. It can be altered similar to how a MAC address is supposed to remain constant, yet, can be changed in software. However, this still remains one of the best ways to catch malware. Yes, an advanced adversary may change this. However, this is often overlooked or, even when it is changed, it often has typos in it. Some malware is bold enough to put the name of the malware in the user agent.
+
+<li><a href="#">Unfortunately, security products have a tendency to play whack- a-mole when evil is discovered. This is especially true surrounding user agents. If a bad user agent is discovered, it gets blacklisted. However, a much more effective approach is whitelisting user agents.
+
+<li><a href="#">The problem is that many organizations do not know how to apply whitelisting this way. The fear is that it will be overly complex and hard to maintain. This is where the SIEM comes in for a win. A SIEM allows for easy slicing and dicing of data.
+
+<li><a href="#">When accessing a website using https:// the contents being transported over the network are encrypted. However, the certificate information is not. This is by design and required for SSL or TLS to work. Because of this, a lot of information can be used within the certificates to identify malware.
+
+<li><a href="#">Public Key Infrastructure, or PKI, was intended to establish hierarchical trust. The intended use is for organizations to trust certain certificate authorities and, therefore, certificates issued by these certificate authorities will, in tum, be trusted. While this is the basic tenet of PKI, unfortunately, self- signed certificates are common. In this case, the certificate is issued and signed by its own private key.
+
+<li><a href="#">When dealing with certificates, the analysis is done by looking at two things: the certificate issuer and the actual certificate details.
+
+<li><a href="#">Malware often uses the bare minimum. This means key fields often used by SSL are left empty. Yes, malware can use properly formed certificates that use trusted root certificate authorities but this is often expensive and time- consuming. Therefore, many do not.
+
+<li><a href="#">Ideally certificates should be generated by trusted root certificate authorities. Therefore, it is possible to export a list of trusted root certificate authorities and then have your SIEM look for SSL certificates that are not issues by your trusted list.
+
+<li><a href="#">To make this useable, you may wish to only apply this to SSL certificates going into or out of the environment.
+
+<li><a href="#">Outside of looking for expired certificates, you should monitor certificates with abnormally low or high validity time periods. For example, if you go to buy an SSL certificate, you typically can only issue certificates for up to three years. Occasionally, you will find a place where you can order a five-year SSL certificate, but this is slowly going way. This is because certificates were never meant to be issued indefinitely.
+
+<li><a href="#">----->
+
+<li><a href="#">A truly effective enterprise will balance network controls with endpoint controls. This also holds true with effective log monitoring and analysis. The level of detail involved in endpoint analytics is much greater than network monitoring. Put plainly, endpoints can perform and see things that network monitoring never will. This is because endpoints deal with processes, storage and files, memory, as well as network traffic. They are the ultimate destination of whatever is happening.
+
+<li><a href="#">It is much easier to monitor for unauthorized network connections and patterns of activity using network equipment. This is because they are purpose-built, mature, and there are a lot less of them to manage than there are endpoints.
+
+<li><a href="#">On the flip side, endpoints can provide highly targeted visibility points. For example, you can look for unauthorized programs being launched, services being created, and other indicators of activity.
+
+<li><a href="#">A major drawback, though, is that management and scalability are much more difficult. There are more data points available, it is hard to keep every device configured properly, and a deeper understanding of the many endpoints is required.
+
+<li><a href="#">The most common type of Windows logs today are the Windows XML Event Logs. These are log files stored with the file extension of .evtx.
+
+<li><a href="#">The change from EVT to EVTX is significant. By adding XML capabilities to events, it allows Windows a granular layout by allowing custom fields, also referred to as properties to the EventData and UserData sections. This means additional filtering and searching capabilities.
+
+<li><a href="#">Enabling or disabling Windows logging is done with Windows Audit Policies. Fortunately, Windows Audit Policies are not only easy to set but also easy to understand. Each log category within Windows Audit Policies has a tab labeled "Explain". When clicked, "Explain" gives an in-depth description of what the policy does. This, combined with the ability to easily set and deploy audit policies via group policies, makes configuring Windows logging easy.
+
+<li><a href="#">One of the quickest ways to find recommendations on which audit policies need enabling and why is to use Security Compliance Manager (SCM) 1• This free tool from Microsoft comes with baselines for securing Windows operating systems and other Windows programs like internet Explorer and SQL Server. The Computer Security Compliance baselines included for each operating system lists out the recommended settings for audit policy use.
+
+<li><a href="#">Where SCM really shines is that every setting includes a detailed breakdown of what it does, why it is important, and why Microsoft recommends certain settings. This is great for understanding what the impact of a specific setting is.
+
+<li><a href="#">One of the least detected attacks that is highly prevalent is credential theft. In fact, Mandi ant, a major incident handling company, stated in an annual M-Trends report that 100% of their investigations involved credential theft and reuse.
+
+<li><a href="#">Monitoring logons is a critical component in continuous monitoring. At the most basic level, organizations should look for repetitive logon failures or successes to find brute force attempts or compromised accounts spreading internally. Once this and other high-value quick wins are implemented, then organizations should advance their monitoring to include things such as baselining user activity by monitoring logons, logoffs, time of occurrences, and systems typically logged into per user.
+
+<li><a href="#">There are a few critical events analysts should regularly monitor. One is process creations which involves logging all new processes being launched. Windows can natively log this if Audit Process Creation is enabled.
+
+<li><a href="#">To enable auditing process creation and include command line parameters, enable " Audit Process Creation" but also enable the policy " include command line in process creation events" located at Computer Configuration -> -> Policies-> Administrative Templates -> -> System -> -> Audit Process Creation.
+
+<li><a href="#">Object access controls logging for quite a few things. If you wish to audit files, registry keys, or network shares, you must enable the auditing capability first. For example, after turning on Audit File System, it grants Windows the ability to audit things like files or folders being accessed but only if an ACL is placed on them telling what to audit.
+
+<li><a href="#">With each version of Windows, the logging capabilities are getting better and better. Yet, there still are things that Windows does not natively Jog. Should you need additional logging, this can be handled by writing custom scripts or programs or often is handled by purchasing a commercial product and implementing it.
+
+<li><a href="#">One of the easiest ways to generate a custom log is to use PowerShell also has the capability to create a new channel as well as specify custom event ids, logs become easy to read and sort.
+
+<li><a href="#">If you are planning on using a custom event log you first must create it using New-EventLog. Failure to do so will result in an error and no log being generated when invoking Write-EventLog.
+
+<li><a href="#">Sysmon was designed to generate logs of interesting activity commonly associated with malicious or anomalous activity. For example, Sysmon can monitor all processes being launched along with the parent process that spawned the new process and can provide a hash of the new process. On top of this, the log also includes any command line parameters. Sysmon can optionally log all network connections being made. Sysmon records the process that either made the network request or is receiving the network request. This level of detail is great for troubleshooting, incident response, and establishing firewall rules for a default deny policy.
+
+<li><a href="#">However, it may not make sense to try and collect all of these logs centrally unless major filtering is done. Sysmon allows fine-grained filtering on what to log. For example, you can create a configuration rule to log all network connections unless they come from the process iexplore. exe.
+
+<li><a href="#">Configuring Sysmon to log or not log something can be done with basic command line switches or by using the advanced configuration. The advanced configuration requires the use of XML configuration files. When deploying Sysmon, it is usually recommended to use the advanced configuration files as the level of granularity is often used to include or exclude certain things.
+
+<li><a href="#">The default behavior of most systems is to log to / var/ log and file names such as au th.log are specified to categorize the log. This is also referred to as the syslog facility in many cases. By default, most syslog services, also called daemons, only log locally. However, they can be modified to ship logs over the network or event.
+<li><a href="#">accept logs from other network systems.
+
+<li><a href="#">Common Log Files.... /var/log/messages - Global messages (general activity) /var / /log/ au th.log - Authentication related logs /var / /log/boot.log - Boot time events /var/log/daemon.log - Background process events /var/log/kern.log - Kernel messages (often used for troubleshooting) /var / /log/ cron.log - Events related to scheduled tasks /var / /log/ secure - Events related to su or sudo access.
+
+<li><a href="#">Syslog uses facility to describe what a log is for. Custom applications often use local use O through 7. Severity is used to describe the importance of a log. Syslog messages sent over the network typically consist of five main fields. The PRl field starts at the beginning and is an integer that is calculated to store the facility and severity label for an event. Following this is the times tamp that's specific to the system generating the event.
+
+<li><a href="#">After the timestamp is the source hostname, followed by the source program that generated the event log. Finally, the message contains the specifics for the log. Unlike Windows, Linux does not generate a unique event 1D specific to an event. This often requires string searching or adding fields or tags to report on specific events such as logons. To gamer value, the message field often requires further breakdown and parsing. This is primarily because syslog does not use structured schemas such as XML.
+
+<li><a href="#">When default Linux logs are not enough, there are options to increase logging. Probably the most common logging tool is the Linux Auditing System developed by Red Hat. Other tools, such as Snoopy Logger, provide logs of every command line entered.
+
+<li><a href="#">Linux Audit system... Similar to Sysmon, this service provides additional logging such as recording user activity and process activity. To be truly effective, auditd must be configured and told what to log or what not to log.
+
+<li><a href="#">Auditd allows for extremely granular monitoring. As a result, it is usually best to plan exactly what needs logging before writing the auditing rules. A general rule of thumb is to try and log only what you intend to actually look at. In the case of auditd, logging everything can have adverse effects on system performance.
+
+<li><a href="#">In organizations, early detection of an adversary can substantially limit damages. The end goal of an attacker is not the initial compromise. lnstead, it is something like stealing sensitive data, changing or destroying system integrity, etc. A tactical SIEM will catch early signs of compromise and hopefully enable defenders to eliminate adversary access early enough that their end goal is never achieved.
+
+<li><a href="#">Regularly looking for logs that are noise and eliminating them is an easy, quick win. This simple process will increase the performance of searches within the SIEM. After all, less data means lower hardware utilization. This alone will improve an analyst's speed but so will the fact that there are less logs to have to filter through.
+<li><a href="#">Once a collection strategy and the systems targeted for log collection have been decided, it is time to actually implement collection. While agentless log collection is available, a log agent is recommended.
+
+<li><a href="#">The native Windows log agent is the Windows Event Collector service. It is used to setup Windows event forwarding to a centralized system. The centralized collector system can be setup to either reach out and pull logs or to listen and receive them.
+
+<li><a href="#">Linux events can provide insight into certain activities such as logins and new user creation. However, when it comes to tracking an attacker from reconnaissance through exploitation and privilege escalation, it is also useful to rely on Linux command output to detect attacks. Additionally, third-party tools can provide even greater visibility into potential attacks on a system.
+
+<li><a href="#">Many USB devices, especially storage devices, will generate between eight and nine events to the System channel when they are initially plugged in. However, removal or reinsertion of these devices generates zero events in the System channel. Fortunately, all is not lost. The Event IDs generated in the Microsoft\ Windows\DriverFrameworks-UserMode operational channel can be enabled. It logs mass storage devices and more at insertion, removal, and all subsequent reinsertions and removals. It also tracks each device by its serial number as well tracks each unique session.
+
+<li><a href="#">The Microsoft-Windows-DriverFrameworksUserMode/ Operational provides detailed, yet cryptic, logs.
+<li><a href="#">sometimes it is simpler to use a third-party tool. For example, the free NirSoft USB0eview1 can be set to run once a day and log to a CSY file. This file can then be picked up and shipped off to an aggregator. In this case, the USB information is clearer and more concise to follow. However, this process is no longer " real-time" and requires making sure USBDeview. exe is allowed to run on systems.
+
+<li><a href="#">Monitoring new services can be overwhelming if filtering is not applied. For example, if a new service log comes in for XYZ and XYZ is legitimate, it should be added to this list of allowed services and be filtered out. This process does not work if you have to review every service creation. What you are looking for are new services not previously seen or blacklisted services that are not allowed.
+
+<li><a href="#">Persistence, or maintaining access to a victim system, is typically accomplished using services, scheduled tasks, or registry keys. Monitoring service creation events would detect persistence via services. Next is to monitor scheduled task creations. For this to work, an auditing policy must be set for audit object access rules. This needs to be enabled and to log on success. This will then allow the logging of Event ID 4698 when a new scheduled task is created.
+
+<li><a href="#">Another common and possibly the most frequently employed mechanism for maintaining persistence is the user.
+<li><a href="#">of specific registry keys. Of these the HK.LM, or HK.EY_ LOCAL_ MACHINE, and HKCU, or HKEY CURRENT_ USER, run keys are the most common. These control what executables are launched at system startup or user login.
+
+<li><a href="#">Again for this to work an audit policy must be set to audit object access. If using the Advanced Audit Policy, this requires enabling the Audit Registry policy. Enabling this does not cause all registry key access to be logged. Instead, it allows setting audit ACLs per registry object. While there are multiple registry keys that can be used for persistence, these are the two most common that auditing should be enabled on: HK.EY LOCAL- MACHINE\ SOFTW ARE\Microsoft\ Windows\ CurrentVersion\Run - LOCAL- HKEY CURRENT- USER\ SOFTW ARE\Microsoft\ Windows\ CurrentVersion\Run.
+
+<li><a href="#">On Windows there are multiple ways to steal credentials. If service accounts are being used, the password for them is stored in a special registry key called LSA secrets (HK.EY _ LOCAJ.., MACHINE\ Security\Policy\ Secrets ). While there is a level of encryption/decryption involved, many hacking tools or even PowerShell scripts exist to pull these passwords out. Similar methods exist to pull other saved passwords such as those saved for scheduled tasks, Internet Explorer stored passwords, etc.
+
+<li><a href="#">One of the most devastating forms of credential theft is pass-the-hash. This involves dumping the password hashes of a Windows box and simply using the password hash to logon to another box. The password does not need to be known for this to work.
+
+<li><a href="#">Microsoft has attempted to make pass-the-hash less effective by disabling its use for local accounts. However, this does not apply to RID 500 (administrator account). If you need a local administrator account, the recommendation is to disable the built-in administrator account and create a new one.
+
+<li><a href="#">The good news is that catching local accounts being used for pass-the-hash is simple to detect. This is because it is typically not normal for local accounts to be used to logon to another system. To monitor for pass-the-hash attempts, look for successful login events where the account domain is not using your local domain.
+
+<li><a href="#">Because using credentials inside the network is easier and far stealthier than running exploits, adversaries will often create accounts either on local systems or in Active Directory. This allows them to get back into a system with ease. Local accounts are setup for repetitively gaining access to the box without re-exploitation.
+
+<li><a href="#">Account creation is normal within Active Directory, but not so much for local accounts. Sometimes they are used to help attackers maintain access.
+
+<li><a href="#">Attackers sometimes attempt to hide their tracks. This is actually fairly difficult on Windows, as you cannot simply disable the Event Log service. You can try, but it will fail to do so. Killing the process off can lead to Windows crashing. In this respect, Microsoft has really done a great job in protecting the system's system's system's integrity and protecting the log service.
+
+<li><a href="#">If logging cannot be disabled, it requires one of two things: changing audit policies in an attempt to prevent certain logs from being created or clearing the logs. Both of these events can be monitored as, in itself, making changes to them generates an event. For example, clearing the System channel causes the logs to be removed but then event ID 104 is generated stating the System log file was cleared.
+
+<li><a href="#">File Integrity Monitoring tools regularly check monitored files to look for changes to their contents, permissions, etc. These tools can easily identify malicious manipulation of critical system files and alert defenders.
+
+<li><a href="#">Out-of-the-box logging on Linux systems will not provide granular file integrity monitoring capabilities, so defenders must rely on third-party packages for this capability.
+
+<li><a href="#">Some events can be monitored and are "in your face" alerts warning that you have been compromised. However, some of the most powerful monitoring capabilities are the subtle ones. Ideally, unnecessary traffic that is constantly being blocked would be cleaned up rather than filtered. As an example, in an enterprise environment the SSDP service is often not necessary.
+
+<li><a href="#">Leaving this service enabled causes multicast traffic that surrounding host-based firewall systems will constantly have to block. Instead of filtering it out, simply disable it. Overall, this decreases the amount of traffic on the network, makes it easier to do packet analysis, and removes the need for filtering large amounts of traffic at the hosts or shipping it off to be filtered at an aggregation unit. Not every environment will be able to disable all noisy services but typically most can be disabled.
+
+<li><a href="#">Host-based firewalls are positioned to see more than just network traffic. Because they are processes within their respective operating systems, they can also see which process is accepting or sending network traffic. This can be used to monitor processes that accept network connections.
+
+<li><a href="#">Attacks do not always come from exploitation or things like client side phishing attacks. Many targeted attacks heavily involve the use of valid credentials. Windows, in contrast to Linux, is a bit more complex in regards to authentication. This is because Windows is designed to handle many forms of authentication and is intended to handle centralized logons.
+
+<li><a href="#">Windows logon success and failure is logged per system. Centralized logons, such as through a domain controller, are logged at both the endpoint and the domain controller as long as the audit policy is set for both.
+
+<li><a href="#">Logon Type. Description.
+<li><a href="#">3 Network - This type of logon is when credentials are used to access a remote computer such as browsing files on a file share.
+<li><a href="#">2 lnteractive - This is what most people think of and do. lt is when someone logs in to a system, locally most commonly with a keyboard.
+<li><a href="#">4 Batch - This is used for when a scheduled task using credentials is launched.
+<li><a href="#">5 Server - This is for when a service that is using credentials is started.
+<li><a href="#">7 Unlock - When a workstation or server is locked and then unlocked.
+
+<li><a href="#">The fact that Windows breaks out the type of logon is extremely beneficial for monitoring alerts can be created for logon types that occur in unauthorized conditions. For example, if RDP is not supposed to be used on desktops yet RDP is used on a workstation.
+
+<li><a href="#">lf a user account is created to perform a specific task, such as for credentialed vulnerability scans, it is also considered a service account. Basically, any purpose-built account used to perform a task gets classified as a service account.
+
+<li><a href="#">A majority of logons in most environments come from: • Computer accounts - Active Directory machines are constantly authenticating to domain controllers • Service accounts - "Special" accounts used to run services or scripts.
+
+<li><a href="#">Computer accounts distinguished by a $ in user field. Windows and Linux both employ service accounts. These are accounts used for specific tasks of programs.
+
+<li><a href="#">Linux logon events are simple in nature. They include the username, success or failure, and where the logon is coming from, such as from a local terminal (tty) or a remote program like SSH. Authentication in Linux is controlled by Linux Pluggable Authentication Modules (PAM). This is typically logged to / var/ log/auth.log or / var/ log/secure.
+
+<li><a href="#">Service accounts are targets for attackers and penetration testers. Mainly because they tend to exist in every environment and they provide a higher level of access to resources. While this is bad, there is not a lot you can do about it- service accounts are necessary. However, knowing that service accounts should only be used certain ways provides an awesome ability to monitor for abnormal behavior.
+
+<li><a href="#">Taking the time to inventory service accounts and where they should be logging in takes minimal time respective to the situational awareness it provides.
+
+<li><a href="#">Users are creatures of habit. They tend to logon at certain times of the day and only to certain machines. While some users, such as IT, regularly logon to multiple systems, most individuals will only logon to a small number of systems. If, suddenly, an account is being used to logon to excessive amounts of systems, it is a good sign that something bad is happening.
+
+<li><a href="#">A great way to defend against both known and unknown attacks is to simply understand your environment. By knowing your environment, you can tell when something is out of place.
+
+<li><a href="#">Understanding what is normal in an environment requires: • Knowledge of ALL assets • What is it? • How important is it? • What is its purpose? • Knowledge of organizational policy • What are assets authorized to do? • What restrictions are in place on how they are to do it?.
+
+<li><a href="#">Devices Users • MAC Address • Name • IP Address • Identities • Serial Number • Groups • Operating System • Authentication • Installed Software • Permissions • Processes • Privileges • Scripting Frameworks • Geo Locations.
+<li><a href="#">In order to protect your environment, you first must know what is in your environment and whether or not those things are authorized. In fact, this knowledge is so fundamental that it ranks first and second on the CIS Controls.
+
+<li><a href="#">For best results, a combination of active and passive detection methods is needed. Active simply means the end device is interacted with to gain information from it. Passive means the activity generated by an end device is monitoring to gain information about it.
+
+<li><a href="#">Device Discovery Sources.... Active Passive • Network Scanners • Active Directory • Vulnerability Scanners • Bro • Inventory Systems • DHCP • Network Access Control • NetFlow • Switch CAM Tables • Wireless IDS.
+
+<li><a href="#">The most common form of device discovery is some form of network scanning. This traditionally involves things such as port scanning or remote authentication requests. It is the most common because of how easy it is to set up. For instance, a centralized system can be set up to reach out and scan each subnet. This quickly identifies IP addresses, Ports, Services, Operating Systems, and more.
+
+<li><a href="#">One of the most critical drawbacks to active discovery is it requires the end device to respond to the scanner. If a device is on and receives an ICMP echo request packet but does not respond with an ICMP echo reply, then it is likely to be skipped by a scanner.
+
+<li><a href="#">lnstead of a network scanner, it may make more sense to scan systems using a vulnerability scanner. Often times, vulnerability scanners invoke tools like Nmap to perform network discovery but also have many other additional capabilities such as performing authenticated scans.
+
+<li><a href="#">An authenticated scan involves attempting to log into a machine using specific credentials. Upon successful login, plugins are run that simply look up information such as what are certain registry key values, what software is installed, and other information about the system.
+
+<li><a href="#">If a vulnerability scanner can successfully log into a Windows box, then this likely means the device is an authorized member of the domain. If it cannot, it may mean the device is misconfigured or that it is not an authorized device.
+
+<li><a href="#">Most organizations deploy some form of asset management system. These typically involve installing an agent on a system so that each system can be properly reported on and maintained. Because of this, they are typically the main source of accurate reporting.
+
+<li><a href="#">The problem is many devices, such as switches, do not support agents, and many asset management systems do not include methods for managing all devices.
+
+<li><a href="#">Dynamic Host Configuration Protocol (DHCP) is used to provide an IP address to devices automatically. To make sure a DHCP server does not offer an address that has already been handed out, it must keep track of the IP address accepted by a given MAC address. This means, at a minimum, DHCP has a record of IP addresses and MAC addresses. Many times, the DHCP server also records extra information such as the hostname of the device requesting an lP address. This makes DHCP a perfect candidate for finding devices.
+
+<li><a href="#">Just given a hostname and a MAC address, it is possible to quickly identify authorized vs. unauthorized devices. Part of this is because the first six hexadecimal characters of a MAC address makes up the OUI (Organizationally Unique Identifier). This specifies the vendor used to manufacture a network device. The other reason is often organizations standardize hostnames. Thus, it's easy to find systems that do not confom1 to a corporate naming convention.
+
+<li><a href="#">DHCP logs could be used in correlation with Active Directory computer accounts to automatically tag hostnames that exist in Active Directory as authorized. This may mark over 90% of devices as authorized leaving a much smaller portion for follow-up. This filtering technique also works when correlating with inventory system data.
+
+<li><a href="#">In medium to large enterprises, it is recommended that internal NTP servers are deployed and used. This is simple to setup and deploy in small organizations as well. If all company assets are configured to synchronize time with internal time servers, then requests to non-internal time servers are odd. This usually happens if a personal device is plugged in or a vendor asset does not support changing the time server. The latter case requires a simple exclusion. The former is an indication that an unauthorized device is on your network.
+
+<li><a href="#">For example, if you plug a personal Windows box into a corporate network, it will eventually send out a DNS request for time.windows. com and then an SNTP packet will be sent to the resolved destination. Applying this knowledge makes it simple to alert on personal devices such as creating an e-mail alert if a device requests time.windows. com.
+
+<li><a href="#">At the end of the day, all devices- whether authorized or unauthorized-should be detected. DHCP, as well as previously mentioned methods, works great for easy catches such as personal devices. But additional techniques are required for finding remaining systems, like those using static IP addresses.
+
+<li><a href="#">CSC # 2 focuses on knowing and also controlling authorized vs. unauthorized software. While this is usually performed with application whitelisting software, many companies cannot afford, or currently do not have, commercial application whitelisting. This leaves them with existing OS tools to use or software inventory tools which have limited functionality in regards to deep-diving on what processes are running on a machine.
+
+<li><a href="#">Windows has provided a free application whitelisting product for servers since Windows Server 2008 R2. lt is simple to use and allows or blocks software based on the criteria listed below.
+
+<li><a href="#">Path - This option controls software based on whether it matches a path rule.
+<li><a href="#">Hash - This option controls software based on a file's cryptographic hash.
+<li><a href="#">Publisher - This option controls software based on the digital signature of a file.
+
+<li><a href="#">Centralizing logs for AppLocker results in a list of allowed or blocked software. Like always, data that never gets used is of little to no value. Collecting these events can be useful for incident handling and forensics, but it is intended to be used for day-to-day defense and monitoring.
+
+<li><a href="#">To make things more efficient context should be added to events as needed. For instance, a software blocked event should have publisher information, file hash(es), file path, and user information to speed up analysis. This helps with the process of ruling out false positives as well as creating new allow or block rules.
+
+<li><a href="#">A useful Microsoft Syslntemals utility for collecting information about a file is sigcheck.exe. The details returned by sigcheck. exe provide some much- needed value- added context to software events. lt adds multiple file hashes, publisher information, and VirusTotal checks.
+
+<li><a href="#">While long tail analysis can work across the entire enterprise, it works better in common datasets. Looking for least frequent occurrences on desktops tends to work well. To manage and maintain desktops, standardizations are usually in place. This means that systems are likely to have similar software, patch levels, and settings applied.
+
+<li><a href="#">Operating systems, such as Windows and Linux, can be almost completely controlled and maintained using scripts. This is a fantastic thing for defenders. lt allows system hardening, automated data collection, and much more. Windows, in many cases, is actually controlled by PowerShell behind the scenes, even with GUI programs.
+
+<li><a href="#">Due to its extensive capabilities, it also comes with a risk of being used for malicious purposes. Why install software when you can live off the land? The chances of an attacker being caught using built-in scripting languages are less than if they were to add software to a system.
+
+<li><a href="#">While languages, like PowerShell, can be used interactively with a command prompt, they are intended to be run in a more automated fashion. The two primary methods of calling a script are by invoking a script file or passing the script within a command line. Example of invoking a script file: PowerShell.exe -File sec555.psl This method is commonly used by defenders. This is because scripts tend to be large and it makes sense to store all the code in a file. Thus, code is repeatable and easy to find at a later date.
+
+<li><a href="#">Microsoft implemented a component called the PowerShell Execution Policy to protect administrators from running bad code. However, it was never intended to be a security control. instead, it was intended to stop a user from accidentally running code that he or she did not intend to run.
+
+<li><a href="#">The execution policy is set to one of the below settings: Restricted (default) - Only allows interactive commands. No scripts can be run. AllSigned - Permits only scripts that are digitally signed by a trusted publisher RemoteSigned - Permits only scripts that are digitally signed by a trusted publisher or that have been created locally Unrestricted - Permits all scripts to run.
+
+<li><a href="#">The audit setting to enable command line logging is under Computer Configuration -> -> Policies -> -> Administrative Templates -> -> System -> -> Audit Process Creation. lt is highly recommended to enable this.
+
+<li><a href="#">One of the preferred methods is to invoke PowerShell using only command line parameters. This helps to evade application whitelisting and antivirus. This is usually done by passing base64 encoded commands or triggering a download of code and then having PowerShell execute it. Regardless of which of these techniques are used, there are multiple areas where attacker's attacker's strengths can be turned into weaknesses.
+
+<li><a href="#">Normally, when PowerShell is invoked, it is to call a script or perform a quick function. As a result, the length of the command is short. However, when parameters are passed over the command line or encoding is used, the length often exceeds over 500 characters. This technique can be applied to find abnormalities even outside of PowerShell.
+
+<li><a href="#">There will be legitimate cases where a program exceeds 500 characters. For example, Google Chrome will likely need to be filtered out. Adobe Reader was another false positive as it regularly opened with a command line length of around 700.
+
+<li><a href="#">While obfuscation can be used to hide, it also can be an indicator of malicious behavior. Regex can then be used to find and extract this code; then, it can also be automatically decoded.
+
+<li><a href="#">Net.WebClient. Effectively, it is a method for PowerShell to act as a web browser. Invoke- Expression cmdlet. It tells PowerShell to run something as PowerShell code.
+
+<li><a href="#">The combination of lnvoke-Expression and Net.WebClient, on the same command line, is likely bad. Again, defenders typically invoke scripts. Vendors tend to do likewise. Usually, the only time PowerShell code is loaded from the Internet is for malicious purposes. Knowing this, an alert can be setup to look for Invoke-Expression and the use of Net. WebClient. Keep in mind that iex and Invoke-Expression are the same thing.
+
+<li><a href="#">For solid logging, organizations should consider deploying PowerShell version 5 or later.
+
+<li><a href="#">The PowerShell event logs are located in the following locations:.
+<li><a href="#">" Microsoft-Windows-PowerShell/ Operational" found under Application and Services Logs-> Microsoft -> -> Windows.
+
+<li><a href="#">Some easy alerts to set up around PowerShell use involve looking for commands that should not be used. The trick is making sure these blacklisted commands are either not used internally or are filtered based on authorized conditions. Some examples of items to blacklist include any use of cmdlets with WMI or DLL in their name.
+
+<li><a href="#">Even if a command is whitelisted for a WMI call, it should still be monitored, such as alerting for any users except these authorized IT individuals.
+
+<li><a href="#">DLL cmdlets, on the other hand, should always be monitored. This is because, as of this writing, there are no built-in cmdlets with DLL in their name. Even on a fully patched Windows 10 box, there are none. However, attack tools such as PowerSploit have custom functions with DLL in their name. These functions are used to attempt DLL injection.
+
+<li><a href="#">Microsoft released Just Enough Administration, or JEA1. JEA is designed to limit who is able to access a system as well as what abilities or functions they have. lt can take an administrator account and remove all capabilities except those needed to perform a business need. This can be controlled on a per computer configuration. On top of all this, JEA generates logs. This means if someone tries to perform a task they are not authorized to, a log will reflect it. Effectively, JEA is application whitelisting purpose-built for PowerShell.
+
+<li><a href="#">An alternative solution is to use existing PowerShell logs to generate a list of authorized cmdlets and then use this list as an initial whitelist. Any new cmdlets logged should then be flagged for review.
+
+<li><a href="#">PowerShell, itself, could be used to reach out to multiple systems and pull back a unique list of cmdlets run on target systems. Once the cmdlets are captured, it is as simple as building a visualization and dumping out each entry. This list can then be used to compare against logs as they come in and alert if a cmdlet is found that is not on the list. It is recommended to generate this list using trusted systems and scanning through the commands.
+
+
+<li><a href="#">PowerShell can be invoked without using PowerShell. exe.This too can be caught, but it requires alternative means. When PowerShell is invoked using these abnormal methods, logging does not occur. However, these can be caught using software that monitors DLL image loading such as Sysmon. Note that monitoring DLLs loaded by Microsoft will generate a ton of events. However, excluding things signed by Microsoft would omit these DLLs.
+
+<li><a href="#">Because a SIEM has many logs sources, it can be a great source of information to use to implement controls. For instance, if you are looking to implement new firewall rules, a report using flow data can show all connections to or from certain subnets. This can then be used to identify what firewall rules need creation.
+
+<li><a href="#">Usually, when a system is compromised, it is then used to discover and connect to other internal systems. Yet, many organizations do not have an internal firewall to catch this, but flow data can likely be collected from everywhere. This means that if a workstation tries to connect to another workstation, flow data can see it.
+
+<li><a href="#">Keep in mind that just because you can do something does not mean you should. In this case, prefer a host- based firewall (with logging) overflow data or do both for defense in depth. After all, a host- based firewall can be disabled.
+
+<li><a href="#">Tags can make a huge difference for analysts. One, they provide context. A system tagged as sensitive, top secret, or pci is likely to mean more to an analyst than a system without tags. On top of this, the tags can be used to quickly enable detection techniques. For instance, any member of the domain administrators group could be tagged with something such as privileged_ user. This would make filtering and dashboards against privileged accounts simplified.
+
+<li><a href="#">One way to look for unauthorized or malicious connections is to simply look for the top talkers. This can be done by top source IP addresses and top destination IP addresses. In the event that something is abnormally high and the count for source IP addresses and destination IP addresses is close, then you have a problem. An analyst that occasionally monitors this type of table or chart will quickly pick up what is normal vs. abnormal. To make this technique work, you may need to filter out expected noisy systems.
+
+<li><a href="#">Another quick win for flow data is looking at the longest recorded sessions. Anything over four hours probably should be investigated. Where you are likely to see long running connections is SSL VPNs, nightly backups, and sometimes websites using HTTP keep-alive. These can all be filtered out easily. Then, what remains is unauthorized or evil or unknown. While occasionally systems do upload files to services like Dropbox or Webmail, outbound uploads exceeding 10 MB should be monitored.
+
+<li><a href="#">Filtering can be made on a case-by-case basis. lf Dropbox is allowed, then it can be filtered out. At the end, you should be able to see any unauthorized large file uploads. If need be, adjust the scale from 10 MB to something larger like 100 MB. ASN filtering is also very helpful with this technique.
+
+<li><a href="#">Because flow data contains the number of bytes used for connections, it can be used to look for abnormal protocol use by analyzing the amount of upload compared to download; for instance, clients browsing the Internet use HTTP and HTTPS. The traffic from these applications is heavily weighted toward download. It is not uncommon for the ratio to be 9 to 1. In fact, almost all Internet-based protocols lean heavily toward download rather than upload. Where this changes is when data ex filtration is happening or command and control is established.
+
+<li><a href="#">A use case for Sysmon network detection is to use it to create a whitelist for programs that are initiating connections. The performance impact of this is likely to go unnoticed, yet it can uncover some interesting things.
+
+<li><a href="#">Sysmon filters are granular. You can start small and only monitor ports such as 80 or 443 and then start to expand using this technique.
+
+<li><a href="#">Monitoring end users can be broken down into three main categories. The first is whitelisting, which looks for all user events that are not specifically allowed. The flip side is blacklisting, which is looking for known bad events generated by a user. These two monitoring techniques are used consistently, over and over. However, a third area of monitoring revolves around programmatic learning of normal vs. not normal. This is anomaly based monitoring.
+
+<li><a href="#">One of the most common and most important use cases with UBA revolves around profiling user logons. Where do users normally logon from? What devices do they normally use? What time do they normally logon? How often do they enter their password wrong? All of these questions and more are used to profile " each" user. This is a sweet spot for UBA.
+
+<li><a href="#">Location can be a geolocation or simply internal vs. external lP addresses. Devices can be detected from user agent strings, MAC addresses, and other data. This can make a decent job of eliminating false positives.
+
+<li><a href="#">An alert should mean something has been detected that needs looking into. An anomaly does not always merit looking into. In fact, normally, multiple anomalies are necessary to create an alert. This is why many anomaly engines place so much emphasis on anomaly scores. Until a score reaches a high enough point, it can take away too many resources to investigate.
+
+<li><a href="#">Password spraying involves trying one password against a list of users. Each password is tested across all users prior to trying the next password. This level of iteration is easy to perform and also can stay under the radar of account lockout thresholds. Because it is only one password guess per user, it may fly under the radar. However, this type of attack is still simple to catch. Instead of only monitoring failed logons by users, include monitoring failed logons by source address.
+
+<li><a href="#">How do you catch a massively distributed password spray attack?. Simply monitor failed logons in total.
+
+<li><a href="#">There are multiple ways to catch account sharing. One method is to look for multiple logons to different workstations from the same user account in a given time frame.
+
+<li><a href="#">Because sensitive accounts are targeted by attackers, logic needs to be applied as to when and where these accounts should be used. For example, a domain administrator account has no need to be used on a regular workstation such as a payroll computer. Service accounts, which tend to have elevated privileges, should be designed to only access specific systems. Certain successful logons (possibly by logon type) outside expected systems should be alerted on.
+
+<li><a href="#">One thing that can greatly aid in monitoring privileged accounts is lo force a policy for how access is handled. For example, having a policy that states use of domain administrator use can only come from a jumpbox or specific machines or subnets is a great idea. This allows controls and detection rules to be used to look for all attempted access outside this authentication flow.
+
+<li><a href="#">Having a baseline makes it easy to discover changes. Simply take the baseline and compare it against another point in time. Any difference is a change. For example, assume you are investigating an infected machine. If you had a baseline, you could compare the current state of the system against the baseline. This dramatically speeds up the analysis process.
+
+<li><a href="#">Instead of just having one point in time state, what if multiple ongoing baselines existed? Trust is something that should be considered. For instance, assume a computer is baselined every night. Now, there are multiple logs to reference to compare against. lf a machine is infected on Thursday, but it is not caught until Friday, early in the week baselines are available to identify what changes actually occurred.
+
+<li><a href="#">Baseline Data Sources.
+<li><a href="#">• Active processes • Route table • Software • Certificates • Scheduled tasks • USB devices • Drivers • Host files • Registry keys • Security status • Services • Shares • Users and groups.
+
+<li><a href="#">Endpoints have lots of configuration settings as well as volatile data, like running processes and network connections. Both types of data can be beneficial to baseline. Likely, existing systems will not have a means of gathering this kind of data natively. As a result, scripts and software are necessary to collect and ship off this kind of data.
+
+<li><a href="#">One of the more important things to baseline is persistence mechanisms. A vast majority of attacks involve days, months, or even year's worth of internal compromise. In order for an adversary to persist, malware must be on the box and be able to handle a shutdown or reboot. This means that somewhere there is a record of the malware. Autoruns is maintained by Microsoft Syslnternals and is designed to show information on areas software can use for persistence.
+
+<li><a href="#">This is most effective when autorunsc.exe is run nightly to a delimited file and then the contents are imported into a SIEM. This can be used for long tail analysis or during incidents to find where malware may be located.
+
+<li><a href="#">There are certain rules that Windows follows and never breaks. For example, svchost. exe handles services that are running. Each svchost.exe process should always come from services.exe. Mal ware may run as svchost.exe, but if the parent process is not services.exe, then it is evil.
+
+<li><a href="#">The host file takes precedence over DNS and other name services and typically is never modified. Occasionally IT staff or developers may need to edit this file. However, the rest of the environment does not. Therefore, it should be included in any baselines. Changes need investigation.
+
+<li><a href="#">If you are a savvy organization, you may be deliberately adding entries to the host file. For example, if your company extranet points to an external IP of 1.2.3.4 1.2.3.4 1.2.3.4 and you are concerned about man-in-the-middle attacks, you can purposely add an entry to the host file forcing the name to point to 1.2.3 1.2.3 .4. This defeats man-in-the middle attacks caused by DNS poisoning or evil DNS servers.
+
+<li><a href="#">One of the more difficult attacks to catch involves ARP cache poisoning. This is where an adversary is sitting on the same layer 2 network as a victim machine. In this scenario, the attacker sends a gratuitous ARP packet telling the victim machine that the MAC address associated with their default gateway is now the MAC address of the attacker's system; thus, causing the victim machine to route traffic through the attacker. This attack is hard to discover as it does not operate at the lP layer and ARP cache entries are hard to monitor. Yet, it would be trivial to have a script that constantly monitors the ARP cache and sends the data off to a SIEM. Even if this was just once a night, it has a chance to identify systems where the default gateway MAC address does not match corporate assets.
+
+<li><a href="#">Typically, there is a default prioritization level for all alerts and then, where possible, the system will reprioritize alerts the vendor has explicitly identified. Part of the need for prioritization is that analysts often do not know the environment they are monitoring. This is often due to high staff turnover. ln an environment where analysts are familiar with that which they are monitoring, their intuition provides a more accurate level of prioritization than a scoring solution.
+
+<li><a href="#">Tuning is an extremely important function of a tactical environment. It is also a skill that evolves over time. What you ultimately want is a manageable number of alerts for investigation. lf a thousand alerts per analyst are generated each day, then they will fail. To handle this, alerts either need to be tuned and filtered out, thereby never reaching the analysts, or auto categorized so they are automatically handled; thus, the analysts do not need to manually investigate them.
+
+<li><a href="#">An easy starting point for tuning is to search for alerts with high repetition. These are most likely false positives or alerts that do not matter in your organization. Yes, it could be constant alerts from attacker activity but that is usually a bit more obvious.
+
+<li><a href="#">At a high-level, analysts should be trained to follow these three steps: 1. Identify an alert or something that needs investigation. 2. Use pieces of the alert to correlate between various log sources. 3. Build a hypothesis using factual data as well as possible inferences.
+
+<li><a href="#">Depending on how an organization is structured, alerts may be handled in a FIFO (first in first out), by asset SLA, or by perceived risk. Perceived risk allows an analyst to use their judgment to identify the highest risk alerts to investigate first.
+
+<li><a href="#">When performing analysis, it is important to keep track of any information you may want to search on later. While this sounds like basic common sense, a lot of individuals do not. Documentation feels like it slows you down and an inexperienced analyst may want to keep searching deeper and deeper into the web of data only to have to backtrack and start over.
+
+<li><a href="#">When first investigating an alert, it can be helpful to look for any other related alerts using the source and destination IP addresses from the first alert. lf other alerts are found, they may be able to provide new light and add context to what is happening.
+
+<li><a href="#">Moloch has been gaining in popularity within the open source community. It provides large-scale pcap processing and analysis. The search interface is similar to Wireshark but without as many options. For example, you can start to type something like tcp or http and a list of options will generate to choose from. Because of the Elasticsearch backend, Moloch can quickly search across large amounts of network metadata to find things and then, if needed, a packet capture of the results can be downloaded.
+
+<li><a href="#">A SIEM is just a tool. It may be your primary tool, but it should be one of many. Multiple tools are necessary when investigating alerts for efficiency and context. Network information, malware analysis, and threat intelligence are just a few examples of things that help during log investigation. An important capability for analysts is the ability to identify existing, as well as new, events of interest.
+
+<li><a href="#">The easiest way to do this is to setup a test environment with the logging level cranked up. Then, make sure the logs are collected. lt usually helps to get a feel for the default logs as that forms a baseline of “normal" activity. Then, attack one or more of the systems. During and after the attack, see what new events occur that you have not seen before. This process acts as an effective way to reverse engineer an attack so that you can operationally detect it moving forward. More than likely, the attack will generate logs that you are familiar with but in ways that are not normal.
+
+<li><a href="#">Reverse analysis involves running attacks or malware to look for changes outside normal operations. The most accurate way to do this is to run things against production systems. However, this can cause outages or other damages. To be safe, the recommended method is to use test systems as closely configured to production systems as possible. lf need be, software can be used to clone product_ production systems into virtual machines and tests can be run against those.
+
+<li><a href="#">Cuckoo Sandbox is a malware analysis framework used to perform repetitive analysis. It works by submitting files or URLs to a system with an agent and tells it to launch whatever was submitted. Then, anything that triggers as a result of opening the file or URL is recorded and analyzed. At the end, a report is generated that includes suspicious events and a predictive evilness score.
+
+<li><a href="#">While intended by design for malware analysis, it is a great platform for reverse analysis in discovering new tactical SIEM rules. To do this, the agent system needs to have log collection setup on it so that every time it powers on and runs a task, all logs get forwarded to a SIEM.
+
+<li><a href="#">A commonality found when studying attackers is that they almost always look for ways to gain privileged access. This usually involves things like pass- the- hash or token stealing as well as using programs or scripts to identify key accounts like domain administrators. Knowing this, we can look for these actions and put in specific detection capabilities.
+
+<li><a href="#">Another approach to detect exfiltration involves the attacker's system. This works by causing a "phone home" beacon. One technique that does not involve hacking the hacker is implementing a Web Bug Server1. This involves injecting HTML code into office files that try to render a 1x1 pixel image hosted on a web server (the Web Bug Server). When one of these documents is opened by an attacker, the IP address and user-agent of the attacker gets logged.
+
+<li><a href="#">Re-analyzing old data can help find unauthorized connections or malware that was not detectable the day it happened. So how can old data catch things today when it did not yesterday? Part of this is because a lot of security capabilities still rely on signatures. The same concept applies to SIEM data. Threat intelligence feeds are, in effect, signatures. Rescanning information using feeds can identify old connections that were malicious.
+
+<li><a href="#">Any data contained in threat intelligence feeds can be re-scanned. IP addresses, domain names, and URLs are probably the most common. Depending on what data you are collecting, you may also have hashes that can be checked on an ongoing or historical basis for malware.
+
+<li><a href="#">Scripting is, by far, the most flexible method to perform post hoc analysis. lt can easily query and pull back data, manipulate it, and integrate with any custom service or checks as required.
+
+
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<script src="hilitor.js"></script>
+<script>
+var myHilitor = new Hilitor("content"); // id of the element to parse
+// myHilitor.setBreakRegExp(new RegExp('[^\\w\' -]+', "g")); // expanded to include spaces
+myHilitor.apply();
+</script>
+
+
+<script>
+
+  window.addEventListener("DOMContentLoaded", function(e) {
+    var myHilitor2 = new Hilitor("playground");
+    myHilitor2.setMatchType("left");
+    document.getElementById("keywords").addEventListener("keyup", function(e) {
+      myHilitor2.apply(this.value);
+    }, false);
+  }, false);
+
+</script>
+
+<script>
+document.addEventListener("contextmenu", function(event){
+event.preventDefault();
+}, false);
+</script>
+
+
+
+
+</html>

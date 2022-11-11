@@ -134,6 +134,7 @@ background-color: #f0f0f0;
 <a class="w3-button w3-hover-blue" href="sec506.html">SEC 506 - Linux/Unix Security</a>
 <a class="w3-button w3-hover-green" href="for508.html">FOR 508 - Incident Response Forensics</a>
 <a class="w3-button w3-hover-blue" href="sec511.html">SEC 511 - Continuous Monitoring</a>
+<a class="w3-button w3-hover-blue" href="sec555.html">SEC 555 - SIEM with Tactical Analytics</a>
 <P>
 <center>
 <a class="w3-button" href="standards.html">Security Standards</a><br>
@@ -215,7 +216,6 @@ background-color: #f0f0f0;
 
 
 <li><a href="#">A list of critical assets is of utmost importance as well. It's hard to defend your most important data or even recognize it's in jeopardy if you don't know where it is and the systems it sits on. Once you understand what data is collected, how it is collected, and where it comes from, you will be able to intuitively know what sources you must consult to answer any given analysis question.
-
 
 
 
@@ -358,6 +358,7 @@ background-color: #f0f0f0;
 
 
 <li><a href="#">The new standard for HTTP/2 has been released and it is extremely different than previous versions. Most changes have to do with making connections more efficient and enabling privacy with encryption by default. This is great from a user perspective, but unfortunate for network security monitoring as analysts.
+
 <li><a href="#">Being able to view request and response headers and immediately notice if anything is suspicious is an essential analyst skill since so much malware tries to hide running over protocol compliant HTTP transactions. While this is easy now, like DNS, unfortunately the future capabilities for HTTP analysis is somewhat uncertain. New standards with mandatory encryption are coming down the pipe, which will undoubtedly make analysis more difficult and will obscure all but decrypted traffic from view.
 
 
@@ -506,8 +507,6 @@ background-color: #f0f0f0;
 
 
 <li><a href="#">Setting up DNS records for SPF, DKIM, and DMARC is an outstanding way of preventing attackers sending email labeled as if it were coming from your organization but will not do much to directly prevent spam coming in to your own organization (minus the important case of attackers trying to spoof internal email).
-
-
 
 
 <li><a href="#">Why is SMB interesting to an attacker? Because the Server Message Block protocol enables an attacker on a remote machine with an administrative level username and password of a victim machine to connect to it, execute any arbitrary command, and interact on a command line. This is a key point you MUST understand as a defender: the capabilities of SMB make password sharing one of the deadliest mistakes in enterprise networks!
@@ -807,10 +806,7 @@ background-color: #f0f0f0;
 <li><a href="#">On the flip side, if you are investigating potentially malicious bash scripts, ELF binaries (the Linux equivalent of an EXE), or some other Linux specific format, you can safely use Windows to look at their components without fear of infection since their contents mean nothing to Windows.
 
 
-<li><a href="#">For files that potentially cause danger in all operating systems JavaScript, PDFs, etc. Linux would still be the recommended operating system for analysis. Why? Most attackers using these file types are sending them with the assumption of the victim running Windows. That means their infection chain at some point will eventually affect Windows only.
-
-
-<li><a href="#">The right way to move a file is to ensure it cannot be found by AV, IDS, or accidentally executed on the collection machine. The most common way to do this is to put the malware in a compressed and encrypted archive with the password of "infected."
+<li><a href="#">For files that potentially cause danger in all operating systems JavaScript, PDFs, etc. Linux would still be the recommended operating system for analysis. Why? Most attackers using these file types are sending them with the assumption of the victim running Windows. That means their infection chain at some point will eventually affect Windows only. The right way to move a file is to ensure it cannot be found by AV, IDS, or accidentally executed on the collection machine. The most common way to do this is to put the malware in a compressed and encrypted archive with the password of "infected."
 
 
 <li><a href="#">Successful exploit delivery can be thought of in two pieces: The exploit itself and the payload. The exploit is the code that causes the program to go into an undefined or unexpected state. This may be an unexpectedly long input that causes a buffer overflow, a path traversal vulnerability in a webserver, or invalid input bytes that cause the program to go into an unstable state. If the exploit works, then the attacker will have the ability to cause the program to take action the programmer did not intend. It is this second part that determines the impact of the exploit. This part is referred to as the payload what the attacker that has created the exploit wants the program to do if it is successful.
