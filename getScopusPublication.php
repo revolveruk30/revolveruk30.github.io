@@ -28,7 +28,7 @@ class getScopusPublication {
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 		'Accept: application/json',
-		'X-ELS-APIKey: dd43a9e67059d268b0a6eaf9f3d73cd4'));
+		'X-ELS-APIKey: your-API-KEY'));
 		$data=curl_exec($ch);
 		curl_close($ch);
 // print_r ($data);
