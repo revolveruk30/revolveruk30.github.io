@@ -1,208 +1,188 @@
 <html>
-<body>
-<center>
-<table width="500" border="0">
-<tbody>
-<tr>
-<br>
-<h1> SHA256 Hash Search </h1>
-<br>
-<script type="text/javascript">
-function doip1(ip1) {
-var ip1 = document.getElementById('ip1'),
-ip1a = document.getElementById('ip1a');
-ip1b = document.getElementById('ip1b');
-ip1c = document.getElementById('ip1c');
-ip1d = document.getElementById('ip1d');
-ip1e = document.getElementById('ip1e');
-ip1f = document.getElementById('ip1f');
-ip1g = document.getElementById('ip1g');
-ip1h = document.getElementById('ip1h');
-ip1i = document.getElementById('ip1i');
-ip1j = document.getElementById('ip1j');
-ip1k = document.getElementById('ip1k');
-
-ip1all = document.getElementById('ip1all');
-
-
-ip1a.value = ip1.value;
-ip1b.value = ip1.value;
-ip1c.value = ip1.value;
-ip1d.value = ip1.value;
-ip1e.value = ip1.value;
-ip1f.value = ip1.value;
-ip1g.value = ip1.value;
-ip1h.value = ip1.value;
-ip1i.value = ip1.value;
-ip1j.value = ip1.value;
-ip1k.value = ip1.value;
-
-ip1all.value = ip1.value;
-
-}
-</script>
-<form onSubmit="doip1(this.ip1.value); return false;">
-<input type="text" id="ip1" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Populate All"/>
-<br />
-<br />
-</form>
-<script type="text/javascript">
-function dos1(a1) {
-window.open('https://otx.alienvault.com/indicator/file/' + a1, 'AlienVault');
-}
-</script>
-<form onsubmit="dos1(this.a1.value); return false;">
-<input type="text" name="a1" id="ip1a" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="AlienVault" />
-<br />
-
-</form>
-
-
-<script type="text/javascript">
-function dos2(b1) {
-window.open('https://www.hybrid-analysis.com/search?query=' + b1, 'Hybrid Analysis');
-}
-</script>
-<form onsubmit="dos2(this.b1.value); return false;">
-<input type="text" name="b1" id="ip1b" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Hybrid Analysis" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos3(c1) {
-window.open('https://www.joesandbox.com/analysis/search?sha256=' + c1, 'Joe Sandbox');
-}
-</script>
-<form onsubmit="dos3(this.c1.value); return false;">
-<input type="text" name="c1" id="ip1c" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Joe Sandbox" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos4(d1) {
-window.open('https://bazaar.abuse.ch/browse.php?search=sha256%3A' + d1, 'Bazaar Abuse');
-}
-</script>
-<form onsubmit="dos4(this.d1.value); return false;">
-<input type="text" name="d1" id="ip1d" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Bazaar Abuse" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos5(e1) {
-window.open('https://exchange.xforce.ibmcloud.com/malware/' + e1, 'IBM XForce');
-}
-</script>
-<form onsubmit="dos5(this.e1.value); return false;">
-<input type="text" name="e1" id="ip1e" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="IBM XForce" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos6(f1) {
-window.open('https://hashlookup.circl.lu/lookup/sha256/' + f1, 'CIRCL.LU');
-}
-</script>
-<form onsubmit="dos6(this.f1.value); return false;">
-<input type="text" name="f1" id="ip1f" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="CIRCL.LU" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos7(g1) {
-window.open('https://malshare.com/sample.php?action=detail&hash=' + g1, 'Malshare');
-}
-</script>
-<form onsubmit="dos7(this.g1.value); return false;">
-<input type="text" name="g1" id="ip1g" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Malshare" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos8(h1) {
-window.open('https://opentip.kaspersky.com/' + h1, 'Kaspersky');
-}
-</script>
-<form onsubmit="dos8(this.h1.value); return false;">
-<input type="text" name="h1" id="ip1h" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Kaspersky" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos9(i1) {
-window.open('https://www.threatminer.org/sample.php?q=' + i1, 'ThreatMiner');
-}
-</script>
-<form onsubmit="dos9(this.i1.value); return false;">
-<input type="text" name="i1" id="ip1i" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="ThreatMiner" />
-<br />
-
-</form>
-
-<script type="text/javascript">
-function dos10(j1) {
-window.open('https://console.threatscore.cyberprotect.cloud/search?query=' + j1, 'ThreatScore');
-}
-</script>
-<form onsubmit="dos10(this.j1.value); return false;">
-<input type="text" name="j1" id="ip1j" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="ThreatScore" />
-<br />
-
-</form>
-<script type="text/javascript">
-function dos11(k1) {
-window.open('https://maltiverse.com/intelligence/search;query=' + k1, 'Maltiverse');
-}
-</script>
-<form onsubmit="dos11(this.k1.value); return false;">
-<input type="text" name="k1" id="ip1k" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Maltiverse" />
-<br />
-</form>
-
-
-<br />
-<br />
-<script type="text/javascript">
-function doall(all1, all2) {
-window.open('https://otx.alienvault.com/indicator/file/' + all1, 'AlientVault');
-window.open('https://www.hybrid-analysis.com/search?query=' + all1, 'Hybrid Analysis');
-window.open('https://www.joesandbox.com/analysis/search?sha256=' + all1, 'Joe Sandbox');
-window.open('https://bazaar.abuse.ch/browse.php?search=sha256%3A' + all1, 'Bazaar Abuse');
-window.open('https://exchange.xforce.ibmcloud.com/malware/' + all1, 'IBM XForce');
-window.open('https://hashlookup.circl.lu/lookup/sha256/' + all1, 'CIRCL.LU');
-window.open('https://malshare.com/sample.php?action=detail&hash=' + all1, 'Malshare');
-window.open('https://opentip.kaspersky.com/' + all1, 'Kaspersky');
-window.open('https://www.threatminer.org/sample.php?q=' + all1, 'ThreatMiner');
-window.open('https://console.threatscore.cyberprotect.cloud/search?query=' + all1, 'ThreatScore');
-window.open('https://maltiverse.com/intelligence/search;query=' + all1, 'Maltiverse');
-}
-</script>
-<form onsubmit="doall(this.all1.value); return false;">
-<input type="text" name="all1" id="ip1all" size="20" placeholder="SHA256 Hash" />
-<input type="submit" style="width:120px" value="Submit All" />
-<br />
-
-</form>
-
-</td>
-<td width="173">
-<p><br /><br />
-</p></td>
-</tr>
-</table>
-<P>
-Website created by Eric M.C
-</body>
+  <body>
+    <center>
+      <table width="500" border="0">
+        <tbody>
+          <tr>
+            <br>
+            <h1> SHA256 Hash Search </h1>
+            <br>
+            <script type="text/javascript">
+              function doip1(ip1) {
+                var ip1 = document.getElementById('ip1'),
+                  ip1a = document.getElementById('ip1a');
+                ip1b = document.getElementById('ip1b');
+                ip1c = document.getElementById('ip1c');
+                ip1d = document.getElementById('ip1d');
+                ip1e = document.getElementById('ip1e');
+                ip1f = document.getElementById('ip1f');
+                ip1g = document.getElementById('ip1g');
+                ip1h = document.getElementById('ip1h');
+                ip1i = document.getElementById('ip1i');
+                ip1j = document.getElementById('ip1j');
+                ip1k = document.getElementById('ip1k');
+                ip1all = document.getElementById('ip1all');
+                ip1a.value = ip1.value;
+                ip1b.value = ip1.value;
+                ip1c.value = ip1.value;
+                ip1d.value = ip1.value;
+                ip1e.value = ip1.value;
+                ip1f.value = ip1.value;
+                ip1g.value = ip1.value;
+                ip1h.value = ip1.value;
+                ip1i.value = ip1.value;
+                ip1j.value = ip1.value;
+                ip1k.value = ip1.value;
+                ip1all.value = ip1.value;
+              }
+            </script>
+            <form onSubmit="doip1(this.ip1.value); return false;">
+              <input type="text" id="ip1" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Populate All" />
+              <br />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos1(a1) {
+                window.open('https://otx.alienvault.com/indicator/file/' + a1, 'AlienVault');
+              }
+            </script>
+            <form onsubmit="dos1(this.a1.value); return false;">
+              <input type="text" name="a1" id="ip1a" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="AlienVault" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos2(b1) {
+                window.open('https://www.hybrid-analysis.com/search?query=' + b1, 'Hybrid Analysis');
+              }
+            </script>
+            <form onsubmit="dos2(this.b1.value); return false;">
+              <input type="text" name="b1" id="ip1b" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Hybrid Analysis" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos3(c1) {
+                window.open('https://www.joesandbox.com/analysis/search?sha256=' + c1, 'Joe Sandbox');
+              }
+            </script>
+            <form onsubmit="dos3(this.c1.value); return false;">
+              <input type="text" name="c1" id="ip1c" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Joe Sandbox" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos4(d1) {
+                window.open('https://bazaar.abuse.ch/browse.php?search=sha256%3A' + d1, 'Bazaar Abuse');
+              }
+            </script>
+            <form onsubmit="dos4(this.d1.value); return false;">
+              <input type="text" name="d1" id="ip1d" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Bazaar Abuse" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos5(e1) {
+                window.open('https://exchange.xforce.ibmcloud.com/malware/' + e1, 'IBM XForce');
+              }
+            </script>
+            <form onsubmit="dos5(this.e1.value); return false;">
+              <input type="text" name="e1" id="ip1e" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="IBM XForce" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos6(f1) {
+                window.open('https://hashlookup.circl.lu/lookup/sha256/' + f1, 'CIRCL.LU');
+              }
+            </script>
+            <form onsubmit="dos6(this.f1.value); return false;">
+              <input type="text" name="f1" id="ip1f" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="CIRCL.LU" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos7(g1) {
+                window.open('https://malshare.com/sample.php?action=detail&hash=' + g1, 'Malshare');
+              }
+            </script>
+            <form onsubmit="dos7(this.g1.value); return false;">
+              <input type="text" name="g1" id="ip1g" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Malshare" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos8(h1) {
+                window.open('https://opentip.kaspersky.com/' + h1, 'Kaspersky');
+              }
+            </script>
+            <form onsubmit="dos8(this.h1.value); return false;">
+              <input type="text" name="h1" id="ip1h" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Kaspersky" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos9(i1) {
+                window.open('https://www.threatminer.org/sample.php?q=' + i1, 'ThreatMiner');
+              }
+            </script>
+            <form onsubmit="dos9(this.i1.value); return false;">
+              <input type="text" name="i1" id="ip1i" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="ThreatMiner" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos10(j1) {
+                window.open('https://console.threatscore.cyberprotect.cloud/search?query=' + j1, 'ThreatScore');
+              }
+            </script>
+            <form onsubmit="dos10(this.j1.value); return false;">
+              <input type="text" name="j1" id="ip1j" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="ThreatScore" />
+              <br />
+            </form>
+            <script type="text/javascript">
+              function dos11(k1) {
+                window.open('https://maltiverse.com/intelligence/search;query=' + k1, 'Maltiverse');
+              }
+            </script>
+            <form onsubmit="dos11(this.k1.value); return false;">
+              <input type="text" name="k1" id="ip1k" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Maltiverse" />
+              <br />
+            </form>
+            <br />
+            <br />
+            <script type="text/javascript">
+              function doall(all1, all2) {
+                window.open('https://otx.alienvault.com/indicator/file/' + all1, 'AlientVault');
+                window.open('https://www.hybrid-analysis.com/search?query=' + all1, 'Hybrid Analysis');
+                window.open('https://www.joesandbox.com/analysis/search?sha256=' + all1, 'Joe Sandbox');
+                window.open('https://bazaar.abuse.ch/browse.php?search=sha256%3A' + all1, 'Bazaar Abuse');
+                window.open('https://exchange.xforce.ibmcloud.com/malware/' + all1, 'IBM XForce');
+                window.open('https://hashlookup.circl.lu/lookup/sha256/' + all1, 'CIRCL.LU');
+                window.open('https://malshare.com/sample.php?action=detail&hash=' + all1, 'Malshare');
+                window.open('https://opentip.kaspersky.com/' + all1, 'Kaspersky');
+                window.open('https://www.threatminer.org/sample.php?q=' + all1, 'ThreatMiner');
+                window.open('https://console.threatscore.cyberprotect.cloud/search?query=' + all1, 'ThreatScore');
+                window.open('https://maltiverse.com/intelligence/search;query=' + all1, 'Maltiverse');
+              }
+            </script>
+            <form onsubmit="doall(this.all1.value); return false;">
+              <input type="text" name="all1" id="ip1all" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="Submit All" />
+              <br />
+            </form>
+            </td>
+            <td width="173">
+              <p>
+                <br />
+                <br />
+              </p>
+            </td>
+          </tr>
+      </table>
+      <P> Website created by Eric M.C
+  </body>
 </html>
