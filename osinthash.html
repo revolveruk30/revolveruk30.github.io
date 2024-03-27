@@ -9,7 +9,10 @@
             <br>
             <script type="text/javascript">
               function doip1(ip1) {
-                var ip1 = document.getElementById('ip1'),
+                var
+                  ip0 = document.getElementById('ip0'),
+                  ip0a = document.getElementById('ip0a');
+                  ip1 = document.getElementById('ip1'),
                   ip1a = document.getElementById('ip1a');
                 ip1b = document.getElementById('ip1b');
                 ip1c = document.getElementById('ip1c');
@@ -22,6 +25,8 @@
                 ip1j = document.getElementById('ip1j');
                 ip1k = document.getElementById('ip1k');
                 ip1all = document.getElementById('ip1all');
+
+                ip0a.value = ip1.value;
                 ip1a.value = ip1.value;
                 ip1b.value = ip1.value;
                 ip1c.value = ip1.value;
@@ -42,6 +47,19 @@
               <br />
               <br />
             </form>
+
+            <script type="text/javascript">
+              function dos0(a0) {
+                window.open('https://www.virustotal.com/gui/file/' + a0, 'VirusTotal');
+              }
+            </script>
+            <form onsubmit="dos0(this.a0.value); return false;">
+              <input type="text" name="a0" id="ip0a" size="20" placeholder="SHA256 Hash" />
+              <input type="submit" style="width:120px" value="VirustTotal" />
+              <br />
+            </form>
+
+            
             <script type="text/javascript">
               function dos1(a1) {
                 window.open('https://otx.alienvault.com/indicator/file/' + a1, 'AlienVault');
@@ -155,7 +173,8 @@
             <br />
             <br />
             <script type="text/javascript">
-              function doall(all1, all2) {
+              function doall(all1) {
+                window.open('https://www.virustotal.com/gui/file/' + all1, 'VirusTotal');
                 window.open('https://otx.alienvault.com/indicator/file/' + all1, 'AlientVault');
                 window.open('https://www.hybrid-analysis.com/search?query=' + all1, 'Hybrid Analysis');
                 window.open('https://www.joesandbox.com/analysis/search?sha256=' + all1, 'Joe Sandbox');
