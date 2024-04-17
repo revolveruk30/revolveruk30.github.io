@@ -199,12 +199,11 @@
                 window.open('https://www.threatminer.org/sample.php?q=' + all1, 'ThreatMiner');
                 window.open('https://console.threatscore.cyberprotect.cloud/search?query=' + all1, 'ThreatScore');
                 window.open('https://maltiverse.com/intelligence/search;query=' + all1, 'Maltiverse');
-                window.open('https://www.virscan.org/report/' ' + all1, 'Virscan');
-
-              }
+                window.open('https://www.virscan.org/report/' + all1, 'Virscan');
+ }
             </script>
             <form onsubmit="doall(this.all1.value); return false;">
-              <input type="text" name="all1" id="ip1all" size="20" placeholder="SHA256 Hash" />
+              <input type="text" name="all1" id="ip1all" size="20" placeholder="IP Address" />
               <input type="submit" style="width:120px" value="Submit All" />
               <br />
             </form>
